@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python /tf/notebooks/llm_reasoning_agent_memory_pilot_bundle/experiments/run_evidence_use_gate_v2_pareto.py --train-examples 96 --val-examples 40 --eval-examples 100 --learn-limit 1536 --risk-budgets 0.0,0.005,0.01,0.02 --utility-lambda 0.012 --teacher-alpha 0.6 --teacher-threshold 0.51 --output-tag evidence_use_gate_v2_pareto_100

@@ -222,8 +222,12 @@ Feedback priors are derived from completed contexts using Beta-smoothed success 
 - [Extended Chip schema reference](docs/EXTENDED_CHIP_SCHEMA_REFERENCE.md)
 - [Multi-agent integration](docs/MULTIAGENT_INTEGRATION.md)
 - [Evaluation plan](docs/EVALUATION_PLAN.md)
+- [Experimental experience book](docs/EXPERIMENTAL_EXPERIENCE.md)
+- [Failure and decision log](docs/FAILURE_AND_DECISION_LOG.md)
 - [Full-corpus smoke report](docs/FULL_CORPUS_SMOKE_REPORT.md)
 - [Limitations and roadmap](docs/LIMITATIONS_AND_ROADMAP.md)
+- [Historical research archive](research_archive/README.md)
+- [Archive reproducibility guide](research_archive/REPRODUCIBILITY.md)
 - [Conversation record](docs/CONVERSATION.md)
 - [Repository contents](docs/REPOSITORY_CONTENTS.md)
 - [Third-party notes](THIRD_PARTY_NOTES.md)
@@ -232,4 +236,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development and research-integrity re
 
 ## Status
 
-This is a research-grade reference prototype. It is sufficient for deterministic experiments and agent-framework integration, but the publication claims in the evaluation document still need to be tested. See the roadmap before treating it as a production memory service.
+This is a research-grade reference prototype. It is sufficient for deterministic experiments and agent-framework integration, but the publication claims in the evaluation document still need to be tested. The archived trust-gating experiments inform the verifier and fallback roadmap; they are not direct Chip Memory or G-Memory comparison results. See the experience book and roadmap before treating it as a production memory service.

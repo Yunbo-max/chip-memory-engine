@@ -29,6 +29,7 @@
 | `examples/chips/` | Synthetic classic and extended Chips |
 | `examples/demo.py` | Complete retrieval and lifecycle example |
 | `tests/` | Loader, retrieval, runtime, and CLI regression tests |
+| `tools/verify_experience_archive.py` | Standard-library recomputation of key archived results |
 | `.github/workflows/tests.yml` | Python 3.10–3.12 continuous integration |
 
 ## Design and research documentation
@@ -41,12 +42,24 @@
 | `docs/MULTIAGENT_INTEGRATION.md` | Framework-neutral agent integration |
 | `docs/SCHEMA_AND_PROVENANCE.md` | Source/runtime authority and schema policy |
 | `docs/EVALUATION_PLAN.md` | Baselines, metrics, ablations, and claims to test |
+| `docs/EXPERIMENTAL_EXPERIENCE.md` | Detailed successes, failures, metrics, and lessons from repeated experiments |
+| `docs/FAILURE_AND_DECISION_LOG.md` | Traceable failure-to-design decision ledger |
 | `docs/FULL_CORPUS_SMOKE_REPORT.md` | Results from 502 real paper Chips |
 | `docs/LIMITATIONS_AND_ROADMAP.md` | Known limitations and future work |
 | `docs/CONVERSATION.md` | Conversation record that led to the design and implementation |
 | `THIRD_PARTY_NOTES.md` | Upstream sources and independent-implementation boundary |
 
+## Historical research archive
+
+| Path | Purpose |
+|---|---|
+| `research_archive/evidence_use_control/` | Preserved v0-v4 runners, reports, commands, and raw outputs |
+| `research_archive/followups/v5_safety_first/` | Shifted-split safety-first follow-up |
+| `research_archive/followups/noise_robustness/` | Failed two-example lexical-noise smoke diagnostic |
+| `research_archive/REPRODUCIBILITY.md` | Saved-output recomputation and full-run dependency boundary |
+
+The archive is adjacent evidence for controller design. It is not a direct benchmark of the Chip Memory engine.
+
 ## Excluded material
 
-The repository does not duplicate the 502-paper Chip corpus, paper PDFs, external repositories, runtime logs, or generated indexes. Those assets are large, may have separate licenses, and are supplied as external paths when running the engine.
-
+The repository does not duplicate the 502-paper Chip corpus, paper PDFs, model weights, external repositories, live runtime logs, or generated indexes. Historical experiment outputs are included in `research_archive/` for traceability; their underlying dataset and external-code licenses must be reviewed before public redistribution.

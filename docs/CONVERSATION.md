@@ -1,6 +1,6 @@
 # Conversation Record: Chips, G-Memory, and Multi-Agent Chip Memory
 
-**Saved:** 2026-08-04
+**Saved:** 2026-08-04; updated 2026-08-13
 
 **Workspace:** `/media/scail/HDD_Storage2/Yunbo/negative-preference-optimization`
 
@@ -19,6 +19,9 @@
 - [`MULTIAGENT_INTEGRATION.md`](MULTIAGENT_INTEGRATION.md)
 - [`EVALUATION_PLAN.md`](EVALUATION_PLAN.md)
 - [`FULL_CORPUS_SMOKE_REPORT.md`](FULL_CORPUS_SMOKE_REPORT.md)
+- [`EXPERIMENTAL_EXPERIENCE.md`](EXPERIMENTAL_EXPERIENCE.md)
+- [`FAILURE_AND_DECISION_LOG.md`](FAILURE_AND_DECISION_LOG.md)
+- [`research_archive/`](../research_archive/README.md)
 - Original delivery archive: `CHIP_Memory_Engine_20260802.zip` (superseded by this standalone repository)
 
 ---
@@ -610,6 +613,65 @@ This Markdown conversation record was saved as:
 ```text
 /media/scail/HDD_Storage2/Yunbo/negative-preference-optimization/summer2026/chips_gmemory_conversation_2026-08-04.md
 ```
+
+---
+
+## 13. Standalone repository and GitHub delivery
+
+### User
+
+> can you insclsude all the code and md file for this one to make a new repo and git push to tat github
+
+### User
+
+> continuye
+
+### Assistant — delivery summary
+
+The implementation and documentation were reorganized as a standalone repository at:
+
+```text
+/media/scail/HDD_Storage2/Yunbo/negative-preference-optimization/summer2026/chip-memory-engine
+```
+
+It was initialized independently from the parent research workspace and pushed to:
+
+```text
+https://github.com/Yunbo-max/chip-memory-engine
+```
+
+The repository was kept private by default. The first remote revision passed its Python 3.10, 3.11, and 3.12 GitHub Actions jobs. A clean clone matched the pushed revision and passed all 21 original tests.
+
+The standalone repository includes the executable package, examples, schemas, tests, full architecture and comparison documents, original Chip method/schema references, source/runtime provenance policy, and the saved conversation. It does not copy G-Memory source code or the 502-paper Chip corpus.
+
+---
+
+## 14. Request to preserve the accumulated experimental experience
+
+### User
+
+> so make it detail3d enough and inlcsuding all teh peiremnece iwe have after many experiemnece about this
+
+### Assistant — implementation summary
+
+The repository was expanded with an evidence-based experience record rather than a success-only narrative:
+
+- a detailed experience book separating direct Chip-engine evidence from adjacent SQuAD2 evidence-use experiments;
+- a failure-to-decision ledger covering schema, retrieval, runtime, experimental, and research-integrity issues;
+- the historical v0-v4 evidence-use artifact bundle with scripts, Markdown reports, JSON/JSONL outputs, commands, and recomputation files;
+- shifted-split v5 safety-first artifacts;
+- the failed two-example lexical-noise smoke diagnostic;
+- a reproducibility guide that distinguishes saved-output recomputation from full GPU/model replay;
+- a standard-library verifier that recomputes key metrics directly from raw per-example rows;
+- a regression test that prevents the archived evidence or its central numbers from silently disappearing.
+
+The interpretation keeps both sides of the observed frontier visible:
+
+- clean v4: +0.0230 F1, 44.07% effort reduction, 7% wrong stop;
+- shifted safety-first v5: +0.0303 F1, 32.65% effort reduction, 2% wrong stop;
+- lexical-noise smoke: selective fallback failed on the preserved `n=2` diagnostic.
+
+These experiments are documented as design evidence for a future Chip evidence-use controller. They are not presented as a direct Chip-versus-G-Memory benchmark.
 
 ---
 

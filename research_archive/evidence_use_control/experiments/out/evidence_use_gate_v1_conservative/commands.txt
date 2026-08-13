@@ -1,0 +1,3 @@
+# EvidenceUseGate-v1 conservative 100-example run
+
+CUDA_VISIBLE_DEVICES=1 python /tf/notebooks/llm_reasoning_agent_memory_pilot_bundle/experiments/run_evidence_use_gate_v1_conservative.py --train-examples 96 --val-examples 40 --eval-examples 100 --learn-limit 1536 --max-f1-drop 0.005 --utility-lambda 0.012 --output-tag evidence_use_gate_v1_conservative_100

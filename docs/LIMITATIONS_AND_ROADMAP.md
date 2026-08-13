@@ -34,6 +34,14 @@ A successful task does not prove every retrieved item was helpful. Current feedb
 
 The engine preserves Chip content; it cannot guarantee that extraction was correct. Extraction verification and source anchoring remain upstream responsibilities.
 
+### Evidence-use calibration
+
+The current verifier is deterministic and linguistic; it does not implement the archived learned evidence-use gates. Those adjacent experiments exposed an unresolved safety/efficiency frontier: clean v4 saved 44.07% effort with 7% wrong stops, while shifted safety-first v5 reduced wrong stops to 2% but saved only 32.65%. Neither is a final controller for Chips.
+
+### Noise robustness
+
+The preserved lexical-distractor smoke run completed only two examples and failed its proposed criterion. It is evidence that clean calibration is insufficient, not an estimate of robust performance.
+
 ## Roadmap
 
 ### Phase 1: harden the data contract
@@ -83,3 +91,15 @@ The engine preserves Chip content; it cannot guarantee that extraction was corre
 - release traceable results and failure cases;
 - avoid a general “better than G-Memory” claim unless the controlled evidence supports it.
 
+### Phase 7: evidence-use controller
+
+- emit connected L1/L2/L3 evidence packets with missing-evidence flags;
+- learn `USE`, `CONTINUE`, `FALLBACK`, `REJECT`, and `ABSTAIN` decisions;
+- train cheap runtime heads from expensive verifiers or counterfactual teachers;
+- predeclare a quality/effort/wrong-use frontier;
+- select thresholds and fallback source on validation only;
+- use a fuller grounded packet, not unbounded text, as fallback;
+- test lexical bait, incompatible conditions, contradictions, and instruction-like sources;
+- record per-agent reads, citations, controller decisions, and fallback outcomes.
+
+The detailed failure sequence and decision rationale are preserved in [the experience book](EXPERIMENTAL_EXPERIENCE.md) and [failure log](FAILURE_AND_DECISION_LOG.md).

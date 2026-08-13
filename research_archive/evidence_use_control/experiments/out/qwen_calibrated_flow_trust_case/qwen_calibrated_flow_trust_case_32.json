@@ -1,0 +1,1200 @@
+{
+  "run_at_utc": "2026-06-09T11:47:14.579196+00:00",
+  "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+  "config": {
+    "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "learn_limit": 1024,
+    "val_limit": 24,
+    "eval_limit": 32,
+    "fixed_k": 5,
+    "max_label_drop": 0.05,
+    "max_f1_drop": 0.05,
+    "max_new_tokens": 16,
+    "max_length": 768,
+    "output_tag": "qwen_calibrated_flow_trust_case_32"
+  },
+  "gpu": {
+    "visible_cuda_devices": "0",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "memory_cap_gib": 20.0,
+    "total_memory_gib": 23.65
+  },
+  "calibration": {
+    "alpha": 0.6000000000000001,
+    "threshold": 0.5099999999999999,
+    "baseline_label_coverage": 1.0,
+    "gated_label_coverage": 0.9583333333333334,
+    "label_delta": -0.04166666666666663,
+    "baseline_mean_steps": 3.5,
+    "gated_mean_steps": 1.2916666666666667,
+    "mean_effort_reduction": 2.208333333333333,
+    "relative_effort_reduction": 0.6309523809523808
+  },
+  "aggregate": {
+    "n": 32,
+    "baseline_mean_f1": 0.8334370490620491,
+    "calibrated_flow_mean_f1": 0.8114017926517927,
+    "f1_delta": -0.022035256410256387,
+    "baseline_mean_steps": 3.25,
+    "calibrated_flow_mean_steps": 1.09375,
+    "mean_effort_reduction": 2.15625,
+    "relative_effort_reduction": 0.6634615384615384,
+    "answer_preservation_rate": 0.9375
+  },
+  "verdict": "PASS",
+  "max_memory_allocated_mib": 8414.124,
+  "rows": [
+    {
+      "question_id": "57060cc352bb891400689811",
+      "question": "Century City is an example of a district that belongs to which city?",
+      "answers": [
+        "Los Angeles",
+        "Los Angeles",
+        "Los Angeles"
+      ],
+      "baseline_answer": "Los Angeles",
+      "calibrated_flow_answer": "Los Angeles",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.6043718309619144,
+        0.39562815614268215
+      ],
+      "retrieval_scores_by_step": [
+        0.12992818205742246,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        1
+      ]
+    },
+    {
+      "question_id": "56e17644e3433e1400422f41",
+      "question": "What field of computer science analyzes the resource requirements of a specific algorithm isolated unto itself within a given problem?",
+      "answers": [
+        "analysis of algorithms",
+        "analysis of algorithms",
+        "analysis of algorithms"
+      ],
+      "baseline_answer": "Analysis of algorithms",
+      "calibrated_flow_answer": "Analysis of algorithms",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        0.8854494790714771,
+        0.8316979872974697,
+        0.0,
+        0.017804112172370833
+      ],
+      "flow_scores_by_step": [
+        0.3872923344902432,
+        0.4623123830001834,
+        0.0693676065979634,
+        0.08102766603956645
+      ],
+      "retrieval_scores_by_step": [
+        0.10704879120452636,
+        0.06200747445978405,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56de3f784396321400ee26fc",
+      "question": "What year did the storm hit Richard's fleet?",
+      "answers": [
+        "1191",
+        "1191",
+        "1191"
+      ],
+      "baseline_answer": "The context does not specify the year the storm hit Richard's fleet",
+      "calibrated_flow_answer": "The context does not provide the year when the storm hit Richard's fleet",
+      "baseline_f1": 0.0,
+      "calibrated_flow_f1": 0.0,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        0.610965150110929,
+        0.9441583307902597,
+        0.6338779568323079,
+        0.08651551006787621,
+        0.12275926373769981
+      ],
+      "flow_scores_by_step": [
+        0.16947246137443955,
+        0.32384635767164766,
+        0.28645107998920116,
+        0.08575883703813902,
+        0.13447124779494732
+      ],
+      "retrieval_scores_by_step": [
+        0.17964274506799943,
+        0.15456387775421987,
+        0.057538297307251726,
+        0.03885470991393288,
+        0.0
+      ],
+      "labels_by_step": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56dde0ba66d3e219004dad76",
+      "question": "Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?",
+      "answers": [
+        "King Charles III",
+        "King Charles III",
+        "King Charles III"
+      ],
+      "baseline_answer": "King Charles III of West Francia",
+      "calibrated_flow_answer": "King Charles III of West Francia",
+      "baseline_f1": 0.6666666666666666,
+      "calibrated_flow_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.1517020027746531,
+        0.0019309023136333406,
+        0.0,
+        0.005671172484713551
+      ],
+      "flow_scores_by_step": [
+        0.753907215688241,
+        0.08503339220486959,
+        0.05297961071383313,
+        0.0507166249262988,
+        0.057363147509647126
+      ],
+      "retrieval_scores_by_step": [
+        0.2845816042095545,
+        0.08709697361982965,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56de52614396321400ee27fd",
+      "question": "Who patronized the monks in Italy? ",
+      "answers": [
+        "Robert Guiscard",
+        "Robert Guiscard",
+        "Robert Guiscard"
+      ],
+      "baseline_answer": "Robert Guiscard",
+      "calibrated_flow_answer": "Robert Guiscard",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 3,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.05063181802452527,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.840640868110053,
+        0.11320132950361189,
+        0.04615779254836132
+      ],
+      "retrieval_scores_by_step": [
+        0.10185610434882904,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56de4a474396321400ee2787",
+      "question": "How many customaries does Norman customary law have?",
+      "answers": [
+        "two",
+        "two",
+        "two"
+      ],
+      "baseline_answer": "Two",
+      "calibrated_flow_answer": "Two",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.7442630224154396,
+        0.25573696724454226
+      ],
+      "retrieval_scores_by_step": [
+        0.17791068001019592,
+        0.08434531083010753
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "56e1f10ee3433e1400423224",
+      "question": "What lies between L and P that prevents a definitive determination of the relationship between L and P?",
+      "answers": [
+        "complexity classes",
+        "many complexity classes",
+        "many complexity classes"
+      ],
+      "baseline_answer": "Complexity classes such as NL and NC",
+      "calibrated_flow_answer": "Complexity classes such as NL and NC",
+      "baseline_f1": 0.4444444444444445,
+      "calibrated_flow_f1": 0.4444444444444445,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 2,
+      "combined_scores_by_step": [
+        0.3999999999999999,
+        1.0
+      ],
+      "flow_scores_by_step": [
+        0.2154214269298747,
+        0.7845785657492467
+      ],
+      "retrieval_scores_by_step": [
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "56de4bb84396321400ee27a2",
+      "question": "When were the French wars of religion?",
+      "answers": [
+        "16th century",
+        "the 16th century",
+        "in the 16th century"
+      ],
+      "baseline_answer": "16th century",
+      "calibrated_flow_answer": "16th century",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.8795615495400395,
+        0.12043844118665475
+      ],
+      "retrieval_scores_by_step": [
+        0.3568650342636114,
+        0.033832749603071616
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "56e1ce08e3433e14004231a5",
+      "question": "What would create a conflict between a problem X and problem C within the context of reduction? ",
+      "answers": [
+        "if every problem in C can be reduced to X",
+        "problem in C is harder than X"
+      ],
+      "baseline_answer": "A problem X being reducible to a problem in C",
+      "calibrated_flow_answer": "A problem X is hard for a class of problems C if every problem in C",
+      "baseline_f1": 0.5,
+      "calibrated_flow_f1": 0.4615384615384615,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        0.5404292253867613,
+        0.40564895783075927,
+        0.19946483569043208,
+        0.7495003382993001,
+        0.2834626630472874
+      ],
+      "flow_scores_by_step": [
+        0.16914120531636417,
+        0.12641956919796807,
+        0.10927914187852517,
+        0.3650466939845786,
+        0.23011338168035494
+      ],
+      "retrieval_scores_by_step": [
+        0.16035409039034762,
+        0.1464993164955497,
+        0.0799625088864478,
+        0.05993247868954481,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56e181d9e3433e1400422fa3",
+      "question": "In the encoding of mathematical objects, what is the way in which integers are commonly expressed?",
+      "answers": [
+        "binary notation",
+        "binary notation",
+        "binary notation"
+      ],
+      "baseline_answer": "Binary notation",
+      "calibrated_flow_answer": "Binary notation",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "calibrated_flow_steps": 2,
+      "combined_scores_by_step": [
+        0.5068652222751607,
+        0.7816769803110609,
+        0.08324111846474411,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.158904179087,
+        0.6544020818841914,
+        0.1351668742586012,
+        0.05152685493624711
+      ],
+      "retrieval_scores_by_step": [
+        0.15988164541060118,
+        0.0726170359583982,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "5706149552bb891400689881",
+      "question": "How many teams did Los Angeles used to have?",
+      "answers": [
+        "two",
+        "two",
+        "two"
+      ],
+      "baseline_answer": "two teams",
+      "calibrated_flow_answer": "two teams",
+      "baseline_f1": 0.6666666666666666,
+      "calibrated_flow_f1": 0.6666666666666666,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.8463859573888823,
+        0.15361403265779394
+      ],
+      "retrieval_scores_by_step": [
+        0.1549827186299646,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "56e19724cd28a01900c679f8",
+      "question": "The traveling salesman problem is an example of what type of problem?",
+      "answers": [
+        "A function problem",
+        "function",
+        "function problem"
+      ],
+      "baseline_answer": "Function problem",
+      "calibrated_flow_answer": "Function problem",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 2,
+      "combined_scores_by_step": [
+        0.3999999999999999,
+        0.6000000000000001
+      ],
+      "flow_scores_by_step": [
+        0.2888897618005771,
+        0.7111102302862234
+      ],
+      "retrieval_scores_by_step": [
+        0.3276981164313544,
+        0.11637569231985972
+      ],
+      "labels_by_step": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "56de49a8cffd8e1900b4b7a9",
+      "question": "Who sold the rights?",
+      "answers": [
+        "Maciot de Bethencourt",
+        "Maciot de Bethencourt",
+        "Maciot de Bethencourt"
+      ],
+      "baseline_answer": "Maciot de Bethencourt",
+      "calibrated_flow_answer": "Maciot de Bethencourt",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.8519583611117235,
+        0.14804162939044907
+      ],
+      "retrieval_scores_by_step": [
+        0.26402478190717993,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "57060f3e75f01819005e7922",
+      "question": "What is the central business district of San Diego?",
+      "answers": [
+        "Downtown San Diego",
+        "Downtown San Diego",
+        "Downtown"
+      ],
+      "baseline_answer": "Downtown San Diego",
+      "calibrated_flow_answer": "Downtown San Diego",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 3,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.08915835440925649,
+        0.05182033280856237
+      ],
+      "flow_scores_by_step": [
+        0.7838974150157232,
+        0.07754859129689101,
+        0.13855398421250184
+      ],
+      "retrieval_scores_by_step": [
+        0.6875798165835048,
+        0.15325871024160664,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56e202e9e3433e1400423243",
+      "question": "What complex measurements were defined by \"On the Computational Complexity of Algorithms\"?",
+      "answers": [
+        "time and space",
+        "definitions of time and space complexity",
+        "time and space complexity"
+      ],
+      "baseline_answer": "Time and space complexity",
+      "calibrated_flow_answer": "Time and space complexity",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.75266937349814,
+        0.24733061906602619
+      ],
+      "retrieval_scores_by_step": [
+        0.23870284498211994,
+        0.044735804432413394
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "56e1b355e3433e14004230b1",
+      "question": "What often affects or facilitates ease of analysis in computational problems?",
+      "answers": [
+        "unusual resources",
+        "more unusual resources",
+        "more unusual resources"
+      ],
+      "baseline_answer": "Unusual resources",
+      "calibrated_flow_answer": "Unusual resources",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 3,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        0.8247031274406555,
+        0.7443285906340028,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.3821344944857962,
+        0.48503517134169294,
+        0.13283032886954796
+      ],
+      "retrieval_scores_by_step": [
+        0.11020531950147154,
+        0.05279905378377579,
+        0.020392747319509356
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56e1b8f3e3433e14004230e8",
+      "question": "What is one common example of a critical complexity measure?",
+      "answers": [
+        "time",
+        "time complexity",
+        "time complexity"
+      ],
+      "baseline_answer": "Time complexity",
+      "calibrated_flow_answer": "Time complexity",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.7668672057397067,
+        0.23313278469978915
+      ],
+      "retrieval_scores_by_step": [
+        0.1807440253915541,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "56e1b754cd28a01900c67ac0",
+      "question": "Decision tree is an example of what type of measure?",
+      "answers": [
+        "Complexity measures",
+        "complexity measures",
+        "complexity"
+      ],
+      "baseline_answer": "complexity measure",
+      "calibrated_flow_answer": "complexity measure",
+      "baseline_f1": 0.6666666666666666,
+      "calibrated_flow_f1": 0.6666666666666666,
+      "baseline_steps": 4,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.3266334922234452,
+        0.0,
+        0.13414299715041159
+      ],
+      "flow_scores_by_step": [
+        0.5542048776108653,
+        0.1966555520794384,
+        0.07049823215727485,
+        0.17864132866491972
+      ],
+      "retrieval_scores_by_step": [
+        0.13045589515922199,
+        0.055491133371622946,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "56de16ca4396321400ee25c8",
+      "question": "Who was the ruling class ahead of the Normans?",
+      "answers": [
+        "Anglo-Saxons",
+        "the Anglo-Saxons",
+        "Anglo-Saxons"
+      ],
+      "baseline_answer": "The Anglo-Saxons were the ruling class ahead of the Normans",
+      "calibrated_flow_answer": "The Anglo-Saxons were the ruling class ahead of the Normans",
+      "baseline_f1": 0.42857142857142855,
+      "calibrated_flow_f1": 0.42857142857142855,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.10520693476217462,
+        0.02187733879296397,
+        0.01145107647468464,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.7719603365334807,
+        0.07030653360051967,
+        0.06573162420908098,
+        0.05299500768626335,
+        0.03900648888492721
+      ],
+      "retrieval_scores_by_step": [
+        0.2771840965001963,
+        0.055148927562676295,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56ddde6b9a695914005b962c",
+      "question": "What century did the Normans first gain their separate identity?",
+      "answers": [
+        "10th century",
+        "the first half of the 10th century",
+        "10th",
+        "10th"
+      ],
+      "baseline_answer": "10th century",
+      "calibrated_flow_answer": "10th century",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.25944610995991246,
+        0.0,
+        0.0011773462090898586
+      ],
+      "flow_scores_by_step": [
+        0.6678881427722085,
+        0.22017664490051014,
+        0.05536664331028821,
+        0.05656855970460571
+      ],
+      "retrieval_scores_by_step": [
+        0.11199306142987309,
+        0.027439767092965795,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "5706094b52bb8914006897e2",
+      "question": "What was the effect of the housing crash on the region?",
+      "answers": [
+        "heavily impacted",
+        "heavily impacted"
+      ],
+      "baseline_answer": "The region was heavily impacted by the housing crash",
+      "calibrated_flow_answer": "The region was heavily impacted by the housing crash",
+      "baseline_f1": 0.3636363636363636,
+      "calibrated_flow_f1": 0.3636363636363636,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.03283507012562916,
+        0.02240019550638356,
+        0.10247051747088247,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.6877139359479317,
+        0.0709031752192941,
+        0.05955490165610088,
+        0.1466340369040735,
+        0.035193942309772866
+      ],
+      "retrieval_scores_by_step": [
+        0.3287781091715193,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "5705fc3a52bb89140068976a",
+      "question": "What kind of climate does southern California maintain?",
+      "answers": [
+        "Mediterranean",
+        "a Mediterranean climate",
+        "Mediterranean"
+      ],
+      "baseline_answer": "Mediterranean climate",
+      "calibrated_flow_answer": "Mediterranean climate",
+      "baseline_f1": 0.8,
+      "calibrated_flow_f1": 0.8,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.6083463773017288,
+        0.020575346813308203,
+        0.0,
+        0.039587351968872884
+      ],
+      "flow_scores_by_step": [
+        0.5618858745889921,
+        0.2860896218587109,
+        0.05113418258338495,
+        0.03299741211374111,
+        0.06789290002323899
+      ],
+      "retrieval_scores_by_step": [
+        0.17199083846552782,
+        0.13811927827445827,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "570602fa52bb89140068979e",
+      "question": "Southern California's distinctive regions are divided culturally, politically and what other trait?",
+      "answers": [
+        "economically",
+        "economically",
+        "economically"
+      ],
+      "baseline_answer": "economically",
+      "calibrated_flow_answer": "economically",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.7768105867764123,
+        0.22318940546294375
+      ],
+      "retrieval_scores_by_step": [
+        0.2561812660067414,
+        0.18496940082303237
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "570603c475f01819005e7882",
+      "question": "Southern California had a population of 22,680,010 according to the census from which year?",
+      "answers": [
+        "2010",
+        "2010",
+        "2010"
+      ],
+      "baseline_answer": "2010",
+      "calibrated_flow_answer": "2010",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.8044846393371577,
+        0.19551534901809425
+      ],
+      "retrieval_scores_by_step": [
+        0.5119953349139118,
+        0.055050709263703604
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "57092322efce8f15003a7db2",
+      "question": "What year did BSkyB acquire Sky Italia?",
+      "answers": [
+        "2014",
+        "2014",
+        "2014"
+      ],
+      "baseline_answer": "2014",
+      "calibrated_flow_answer": "2014",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 3,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.05842832696085735,
+        0.19415967145512256
+      ],
+      "flow_scores_by_step": [
+        0.6125028688522977,
+        0.11291545734211615,
+        0.2745816563167977
+      ],
+      "retrieval_scores_by_step": [
+        0.13774919747785266,
+        0.054939556188998144,
+        0.04077436327958847
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56e1c2eee3433e1400423134",
+      "question": "Concrete bounding of computation time frequently produces complexity classes contingent upon what?",
+      "answers": [
+        "chosen machine model",
+        "the chosen machine model",
+        "the chosen machine model"
+      ],
+      "baseline_answer": "machine model",
+      "calibrated_flow_answer": "Machine model",
+      "baseline_f1": 0.8,
+      "calibrated_flow_f1": 0.8,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.20131786696489248,
+        0.07798773015335576,
+        0.09475683978421956,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.5957113472165685,
+        0.18106458489049823,
+        0.06939752282090468,
+        0.10857268558034773,
+        0.04525385149570118
+      ],
+      "retrieval_scores_by_step": [
+        0.3394901289291065,
+        0.04522333554954831,
+        0.04385454246501448,
+        0.021845474643023454,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56e17e6ee3433e1400422f7f",
+      "question": "By how many kilometers does the traveling salesman problem seek to classify a route between the 15 largest cities in Germany?",
+      "answers": [
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "baseline_answer": "2000 kilometers",
+      "calibrated_flow_answer": "The traveling salesman problem seeks to classify a route between the 15 largest cities",
+      "baseline_f1": 0.6666666666666666,
+      "calibrated_flow_f1": 0.0,
+      "baseline_steps": 3,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.13241607204239308,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.7127037925999673,
+        0.20962388410001284,
+        0.07767231314278845
+      ],
+      "retrieval_scores_by_step": [
+        0.2973477367250784,
+        0.021885395703570718,
+        0.016447452069570545
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56de15104396321400ee25b7",
+      "question": "Where did the Normans and Byzantines sign the peace treaty?",
+      "answers": [
+        "Deabolis",
+        "Deabolis",
+        "Deabolis"
+      ],
+      "baseline_answer": "Deabolis",
+      "calibrated_flow_answer": "Deabolis",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.11249196146777374,
+        0.05405977751245747,
+        0.10752553331069717,
+        0.047341171518061824
+      ],
+      "flow_scores_by_step": [
+        0.6877704424457757,
+        0.04395803383146,
+        0.04884663565325661,
+        0.12466879167617748,
+        0.09475608861145562
+      ],
+      "retrieval_scores_by_step": [
+        0.26225456618968407,
+        0.07375382357078902,
+        0.032456526745996916,
+        0.021181818617972272,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "56dddf4066d3e219004dad5f",
+      "question": "Who was the duke in the battle of Hastings?",
+      "answers": [
+        "William the Conqueror",
+        "William the Conqueror",
+        "William the Conqueror"
+      ],
+      "baseline_answer": "William the Conqueror",
+      "calibrated_flow_answer": "William the Conqueror",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0,
+        0.030643914465622514,
+        0.011442065219931076,
+        0.09436244076272218
+      ],
+      "flow_scores_by_step": [
+        0.691163913469104,
+        0.04019940129444648,
+        0.07344623627544285,
+        0.0526133649515316,
+        0.14257707389433555
+      ],
+      "retrieval_scores_by_step": [
+        0.21429395262058698,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "5705e33f52bb89140068964e",
+      "question": "What is the name of the state that the megaregion expands to in the east?",
+      "answers": [
+        "Nevada",
+        "Nevada",
+        "Nevada"
+      ],
+      "baseline_answer": "Nevada",
+      "calibrated_flow_answer": "Nevada",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.8372551620847504,
+        0.1627448280324363
+      ],
+      "retrieval_scores_by_step": [
+        0.08133329501696265,
+        0.030308010675252177
+      ],
+      "labels_by_step": [
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "56de52614396321400ee27fe",
+      "question": "What tradition were the Saint-Evroul monks known for?",
+      "answers": [
+        "singing",
+        "singing",
+        "singing"
+      ],
+      "baseline_answer": "Singing tradition",
+      "calibrated_flow_answer": "Singing tradition",
+      "baseline_f1": 0.6666666666666666,
+      "calibrated_flow_f1": 0.6666666666666666,
+      "baseline_steps": 3,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.17678018282732058,
+        0.5482797209829054
+      ],
+      "flow_scores_by_step": [
+        0.4397831321826935,
+        0.14577719305944026,
+        0.4144396680987846
+      ],
+      "retrieval_scores_by_step": [
+        0.17499542327026796,
+        0.12493197786465332,
+        0.08528395098879055
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "5706155352bb891400689896",
+      "question": "What is rugby rapidly becoming with high schools?",
+      "answers": [
+        "an official school sport",
+        "an official school",
+        "official school sport"
+      ],
+      "baseline_answer": "An official school sport",
+      "calibrated_flow_answer": "An official school sport",
+      "baseline_f1": 1.0,
+      "calibrated_flow_f1": 1.0,
+      "baseline_steps": 1,
+      "calibrated_flow_steps": 1,
+      "combined_scores_by_step": [
+        1.0
+      ],
+      "flow_scores_by_step": [
+        0.9999999922589886
+      ],
+      "retrieval_scores_by_step": [
+        0.1435896365646787
+      ],
+      "labels_by_step": [
+        1
+      ]
+    }
+  ],
+  "note": "Calibrated Qwen attention-flow + retrieval relevance bridge, not exact 71120 implementation."
+}

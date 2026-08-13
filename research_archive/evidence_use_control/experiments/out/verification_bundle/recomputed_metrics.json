@@ -1,0 +1,10 @@
+{
+  "n": 16,
+  "baseline_mean_f1": 0.7263392857142857,
+  "trust_gated_mean_f1": 0.7357142857142858,
+  "f1_delta": 0.009375000000000022,
+  "baseline_mean_steps": 3.375,
+  "trust_gated_mean_steps": 2.3125,
+  "mean_effort_reduction": 1.0625,
+  "relative_effort_reduction": 0.3148148148148148
+}

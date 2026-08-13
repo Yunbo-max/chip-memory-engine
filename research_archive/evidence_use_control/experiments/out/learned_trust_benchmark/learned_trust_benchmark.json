@@ -1,0 +1,3615 @@
+{
+  "run_at_utc": "2026-06-08T17:56:23.077879+00:00",
+  "config": {
+    "limit": 1024,
+    "fixed_k": 5,
+    "max_f1_drop": 0.05
+  },
+  "gpu": {
+    "ok": true,
+    "visible_cuda_devices": "2",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "memory_cap_gib": 20.0,
+    "memory_cap_fraction": 0.845772,
+    "probe_sum": 256.0,
+    "max_memory_allocated_mib": 0.001
+  },
+  "splits": {
+    "train": 307,
+    "val": 102,
+    "test": 103
+  },
+  "chunk_classifier": {
+    "val_auroc": 0.8278031567141724,
+    "val_auprc": 0.7878656721265597,
+    "train_chunks": 1277,
+    "val_chunks": 402,
+    "train_positive_rate": 0.33829287392325763,
+    "val_positive_rate": 0.34577114427860695
+  },
+  "selected_threshold": 0.8999999999999999,
+  "validation_aggregate_at_selected_threshold": {
+    "n": 102,
+    "baseline_mean_token_f1": 0.9901960784313726,
+    "learned_trust_mean_token_f1": 0.9411764705882353,
+    "token_f1_delta": -0.0490196078431373,
+    "baseline_mean_steps": 3.5,
+    "learned_trust_mean_steps": 2.1862745098039214,
+    "mean_effort_reduction": 1.3137254901960786,
+    "relative_effort_reduction": 0.37535014005602246,
+    "answer_preservation_rate": 0.9509803921568627
+  },
+  "test_aggregate": {
+    "n": 103,
+    "baseline_mean_token_f1": 0.9902912621359223,
+    "learned_trust_mean_token_f1": 0.9514563106796117,
+    "token_f1_delta": -0.03883495145631066,
+    "baseline_mean_steps": 3.5436893203883497,
+    "learned_trust_mean_steps": 2.2233009708737863,
+    "mean_effort_reduction": 1.3203883495145634,
+    "relative_effort_reduction": 0.3726027397260275,
+    "answer_preservation_rate": 0.9611650485436893
+  },
+  "verdict": "PASS",
+  "test_rows": [
+    {
+      "question_id": "56e200e4cd28a01900c67c17",
+      "question": "In what year was the Alan Turing's definitional model of a computing device received?",
+      "answers": [
+        "1936",
+        "1936",
+        "1936"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "1936",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "1936",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.907424,
+          "contains_answer": true,
+          "chunk": "Most influential among these was the definition of Turing machines by Alan Turing in 1936, which turned out to be a very robust and flexible simplification of a computer."
+        }
+      ]
+    },
+    {
+      "question_id": "570607f575f01819005e78b7",
+      "question": "There are 34 cities in southern California that have a population exceeding what number?",
+      "answers": [
+        "100,000",
+        "100,000",
+        "100,000"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "100,000",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 3,
+      "learned_trust_answer": "100,000",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.897599,
+          "contains_answer": true,
+          "chunk": "In southern California there are also twelve cities with more than 200,000 residents and 34 cities over 100,000 in population."
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.575959,
+          "contains_answer": false,
+          "chunk": "Los Angeles (at 3.7 million people) and San Diego (at 1.3 million people), both in southern California, are the two largest cities in all of California (and two of the eight largest cities in the United States)."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.362238,
+          "contains_answer": false,
+          "chunk": "Many of southern California's most developed cities lie along or in close proximity to the coast, with the exception of San Bernardino and Riverside."
+        }
+      ]
+    },
+    {
+      "question_id": "5705f09e75f01819005e77a7",
+      "question": "What was the percentage of people that voted in favor of the Pico Act of 1859?",
+      "answers": [
+        "75",
+        "75%",
+        "75"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "75",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "75",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.835712,
+          "contains_answer": false,
+          "chunk": "The last attempt, the Pico Act of 1859, was passed by the California State Legislature and signed by the State governor John B."
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.450407,
+          "contains_answer": false,
+          "chunk": "Subsequently, Californios (dissatisfied with inequitable taxes and land laws) and pro-slavery southerners in the lightly populated \"Cow Counties\" of southern California attempted three times in the 1850s to achieve a separate statehood or territorial status separate from Northern California."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.131146,
+          "contains_answer": false,
+          "chunk": "Weller."
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.19087,
+          "contains_answer": true,
+          "chunk": "It was approved overwhelmingly by nearly 75% of voters in the proposed Territory of Colorado."
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.313908,
+          "contains_answer": false,
+          "chunk": "This territory was to include all the counties up to the then much larger Tulare County (that included what is now Kings, most of Kern, and part of Inyo counties) and San Luis Obispo County."
+        }
+      ]
+    },
+    {
+      "question_id": "570614ff52bb89140068988d",
+      "question": "Which conference do the teams in southern California play in?",
+      "answers": [
+        "Pac-12",
+        "the Pac-12",
+        "Pac-12"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Pac-12",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 2,
+      "learned_trust_answer": "Pac-12",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.845905,
+          "contains_answer": false,
+          "chunk": "College sports are also popular in southern California."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.529301,
+          "contains_answer": true,
+          "chunk": "The UCLA Bruins and the USC Trojans both field teams in NCAA Division I in the Pac-12 Conference, and there is a longtime rivalry between the schools."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1bd4acd28a01900c67afc",
+      "question": "What expression is generally used to convey upper or lower bounds?",
+      "answers": [
+        "big O notation",
+        "big O notation",
+        "big O notation"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "big O notation",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 3,
+      "learned_trust_answer": "big O notation",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.878716,
+          "contains_answer": true,
+          "chunk": "Upper and lower bounds are usually stated using the big O notation, which hides constant factors and smaller terms."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.373396,
+          "contains_answer": false,
+          "chunk": "This makes the bounds independent of the specific details of the computational model used."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.193664,
+          "contains_answer": true,
+          "chunk": "For instance, if T(n) = 7n2 + 15n + 40, in big O notation one would write T(n) = O(n2)."
+        }
+      ]
+    },
+    {
+      "question_id": "56de3f784396321400ee26fa",
+      "question": "What ruined Richard's plans to reach Acre?",
+      "answers": [
+        "a storm",
+        "a storm",
+        "a storm"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "a storm",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "a storm",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.898006,
+          "contains_answer": false,
+          "chunk": "In April 1191 Richard the Lion-hearted left Messina with a large fleet in order to reach Acre."
+        },
+        {
+          "step": 2,
+          "chunk_index": 4,
+          "trust": 0.345247,
+          "contains_answer": false,
+          "chunk": "On 1 May 1191, Richard's fleet arrived in the port of Limassol on Cyprus."
+        },
+        {
+          "step": 3,
+          "chunk_index": 6,
+          "trust": 0.22254,
+          "contains_answer": false,
+          "chunk": "Isaac refused, so Richard landed his troops and took Limassol."
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.126361,
+          "contains_answer": true,
+          "chunk": "But a storm dispersed the fleet."
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.160551,
+          "contains_answer": false,
+          "chunk": "Survivors of the wrecks had been taken prisoner by the island's despot Isaac Komnenos."
+        }
+      ]
+    },
+    {
+      "question_id": "57094b4f9928a814004714fa",
+      "question": "What was Sky Travel later rebranded as?",
+      "answers": [
+        "Pick TV",
+        "Pick TV",
+        "Pick TV"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "Pick TV",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "Pick TV",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.847089,
+          "contains_answer": false,
+          "chunk": "Initially BSkyB provided Sky Travel to the service."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.537841,
+          "contains_answer": true,
+          "chunk": "However, this was replaced by Sky Three on 31 October 2005, which was itself later re-branded as 'Pick TV' in 2011."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.306347,
+          "contains_answer": false,
+          "chunk": "Prior to October 2005, three BSkyB channels were available on this platform: Sky News, Sky Three, and Sky Sports News."
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.372183,
+          "contains_answer": false,
+          "chunk": "While BSkyB had been excluded from being a part of the ONdigital consortium, thereby making them a competitor by default, BSkyB was able to join ITV Digital's free-to-air replacement, Freeview, in which it holds an equal stake with the BBC, ITV, Channel 4 and National Grid Wireless."
+        }
+      ]
+    },
+    {
+      "question_id": "56e16839cd28a01900c67887",
+      "question": "What measure of a computational problem broadly defines the inherent difficulty of the solution?",
+      "answers": [
+        "if its solution requires significant resources",
+        "its solution requires significant resources",
+        "if its solution requires significant resources"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "if its solution requires significant resources",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "if its solution requires significant resources",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.844777,
+          "contains_answer": true,
+          "chunk": "A problem is regarded as inherently difficult if its solution requires significant resources, whatever the algorithm used."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.472998,
+          "contains_answer": false,
+          "chunk": "One of the roles of computational complexity theory is to determine the practical limits on what computers can and cannot do."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.30029,
+          "contains_answer": false,
+          "chunk": "The theory formalizes this intuition, by introducing mathematical models of computation to study these problems and quantifying the amount of resources needed to solve them, such as time and storage."
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.317408,
+          "contains_answer": false,
+          "chunk": "Other complexity measures are also used, such as the amount of communication (used in communication complexity), the number of gates in a circuit (used in circuit complexity) and the number of processors (used in parallel computing)."
+        }
+      ]
+    },
+    {
+      "question_id": "56de40da4396321400ee270a",
+      "question": "Who led Richard's troops when Cyprus was conquered?",
+      "answers": [
+        "Guy de Lusignan",
+        "Guy de Lusignan",
+        "Guy de Lusignan"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Guy de Lusignan",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "Guy de Lusignan",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.8714,
+          "contains_answer": true,
+          "chunk": "Richard then proceeded to conquer the whole island, his troops being led by Guy de Lusignan."
+        },
+        {
+          "step": 2,
+          "chunk_index": 6,
+          "trust": 0.419023,
+          "contains_answer": false,
+          "chunk": "By 1 June, Richard had conquered the whole island."
+        },
+        {
+          "step": 3,
+          "chunk_index": 9,
+          "trust": 0.319934,
+          "contains_answer": false,
+          "chunk": "Before his departure, he named two of his Norman generals, Richard de Camville and Robert de Thornham, as governors of Cyprus."
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.2689,
+          "contains_answer": false,
+          "chunk": "The local barons abandoned Isaac, who considered making peace with Richard, joining him on the crusade, and offering his daughter in marriage to the person named by Richard."
+        },
+        {
+          "step": 5,
+          "chunk_index": 8,
+          "trust": 0.143302,
+          "contains_answer": false,
+          "chunk": "Richard left for Acre on 5 June, with his allies."
+        }
+      ]
+    },
+    {
+      "question_id": "570961aa200fba1400367f18",
+      "question": "What platform caused BSkyB to end their analogue service?",
+      "answers": [
+        "Sky Digital",
+        "Sky Digital",
+        "Sky Digital platform"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Sky Digital",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Sky Digital",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.928314,
+          "contains_answer": true,
+          "chunk": "The service continued until the closure of BSkyB's analogue service on 27 September 2001, due to the launch and expansion of the Sky Digital platform."
+        }
+      ]
+    },
+    {
+      "question_id": "56de40da4396321400ee2708",
+      "question": "Who was Guy's Rival?",
+      "answers": [
+        "Conrad of Montferrat",
+        "Conrad of Montferrat",
+        "Conrad of Montferrat"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Conrad of Montferrat",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Conrad of Montferrat",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.918689,
+          "contains_answer": true,
+          "chunk": "All declared their support for Richard provided that he support Guy against his rival Conrad of Montferrat."
+        }
+      ]
+    },
+    {
+      "question_id": "5706094b52bb8914006897df",
+      "question": "Southern California is most famous for tourism and what notably named district?",
+      "answers": [
+        "Hollywood",
+        "Hollywood",
+        "Hollywood"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Hollywood",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "Hollywood",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.894768,
+          "contains_answer": true,
+          "chunk": "Southern California is famous for tourism and Hollywood (film, television, and music)."
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.389421,
+          "contains_answer": false,
+          "chunk": "Southern California's economy is diverse and one of the largest in the United States."
+        },
+        {
+          "step": 3,
+          "chunk_index": 3,
+          "trust": 0.18268,
+          "contains_answer": false,
+          "chunk": "Other industries include software, automotive, ports, finance, tourism, biomedical, and regional logistics."
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.2234,
+          "contains_answer": false,
+          "chunk": "It is dominated and heavily dependent upon abundance of petroleum, as opposed to other regions where automobiles not nearly as dominant, the vast majority of transport runs on this fuel."
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.150614,
+          "contains_answer": false,
+          "chunk": "The region was a leader in the housing bubble 2001\u20132007, and has been heavily impacted by the housing crash."
+        }
+      ]
+    },
+    {
+      "question_id": "57060cc352bb89140068980f",
+      "question": "Downtown Santa Monica and Downtown Glendale are a part of which area?",
+      "answers": [
+        "Los Angeles Area",
+        "the Los Angeles Area",
+        "major business"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Los Angeles Area",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Los Angeles Area",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.957602,
+          "contains_answer": true,
+          "chunk": "Within the Los Angeles Area are the major business districts of Downtown Burbank, Downtown Santa Monica, Downtown Glendale and Downtown Long Beach."
+        }
+      ]
+    },
+    {
+      "question_id": "56e190bce3433e1400422fcc",
+      "question": "What answer denotes that an algorithm has accepted an input string?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "yes",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "yes",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.917158,
+          "contains_answer": true,
+          "chunk": "If the algorithm deciding this problem returns the answer yes, the algorithm is said to accept the input string, otherwise it is said to reject the input."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b8f3e3433e14004230e8",
+      "question": "What is one common example of a critical complexity measure?",
+      "answers": [
+        "time",
+        "time complexity",
+        "time complexity"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "time",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "time",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.909715,
+          "contains_answer": true,
+          "chunk": "The best, worst and average case complexity refer to three different ways of measuring the time complexity (or any other complexity measure) of different inputs of the same size."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1cbe2cd28a01900c67bb0",
+      "question": "According to polynomial time reduction squaring can ultimately be logically reduced to what?",
+      "answers": [
+        "multiplication",
+        "multiplication",
+        "multiplication"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "multiplication",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "multiplication",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.868812,
+          "contains_answer": false,
+          "chunk": "The most commonly used reduction is a polynomial-time reduction."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.393344,
+          "contains_answer": false,
+          "chunk": "This means that the reduction process takes polynomial time."
+        },
+        {
+          "step": 3,
+          "chunk_index": 5,
+          "trust": 0.320196,
+          "contains_answer": true,
+          "chunk": "Thus we see that squaring is not more difficult than multiplication, since squaring can be reduced to multiplication."
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.230956,
+          "contains_answer": false,
+          "chunk": "For example, the problem of squaring an integer can be reduced to the problem of multiplying two integers."
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.137941,
+          "contains_answer": false,
+          "chunk": "This means an algorithm for multiplying two integers can be used to square an integer."
+        }
+      ]
+    },
+    {
+      "question_id": "57094d489928a8140047150c",
+      "question": "Who is the parent company of NDS?",
+      "answers": [
+        "Cisco Systems",
+        "Cisco Systems",
+        "Cisco Systems company"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Cisco Systems",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "Cisco Systems",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.87028,
+          "contains_answer": true,
+          "chunk": "BSkyB utilises the VideoGuard pay-TV scrambling system owned by NDS, a Cisco Systems company."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.307409,
+          "contains_answer": false,
+          "chunk": "There are tight controls over use of VideoGuard decoders; they are not available as stand-alone DVB CAMs (conditional-access modules)."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.208131,
+          "contains_answer": false,
+          "chunk": "BSkyB has design authority over all digital satellite receivers capable of receiving their service."
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.231277,
+          "contains_answer": false,
+          "chunk": "The receivers, though designed and built by different manufacturers, must conform to the same user interface look-and-feel as all the others."
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.156429,
+          "contains_answer": false,
+          "chunk": "This extends to the Personal video recorder (PVR) offering (branded Sky+)."
+        }
+      ]
+    },
+    {
+      "question_id": "56e181d9e3433e1400422fa1",
+      "question": "What is the name of the alphabet is most commonly used in a problem instance?",
+      "answers": [
+        "binary alphabet",
+        "binary",
+        "binary"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "binary alphabet",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "binary alphabet",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.873087,
+          "contains_answer": false,
+          "chunk": "When considering computational problems, a problem instance is a string over an alphabet."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.418934,
+          "contains_answer": true,
+          "chunk": "Usually, the alphabet is taken to be the binary alphabet (i.e., the set {0,1}), and thus the strings are bitstrings."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.184128,
+          "contains_answer": false,
+          "chunk": "As in a real-world computer, mathematical objects other than bitstrings must be suitably encoded."
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.211212,
+          "contains_answer": true,
+          "chunk": "For example, integers can be represented in binary notation, and graphs can be encoded directly via their adjacency matrices, or by encoding their adjacency lists in binary."
+        }
+      ]
+    },
+    {
+      "question_id": "56de49a8cffd8e1900b4b7a8",
+      "question": "Who bought the rights?",
+      "answers": [
+        "Enrique P\u00e9rez de Guzm\u00e1n",
+        "Enrique P\u00e9rez de Guzm\u00e1n",
+        "Enrique P\u00e9rez de Guzm\u00e1n"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Enrique P\u00e9rez de Guzm\u00e1n",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Enrique P\u00e9rez de Guzm\u00e1n",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.902323,
+          "contains_answer": true,
+          "chunk": "In 1418, Jean's nephew Maciot de Bethencourt sold the rights to the islands to Enrique P\u00e9rez de Guzm\u00e1n, 2nd Count de Niebla."
+        }
+      ]
+    },
+    {
+      "question_id": "5705fc3a52bb89140068976b",
+      "question": "Other than many sunny days, what characteristic is typical for the climate in souther California?",
+      "answers": [
+        "infrequent rain",
+        "infrequent rain",
+        "infrequent rain"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "infrequent rain",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "infrequent rain",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.866328,
+          "contains_answer": true,
+          "chunk": "Southern California contains a Mediterranean climate, with infrequent rain and many sunny days."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.415219,
+          "contains_answer": false,
+          "chunk": "In the summers, temperature ranges are 90-60's while as winters are 70-50's, usually all of Southern California have Mediterranean climate."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.174816,
+          "contains_answer": false,
+          "chunk": "Summers are hot and dry, while winters are a bit warm or mild and wet."
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.118519,
+          "contains_answer": false,
+          "chunk": "Serious rain can occur unusually."
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.172714,
+          "contains_answer": false,
+          "chunk": "But snow is very rare in the Southwest of the state, it occurs on the Southeast of the state."
+        }
+      ]
+    },
+    {
+      "question_id": "56dde0ba66d3e219004dad75",
+      "question": "When was the Duchy of Normandy founded?",
+      "answers": [
+        "911",
+        "911",
+        "911"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "911",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "911",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.958831,
+          "contains_answer": true,
+          "chunk": "The Duchy of Normandy, which began in 911 as a fiefdom, was established by the treaty of Saint-Clair-sur-Epte between King Charles III of West Francia and the famed Viking ruler Rollo, and was situated in the former Frankish kingdom of Neustria."
+        }
+      ]
+    },
+    {
+      "question_id": "56e181d9e3433e1400422fa0",
+      "question": "In a computational problem, what can be described as a string over an alphabet?",
+      "answers": [
+        "problem instance",
+        "a problem instance",
+        "problem instance"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "problem instance",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "problem instance",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.894734,
+          "contains_answer": true,
+          "chunk": "When considering computational problems, a problem instance is a string over an alphabet."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.382058,
+          "contains_answer": false,
+          "chunk": "Usually, the alphabet is taken to be the binary alphabet (i.e., the set {0,1}), and thus the strings are bitstrings."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.18946,
+          "contains_answer": false,
+          "chunk": "As in a real-world computer, mathematical objects other than bitstrings must be suitably encoded."
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.22236,
+          "contains_answer": false,
+          "chunk": "For example, integers can be represented in binary notation, and graphs can be encoded directly via their adjacency matrices, or by encoding their adjacency lists in binary."
+        }
+      ]
+    },
+    {
+      "question_id": "570610b275f01819005e792d",
+      "question": "Which airport is home to the busiest single runway in the world?",
+      "answers": [
+        "San Diego International Airport",
+        "San Diego International Airport",
+        "San Diego International Airport"
+      ],
+      "baseline_steps": 1,
+      "baseline_answer": "San Diego International Airport",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "San Diego International Airport",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.992622,
+          "contains_answer": true,
+          "chunk": "Southern California is home to Los Angeles International Airport, the second-busiest airport in the United States by passenger volume (see World's busiest airports by passenger traffic) and the third by international passenger volume (see Busiest airports in the United States by international passenger traffic); San Diego International Airport the busiest single runway airport in the world; Van Nuys Airport, the world's busiest general aviation airport; major commercial airports at Orange County, Bakersfield, Ontario, Burbank and Long Beach; and numerous smaller commercial and general aviation airports."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b00ce3433e14004230a1",
+      "question": "In the determination of complexity classes, what are two examples of types of Turing machines?",
+      "answers": [
+        "probabilistic Turing machines, non-deterministic Turing machines",
+        "probabilistic Turing machines, non-deterministic Turing machines"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "probabilistic Turing machines, non-deterministic Turing machines",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "probabilistic Turing machines, non-deterministic Turing machines",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.958337,
+          "contains_answer": true,
+          "chunk": "Many types of Turing machines are used to define complexity classes, such as deterministic Turing machines, probabilistic Turing machines, non-deterministic Turing machines, quantum Turing machines, symmetric Turing machines and alternating Turing machines."
+        }
+      ]
+    },
+    {
+      "question_id": "56de3ebc4396321400ee26e8",
+      "question": "What major conquest did Tancred play a roll in?",
+      "answers": [
+        "Jerusalem",
+        "Jerusalem",
+        "Jerusalem"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "Jerusalem",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "Jerusalem",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.883557,
+          "contains_answer": true,
+          "chunk": "Tancred was instrumental in the conquest of Jerusalem and he worked for the expansion of the Crusader kingdom in Transjordan and the region of Galilee.[citation needed]"
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.465205,
+          "contains_answer": false,
+          "chunk": "In 1096, Crusaders passing by the siege of Amalfi were joined by Bohemond of Taranto and his nephew Tancred with an army of Italo-Normans."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.194851,
+          "contains_answer": false,
+          "chunk": "Bohemond was the de facto leader of the Crusade during its passage through Asia Minor."
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.200205,
+          "contains_answer": false,
+          "chunk": "After the successful Siege of Antioch in 1097, Bohemond began carving out an independent principality around that city."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1cbe2cd28a01900c67baf",
+      "question": "What would need to remain constant in a multiplication algorithm to produce the same outcome whether multiplying or squaring two integers?  ",
+      "answers": [
+        "input",
+        "input",
+        "input"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "input",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "input",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 5,
+          "trust": 0.849858,
+          "contains_answer": false,
+          "chunk": "Thus we see that squaring is not more difficult than multiplication, since squaring can be reduced to multiplication."
+        },
+        {
+          "step": 2,
+          "chunk_index": 4,
+          "trust": 0.488905,
+          "contains_answer": true,
+          "chunk": "Indeed, this can be done by giving the same input to both inputs of the multiplication algorithm."
+        },
+        {
+          "step": 3,
+          "chunk_index": 3,
+          "trust": 0.305425,
+          "contains_answer": false,
+          "chunk": "This means an algorithm for multiplying two integers can be used to square an integer."
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.261814,
+          "contains_answer": false,
+          "chunk": "For example, the problem of squaring an integer can be reduced to the problem of multiplying two integers."
+        },
+        {
+          "step": 5,
+          "chunk_index": 0,
+          "trust": 0.122971,
+          "contains_answer": false,
+          "chunk": "The most commonly used reduction is a polynomial-time reduction."
+        }
+      ]
+    },
+    {
+      "question_id": "56ddde6b9a695914005b9629",
+      "question": "When were the Normans in Normandy?",
+      "answers": [
+        "10th and 11th centuries",
+        "in the 10th and 11th centuries",
+        "10th and 11th centuries",
+        "10th and 11th centuries"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "10th and 11th centuries",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "10th and 11th centuries",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 3,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.939532,
+          "contains_answer": true,
+          "chunk": "The Normans (Norman: Nourmands; French: Normands; Latin: Normanni) were the people who in the 10th and 11th centuries gave their name to Normandy, a region in France."
+        }
+      ]
+    },
+    {
+      "question_id": "56de16ca4396321400ee25c6",
+      "question": "Who killed Harold II? ",
+      "answers": [
+        "William II",
+        "Duke William II",
+        "Duke William II"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "William II",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "William II",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.920516,
+          "contains_answer": true,
+          "chunk": "In 1066, Duke William II of Normandy conquered England killing King Harold II at the Battle of Hastings."
+        }
+      ]
+    },
+    {
+      "question_id": "56e190bce3433e1400422fc9",
+      "question": "What are the two simple word responses to a decision problem?",
+      "answers": [
+        "yes or no",
+        "yes or no",
+        "yes or no"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "yes or no",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "yes or no",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.882,
+          "contains_answer": true,
+          "chunk": "A decision problem is a special type of computational problem whose answer is either yes or no, or alternately either 1 or 0."
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.589291,
+          "contains_answer": false,
+          "chunk": "A decision problem can be viewed as a formal language, where the members of the language are instances whose output is yes, and the non-members are those instances whose output is no."
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.248901,
+          "contains_answer": false,
+          "chunk": "Decision problems are one of the central objects of study in computational complexity theory."
+        },
+        {
+          "step": 4,
+          "chunk_index": 4,
+          "trust": 0.285168,
+          "contains_answer": false,
+          "chunk": "If the algorithm deciding this problem returns the answer yes, the algorithm is said to accept the input string, otherwise it is said to reject the input."
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.223456,
+          "contains_answer": false,
+          "chunk": "The objective is to decide, with the aid of an algorithm, whether a given input string is a member of the formal language under consideration."
+        }
+      ]
+    },
+    {
+      "question_id": "56de0f6a4396321400ee257f",
+      "question": "Who was the Normans' main enemy in Italy, the Byzantine Empire and Armenia?",
+      "answers": [
+        "Seljuk Turks",
+        "the Pechenegs, the Bulgars, and especially the Seljuk Turks",
+        "the Seljuk Turks"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Seljuk Turks",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Seljuk Turks",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.929154,
+          "contains_answer": true,
+          "chunk": "Soon after the Normans began to enter Italy, they entered the Byzantine Empire and then Armenia, fighting against the Pechenegs, the Bulgars, and especially the Seljuk Turks."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b62ecd28a01900c67aa4",
+      "question": "Complexity theory classifies problems based on what primary attribute?",
+      "answers": [
+        "difficulty",
+        "difficulty",
+        "difficulty"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "difficulty",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "difficulty",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.934347,
+          "contains_answer": true,
+          "chunk": "Since complexity theory is interested in classifying problems based on their difficulty, one defines sets of problems based on some criteria."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e26d75f01819005e76d8",
+      "question": "The reasons for the las two counties to be added are based on what?",
+      "answers": [
+        "historical political divisions",
+        "historical political divisions",
+        "historical political divisions"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "historical political divisions",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "historical political divisions",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.851661,
+          "contains_answer": true,
+          "chunk": "The more extensive 10-county definition, including Kern and San Luis Obispo counties, is also used based on historical political divisions."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.553763,
+          "contains_answer": false,
+          "chunk": "The region is traditionally described as \"eight counties\", based on demographics and economic ties: Imperial, Los Angeles, Orange, Riverside, San Bernardino, San Diego, Santa Barbara, and Ventura."
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.282392,
+          "contains_answer": false,
+          "chunk": "Southern California, often abbreviated SoCal, is a geographic and cultural region that generally comprises California's southernmost 10 counties."
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.189738,
+          "contains_answer": false,
+          "chunk": "Southern California is a major economic center for the state of California and the United States."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e4fe75f01819005e7705",
+      "question": "What is the name of the desert on the border of Arizona?",
+      "answers": [
+        "Colorado Desert",
+        "the Colorado Desert",
+        "Colorado Desert"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Colorado Desert",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Colorado Desert",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.957114,
+          "contains_answer": true,
+          "chunk": "To the east is the Colorado Desert and the Colorado River at the border with Arizona, and the Mojave Desert at the border with the state of Nevada."
+        }
+      ]
+    },
+    {
+      "question_id": "56de4a474396321400ee2786",
+      "question": "Where are Jersey and Guernsey",
+      "answers": [
+        "Channel Islands",
+        "the Channel Islands",
+        "the Channel Islands"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Channel Islands",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Channel Islands",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.943823,
+          "contains_answer": true,
+          "chunk": "The customary law of Normandy was developed between the 10th and 13th centuries and survives today through the legal systems of Jersey and Guernsey in the Channel Islands."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e63175f01819005e7721",
+      "question": "What is the population of Los Angeles?",
+      "answers": [
+        "3,792,621",
+        "3,792,621",
+        "3,792,621"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "3,792,621",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "3,792,621",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 2,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.942199,
+          "contains_answer": true,
+          "chunk": "With a population of 3,792,621, Los Angeles is the most populous city in California and the second most populous in the United States."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e26d75f01819005e76d7",
+      "question": "What are the ties that best described what the \"eight counties\" are based on?",
+      "answers": [
+        "demographics and economic ties",
+        "economic",
+        "demographics and economic"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "demographics and economic ties",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "demographics and economic ties",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 3,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.93106,
+          "contains_answer": true,
+          "chunk": "The region is traditionally described as \"eight counties\", based on demographics and economic ties: Imperial, Los Angeles, Orange, Riverside, San Bernardino, San Diego, Santa Barbara, and Ventura."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c720e3433e140042316b",
+      "question": "In what expression can one expect to find DTIME(n)",
+      "answers": [
+        "DTIME(n2)",
+        "DTIME(n2)",
+        "DTIME(n2)"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "DTIME(n2)",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "DTIME(n2)",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.885817,
+          "contains_answer": true,
+          "chunk": "In particular, although DTIME(n) is contained in DTIME(n2), it would be interesting to know if the inclusion is strict."
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.365118,
+          "contains_answer": false,
+          "chunk": "For the complexity classes defined in this way, it is desirable to prove that relaxing the requirements on (say) computation time indeed defines a bigger set of problems."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.231302,
+          "contains_answer": false,
+          "chunk": "For time and space requirements, the answer to such questions is given by the time and space hierarchy theorems respectively."
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.192806,
+          "contains_answer": false,
+          "chunk": "They are called hierarchy theorems because they induce a proper hierarchy on the classes defined by constraining the respective resources."
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.1833,
+          "contains_answer": false,
+          "chunk": "Thus there are pairs of complexity classes such that one is properly included in the other."
+        }
+      ]
+    },
+    {
+      "question_id": "5705eb3375f01819005e7767",
+      "question": "Other than the motion picture and television industry, what other major industry is centered in Los Angeles?",
+      "answers": [
+        "music",
+        "major record companies"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "music",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "music",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 3,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.940679,
+          "contains_answer": true,
+          "chunk": "The motion picture, television, and music industry is centered on the Los Angeles in southern California."
+        }
+      ]
+    },
+    {
+      "question_id": "56de1563cffd8e1900b4b5c2",
+      "question": "When did the Normans attack Dyrrachium?",
+      "answers": [
+        "1185",
+        "in 1185",
+        "1185"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "1185",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "1185",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.928232,
+          "contains_answer": true,
+          "chunk": "The further decline of Byzantine state-of-affairs paved the road to a third attack in 1185, when a large Norman army invaded Dyrrachium, owing to the betrayal of high Byzantine officials."
+        }
+      ]
+    },
+    {
+      "question_id": "56e19724cd28a01900c679f6",
+      "question": "A function problem is an example of what?",
+      "answers": [
+        "a computational problem",
+        "a computational problem",
+        "a computational problem"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "a computational problem",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "a computational problem",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.960213,
+          "contains_answer": true,
+          "chunk": "A function problem is a computational problem where a single output (of a total function) is expected for every input, but the output is more complex than that of a decision problem, that is, it isn't just yes or no."
+        }
+      ]
+    },
+    {
+      "question_id": "5706139252bb891400689866",
+      "question": "What kind of university is the California Institute of Technology?",
+      "answers": [
+        "private",
+        "private",
+        "private"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "private",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "private",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.993024,
+          "contains_answer": true,
+          "chunk": "Amongst these include 5 University of California campuses (Irvine, Los Angeles, Riverside, Santa Barbara, and San Diego); 12 California State University campuses (Bakersfield, Channel Islands, Dominguez Hills, Fullerton, Los Angeles, Long Beach, Northridge, Pomona, San Bernardino, San Diego, San Marcos, and San Luis Obispo); and private institutions such as the California Institute of Technology, Chapman University, the Claremont Colleges (Claremont McKenna College, Harvey Mudd College, Pitzer College, Pomona College, and Scripps College), Loma Linda University, Loyola Marymount University, Occidental College, Pepperdine University, University of Redlands, University of San Diego, and the University of Southern California."
+        }
+      ]
+    },
+    {
+      "question_id": "56e17644e3433e1400422f41",
+      "question": "What field of computer science analyzes the resource requirements of a specific algorithm isolated unto itself within a given problem?",
+      "answers": [
+        "analysis of algorithms",
+        "analysis of algorithms",
+        "analysis of algorithms"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "analysis of algorithms",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "analysis of algorithms",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.819608,
+          "contains_answer": true,
+          "chunk": "Closely related fields in theoretical computer science are analysis of algorithms and computability theory."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.70626,
+          "contains_answer": true,
+          "chunk": "A key distinction between analysis of algorithms and computational complexity theory is that the former is devoted to analyzing the amount of resources needed by a particular algorithm to solve a problem, whereas the latter asks a more general question about all possible algorithms that could be used to solve the same problem."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.195429,
+          "contains_answer": false,
+          "chunk": "More precisely, it tries to classify problems that can or cannot be solved with appropriately restricted resources."
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.25892,
+          "contains_answer": false,
+          "chunk": "In turn, imposing restrictions on the available resources is what distinguishes computational complexity from computability theory: the latter theory asks what kind of problems can, in principle, be solved algorithmically."
+        }
+      ]
+    },
+    {
+      "question_id": "56e20a3ae3433e140042324b",
+      "question": "What theorem was implicated by Manuel Blum's axioms?",
+      "answers": [
+        "speed-up theorem",
+        "speed-up theorem",
+        "speed-up theorem"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "speed-up theorem",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "speed-up theorem",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 2,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.916721,
+          "contains_answer": true,
+          "chunk": "In 1967, Manuel Blum developed an axiomatic complexity theory based on his axioms and proved an important result, the so-called, speed-up theorem."
+        }
+      ]
+    },
+    {
+      "question_id": "5706155352bb891400689896",
+      "question": "What is rugby rapidly becoming with high schools?",
+      "answers": [
+        "an official school sport",
+        "an official school",
+        "official school sport"
+      ],
+      "baseline_steps": 1,
+      "baseline_answer": "an official school sport",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "an official school sport",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.923022,
+          "contains_answer": true,
+          "chunk": "Rugby is also a growing sport in southern California, particularly at the high school level, with increasing numbers of schools adding rugby as an official school sport."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1fc57e3433e140042322f",
+      "question": "Intractable problems lacking polynomial time solutions necessarily negate the practical efficacy of what type of algorithm?",
+      "answers": [
+        "exponential-time algorithms",
+        "exponential-time",
+        "exponential-time algorithms",
+        "exponential-time algorithms"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "",
+      "baseline_token_f1": 0.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "",
+      "learned_trust_token_f1": 0.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 8,
+          "trust": 0.854623,
+          "contains_answer": false,
+          "chunk": "Nevertheless, a polynomial time algorithm is not always practical."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.504335,
+          "contains_answer": false,
+          "chunk": "In complexity theory, problems that lack polynomial-time solutions are considered to be intractable for more than the smallest inputs."
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.415461,
+          "contains_answer": false,
+          "chunk": "Problems that can be solved in theory (e.g., given large but finite time), but which in practice take too long for their solutions to be useful, are known as intractable problems."
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.272211,
+          "contains_answer": false,
+          "chunk": "In fact, the Cobham\u2013Edmonds thesis states that only those problems that can be solved in polynomial time can be feasibly computed on some computational device."
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.165704,
+          "contains_answer": false,
+          "chunk": "Problems that are known to be intractable in this sense include those that are EXPTIME-hard."
+        }
+      ]
+    },
+    {
+      "question_id": "570603c475f01819005e7886",
+      "question": "Which region began to grow and assert itself in the 2000s?",
+      "answers": [
+        "Greater Sacramento",
+        "Greater Sacramento",
+        "Greater Sacramento"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Greater Sacramento",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Greater Sacramento",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.954019,
+          "contains_answer": true,
+          "chunk": "Despite a reputation for high growth rates, southern California's rate grew less than the state average of 10.0% in the 2000s as California's growth became concentrated in the northern part of the state due to a stronger, tech-oriented economy in the Bay Area and an emerging Greater Sacramento region."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c7e2cd28a01900c67b74",
+      "question": "What is the foundation for separation results within complexity classes?",
+      "answers": [
+        "time and space hierarchy theorems",
+        "The time and space hierarchy theorems",
+        "time and space hierarchy theorems"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "time and space hierarchy theorems",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "time and space hierarchy theorems",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.93147,
+          "contains_answer": true,
+          "chunk": "The time and space hierarchy theorems form the basis for most separation results of complexity classes."
+        }
+      ]
+    },
+    {
+      "question_id": "56de16ca4396321400ee25c7",
+      "question": "When was the Battle of Hastings?",
+      "answers": [
+        "1066",
+        "In 1066",
+        "1066"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "1066",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "1066",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.927265,
+          "contains_answer": true,
+          "chunk": "In 1066, Duke William II of Normandy conquered England killing King Harold II at the Battle of Hastings."
+        }
+      ]
+    },
+    {
+      "question_id": "57094a79efce8f15003a7dc5",
+      "question": "How many of the six total packages available to broadcasters was Setanta awarded?",
+      "answers": [
+        "two",
+        "two",
+        "two"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "two",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "two",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.914036,
+          "contains_answer": true,
+          "chunk": "In May 2006, the Irish broadcaster Setanta Sports was awarded two of the six Premier League packages that the English FA offered to broadcasters."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b169cd28a01900c67a74",
+      "question": "What two resources commonly consumed by alternate models are typically known to vary?",
+      "answers": [
+        "time and memory",
+        "time and memory consumption",
+        "time and memory consumption"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "time and memory",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "time and memory",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.840624,
+          "contains_answer": true,
+          "chunk": "The time and memory consumption of these alternate models may vary."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.278905,
+          "contains_answer": false,
+          "chunk": "What all these models have in common is that the machines operate deterministically."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.238782,
+          "contains_answer": false,
+          "chunk": "Perhaps surprisingly, each of these models can be converted to another without providing any extra computational power."
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.220613,
+          "contains_answer": false,
+          "chunk": "Many machine models different from the standard multi-tape Turing machines have been proposed in the literature, for example random access machines."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e99452bb891400689688",
+      "question": "Orange, San Diego, Riverside and San Bernardino make up four of the five counties. What is the name of the last county?",
+      "answers": [
+        "Los Angeles",
+        "Los Angeles",
+        "Riverside"
+      ],
+      "baseline_steps": 1,
+      "baseline_answer": "Los Angeles",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Los Angeles",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.945795,
+          "contains_answer": true,
+          "chunk": "Its counties of Los Angeles, Orange, San Diego, San Bernardino, and Riverside are the five most populous in the state and all are in the top 15 most populous counties in the United States."
+        }
+      ]
+    },
+    {
+      "question_id": "56de3d594396321400ee26cc",
+      "question": "Who made Ralph earl?",
+      "answers": [
+        "Edward the Confessor",
+        "Edward the Confessor",
+        "Edward the Confessor"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "Edward the Confessor",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Edward the Confessor",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 2,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.938288,
+          "contains_answer": true,
+          "chunk": "Edward the Confessor had set up the aforementioned Ralph as earl of Hereford and charged him with defending the Marches and warring with the Welsh."
+        }
+      ]
+    },
+    {
+      "question_id": "56e202e9e3433e1400423240",
+      "question": "What paper is commonly considered the bellwether ushering in systematic studies computational complexity?",
+      "answers": [
+        "On the Computational Complexity of Algorithms",
+        "On the Computational Complexity of Algorithms",
+        "\"On the Computational Complexity of Algorithms\""
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "On the Computational Complexity of Algorithms",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "On the Computational Complexity of Algorithms",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.965928,
+          "contains_answer": true,
+          "chunk": "As Fortnow & Homer (2003) point out, the beginning of systematic studies in computational complexity is attributed to the seminal paper \"On the Computational Complexity of Algorithms\" by Juris Hartmanis and Richard Stearns (1965), which laid out the definitions of time and space complexity and proved the hierarchy theorems."
+        }
+      ]
+    },
+    {
+      "question_id": "56de10b44396321400ee2595",
+      "question": "Who did the Normans team up with in Anatolia?",
+      "answers": [
+        "Turkish forces",
+        "Turkish forces",
+        "Turkish forces"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Turkish forces",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "Turkish forces",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.882737,
+          "contains_answer": true,
+          "chunk": "Some Normans joined Turkish forces to aid in the destruction of the Armenians vassal-states of Sassoun and Taron in far eastern Anatolia."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.449104,
+          "contains_answer": false,
+          "chunk": "From 1073 to 1074, 8,000 of the 20,000 troops of the Armenian general Philaretus Brachamius were Normans\u2014formerly of Oursel\u2014led by Raimbaud."
+        },
+        {
+          "step": 3,
+          "chunk_index": 4,
+          "trust": 0.548913,
+          "contains_answer": false,
+          "chunk": "They even lent their ethnicity to the name of their castle: Afranji, meaning \"Franks.\" The known trade between Amalfi and Antioch and between Bari and Tarsus may be related to the presence of Italo-Normans in those cities while Amalfi and Bari were under Norman rule in Italy."
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.234673,
+          "contains_answer": false,
+          "chunk": "Later, many took up service with the Armenian state further south in Cilicia and the Taurus Mountains."
+        },
+        {
+          "step": 5,
+          "chunk_index": 2,
+          "trust": 0.192787,
+          "contains_answer": false,
+          "chunk": "A Norman named Oursel led a force of \"Franks\" into the upper Euphrates valley in northern Syria."
+        }
+      ]
+    },
+    {
+      "question_id": "57060a6e52bb8914006897f9",
+      "question": "What does CBD stand for?",
+      "answers": [
+        "Central business districts",
+        "Central business districts",
+        "Central business districts"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Central business districts",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 2,
+      "learned_trust_answer": "Central business districts",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.846349,
+          "contains_answer": true,
+          "chunk": "Central business districts (CBD) include Downtown Los Angeles, Downtown San Diego, Downtown San Bernardino, Downtown Bakersfield, South Coast Metro and Downtown Riverside."
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.222588,
+          "contains_answer": false,
+          "chunk": "Southern California is home to many major business districts."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1febfe3433e1400423239",
+      "question": "How quickly can an algorithm solve an NP-complete knapsack problem?",
+      "answers": [
+        "in less than quadratic time",
+        "less than quadratic time",
+        "less than quadratic time"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "in less than quadratic time",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "in less than quadratic time",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 3,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.960828,
+          "contains_answer": true,
+          "chunk": "Similarly, algorithms can solve the NP-complete knapsack problem over a wide range of sizes in less than quadratic time and SAT solvers routinely handle large instances of the NP-complete Boolean satisfiability problem."
+        }
+      ]
+    },
+    {
+      "question_id": "56dde27d9a695914005b9652",
+      "question": "What part of France were the Normans located?",
+      "answers": [
+        "north",
+        "the north",
+        "north"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "north",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "north",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.944707,
+          "contains_answer": true,
+          "chunk": "The descendants of Rollo's Vikings and their Frankish wives would replace the Norse religion and Old Norse language with Catholicism (Christianity) and the Gallo-Romance language of the local people, blending their maternal Frankish heritage with Old Norse traditions and customs to synthesize a unique \"Norman\" culture in the north of France."
+        }
+      ]
+    },
+    {
+      "question_id": "57060eaf75f01819005e7913",
+      "question": "What other business district does Orange County envelop outside of Downtown Santa Ana and Newport Center?",
+      "answers": [
+        "South Coast Metro",
+        "the South Coast Metro",
+        "South Coast Metro"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "South Coast Metro",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "South Coast Metro",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.956989,
+          "contains_answer": true,
+          "chunk": "Orange County is a rapidly developing business center that includes Downtown Santa Ana, the South Coast Metro and Newport Center districts; as well as the Irvine business centers of The Irvine Spectrum, West Irvine, and international corporations headquartered at the University of California, Irvine."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e63175f01819005e7724",
+      "question": "In which cardinal direction from Los Angeles is San Diego?",
+      "answers": [
+        "south",
+        "south"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "south",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "south",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 2,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.917147,
+          "contains_answer": true,
+          "chunk": "Within southern California are two major cities, Los Angeles and San Diego, as well as three of the country's largest metropolitan areas."
+        }
+      ]
+    },
+    {
+      "question_id": "56e17a7ccd28a01900c679a2",
+      "question": "In computational complexity theory, what is the term given to describe the baseline abstract question needing to be solved? ",
+      "answers": [
+        "the problem",
+        "a problem",
+        "problem"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "a problem",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "a problem",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.912211,
+          "contains_answer": true,
+          "chunk": "In computational complexity theory, a problem refers to the abstract question to be solved."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a38de3433e140042305d",
+      "question": "What is one variable on which the running time may be contingent?",
+      "answers": [
+        "the instance",
+        "the instance",
+        "the size of the instance"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "the instance",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "the instance",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.863925,
+          "contains_answer": true,
+          "chunk": "However, the running time may, in general, depend on the instance."
+        },
+        {
+          "step": 2,
+          "chunk_index": 6,
+          "trust": 0.49973,
+          "contains_answer": false,
+          "chunk": "For instance, in the problem of finding whether a graph is connected, how much more time does it take to solve a problem for a graph with 2n vertices compared to the time taken for a graph with n vertices?"
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.198454,
+          "contains_answer": false,
+          "chunk": "In particular, larger instances will require more time to solve."
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.273968,
+          "contains_answer": false,
+          "chunk": "To measure the difficulty of solving a computational problem, one may wish to see how much time the best algorithm requires to solve the problem."
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.260719,
+          "contains_answer": true,
+          "chunk": "Thus the time required to solve a problem (or the space required, or any measure of complexity) is calculated as a function of the size of the instance."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1bd4acd28a01900c67aff",
+      "question": "Big O notation provides autonomy to upper and lower bounds with relationship to what? ",
+      "answers": [
+        "the computational model",
+        "specific details of the computational model used",
+        "the specific details of the computational model used"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "the computational model",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "",
+      "learned_trust_token_f1": 0.0,
+      "answer_preserved": false,
+      "effort_delta": 2,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.906671,
+          "contains_answer": false,
+          "chunk": "Upper and lower bounds are usually stated using the big O notation, which hides constant factors and smaller terms."
+        }
+      ]
+    },
+    {
+      "question_id": "56e20a27cd28a01900c67c24",
+      "question": "What is the concrete choice typically assumed by most complexity-theoretic theorems?",
+      "answers": [
+        "input encoding",
+        "input encoding",
+        "input encoding"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "input encoding",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "input encoding",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.943659,
+          "contains_answer": true,
+          "chunk": "Even though some proofs of complexity-theoretic theorems regularly assume some concrete choice of input encoding, one tries to keep the discussion abstract enough to be independent of the choice of encoding."
+        }
+      ]
+    },
+    {
+      "question_id": "5706139252bb891400689865",
+      "question": "What kind of universities is the region famous for?",
+      "answers": [
+        "research",
+        "research",
+        "research"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "research",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "research",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.942949,
+          "contains_answer": true,
+          "chunk": "The Tech Coast is a moniker that has gained use as a descriptor for the region's diversified technology and industrial base as well as its multitude of prestigious and world-renowned research universities and other public and private institutions."
+        }
+      ]
+    },
+    {
+      "question_id": "56dde2fa66d3e219004dad9b",
+      "question": "What was one of the Norman's major exports?",
+      "answers": [
+        "fighting horsemen",
+        "fighting horsemen",
+        "fighting horsemen"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "fighting horsemen",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "fighting horsemen",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.884649,
+          "contains_answer": false,
+          "chunk": "Many Normans of Italy, France and England eventually served as avid Crusaders under the Italo-Norman prince Bohemund I and the Anglo-Norman king Richard the Lion-Heart."
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.449927,
+          "contains_answer": true,
+          "chunk": "Most Norman knights remained poor and land-hungry, and by 1066 Normandy had been exporting fighting horsemen for more than a generation."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.410869,
+          "contains_answer": false,
+          "chunk": "The new Norman rulers were culturally and ethnically distinct from the old French aristocracy, most of whom traced their lineage to Franks of the Carolingian dynasty."
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.268674,
+          "contains_answer": false,
+          "chunk": "The Normans thereafter adopted the growing feudal doctrines of the rest of France, and worked them into a functional hierarchical system in both Normandy and in England."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e33f52bb89140068964e",
+      "question": "What is the name of the state that the megaregion expands to in the east?",
+      "answers": [
+        "Nevada",
+        "Nevada",
+        "Nevada"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Nevada",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 2,
+      "learned_trust_answer": "Nevada",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.86138,
+          "contains_answer": true,
+          "chunk": "The megaregion's area is more expansive, extending east into Las Vegas, Nevada, and south across the Mexican border into Tijuana."
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.447807,
+          "contains_answer": false,
+          "chunk": "The 8- and 10-county definitions are not used for the greater Southern California Megaregion, one of the 11 megaregions of the United States."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1ddfce3433e14004231d8",
+      "question": "What is the prize offered for finding a solution to P=NP?",
+      "answers": [
+        "$1,000,000",
+        "US$1,000,000",
+        "US$1,000,000"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "$1,000,000",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "$1,000,000",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.896424,
+          "contains_answer": false,
+          "chunk": "The question of whether P equals NP is one of the most important open questions in theoretical computer science because of the wide implications of a solution."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.509337,
+          "contains_answer": false,
+          "chunk": "The P versus NP problem is one of the Millennium Prize Problems proposed by the Clay Mathematics Institute."
+        },
+        {
+          "step": 3,
+          "chunk_index": 4,
+          "trust": 0.279998,
+          "contains_answer": true,
+          "chunk": "There is a US$1,000,000 prize for resolving the problem."
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.191144,
+          "contains_answer": false,
+          "chunk": "If the answer is yes, many important problems can be shown to have more efficient solutions."
+        },
+        {
+          "step": 5,
+          "chunk_index": 2,
+          "trust": 0.248628,
+          "contains_answer": false,
+          "chunk": "These include various types of integer programming problems in operations research, many problems in logistics, protein structure prediction in biology, and the ability to find formal proofs of pure mathematics theorems."
+        }
+      ]
+    },
+    {
+      "question_id": "56e17a7ccd28a01900c679a3",
+      "question": "Is a problem instance typically characterized as abstract or concrete?",
+      "answers": [
+        "concrete",
+        "concrete",
+        "abstract"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "concrete",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "concrete",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.898908,
+          "contains_answer": false,
+          "chunk": "The input string for a computational problem is referred to as a problem instance, and should not be confused with the problem itself."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.589577,
+          "contains_answer": true,
+          "chunk": "In contrast, an instance of this problem is a rather concrete utterance, which can serve as the input for a decision problem."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.297509,
+          "contains_answer": true,
+          "chunk": "In computational complexity theory, a problem refers to the abstract question to be solved."
+        },
+        {
+          "step": 4,
+          "chunk_index": 5,
+          "trust": 0.185177,
+          "contains_answer": false,
+          "chunk": "The instance is a number (e.g."
+        },
+        {
+          "step": 5,
+          "chunk_index": 0,
+          "trust": 0.242918,
+          "contains_answer": false,
+          "chunk": "A computational problem can be viewed as an infinite collection of instances together with a solution for every instance."
+        }
+      ]
+    },
+    {
+      "question_id": "57060eaf75f01819005e7912",
+      "question": "Jamboree Business Parks belongs to which business center?",
+      "answers": [
+        "West Irvine",
+        "West Irvine",
+        "West Irvine"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "West Irvine",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "West Irvine",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.900999,
+          "contains_answer": true,
+          "chunk": "West Irvine includes the Irvine Tech Center and Jamboree Business Parks."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c2eee3433e1400423135",
+      "question": "A multi-tape Turing machine requires what type of time for a solution?",
+      "answers": [
+        "linear time",
+        "linear",
+        "linear"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "linear time",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "linear time",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.961722,
+          "contains_answer": true,
+          "chunk": "For instance, the language {xx | x is any binary string} can be solved in linear time on a multi-tape Turing machine, but necessarily requires quadratic time in the model of single-tape Turing machines."
+        }
+      ]
+    },
+    {
+      "question_id": "56de15dbcffd8e1900b4b5c8",
+      "question": "Who did Emma Marry?",
+      "answers": [
+        "King Ethelred II",
+        "Ethelred II",
+        "King Ethelred II"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "King Ethelred II",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "",
+      "learned_trust_token_f1": 0.0,
+      "answer_preserved": false,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.900749,
+          "contains_answer": false,
+          "chunk": "His stay in Normandy (until 1016) influenced him and his sons by Emma, who stayed in Normandy after Cnut the Great's conquest of the isle."
+        }
+      ]
+    },
+    {
+      "question_id": "56e2042ecd28a01900c67c20",
+      "question": "In 1962, who was responsible for the authorship of a paper published on real time-computations?",
+      "answers": [
+        "Hisao Yamada",
+        "Hisao Yamada",
+        "Hisao Yamada"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "Hisao Yamada",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Hisao Yamada",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 2,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.929949,
+          "contains_answer": true,
+          "chunk": "Earlier papers studying problems solvable by Turing machines with specific bounded resources include  John Myhill's definition of linear bounded automata (Myhill 1960), Raymond Smullyan's study of rudimentary sets (1961), as well as Hisao Yamada's paper on real-time computations (1962)."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e63175f01819005e7722",
+      "question": "Which city is the most populous in California?",
+      "answers": [
+        "Los Angeles",
+        "Los Angeles",
+        "Los Angeles"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "Los Angeles",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Los Angeles",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 2,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.937439,
+          "contains_answer": true,
+          "chunk": "With a population of 3,792,621, Los Angeles is the most populous city in California and the second most populous in the United States."
+        }
+      ]
+    },
+    {
+      "question_id": "5706143575f01819005e7953",
+      "question": "What is the other NHL team aside from the Anaheim Ducks to reside in Southern California?",
+      "answers": [
+        "Los Angeles Kings",
+        "Los Angeles Kings",
+        "Los Angeles Kings"
+      ],
+      "baseline_steps": 1,
+      "baseline_answer": "Los Angeles Kings",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Los Angeles Kings",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.942124,
+          "contains_answer": true,
+          "chunk": "Professional sports teams in Southern California include teams from the NFL (Los Angeles Rams, San Diego Chargers); NBA (Los Angeles Lakers, Los Angeles Clippers); MLB (Los Angeles Dodgers, Los Angeles Angels of Anaheim, San Diego Padres); NHL (Los Angeles Kings, Anaheim Ducks); and MLS (LA Galaxy)."
+        }
+      ]
+    },
+    {
+      "question_id": "56de15dbcffd8e1900b4b5c9",
+      "question": "Who was Emma's brother?",
+      "answers": [
+        "Duke Richard II",
+        "Duke Richard II",
+        "Duke Richard II"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Duke Richard II",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "",
+      "learned_trust_token_f1": 0.0,
+      "answer_preserved": false,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.910485,
+          "contains_answer": false,
+          "chunk": "His stay in Normandy (until 1016) influenced him and his sons by Emma, who stayed in Normandy after Cnut the Great's conquest of the isle."
+        }
+      ]
+    },
+    {
+      "question_id": "5705eccb52bb8914006896b9",
+      "question": "Other than the desert city why do many locals and tourists frequent southern California?",
+      "answers": [
+        "beaches",
+        "for its popular beaches",
+        "beaches"
+      ],
+      "baseline_steps": 1,
+      "baseline_answer": "beaches",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "beaches",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.955737,
+          "contains_answer": true,
+          "chunk": "Many locals and tourists frequent the southern California coast for its popular beaches, and the desert city of Palm Springs is popular for its resort feel and nearby open spaces."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1bc3ae3433e1400423104",
+      "question": "Classification of resources is contingent on determining the upper and lower bounds of minimum time required by what?  ",
+      "answers": [
+        "the most efficient algorithm",
+        "the most efficient algorithm",
+        "the most efficient algorithm solving a given problem"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "the most efficient algorithm",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "the most efficient algorithm",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.962773,
+          "contains_answer": true,
+          "chunk": "To classify the computation time (or similar resources, such as space consumption), one is interested in proving upper and lower bounds on the minimum amount of time required by the most efficient algorithm solving a given problem."
+        }
+      ]
+    },
+    {
+      "question_id": "56de17f9cffd8e1900b4b5e0",
+      "question": "Who was Margaret's brother?",
+      "answers": [
+        "Edgar",
+        "Edgar",
+        "Edgar Atheling"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "Edgar",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Edgar",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 3,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.907942,
+          "contains_answer": true,
+          "chunk": "King Malcolm III of Scotland married Edgar's sister Margaret, and came into opposition to William who had already disputed Scotland's southern borders."
+        }
+      ]
+    },
+    {
+      "question_id": "56dddf4066d3e219004dad60",
+      "question": "Who ruled the duchy of Normandy",
+      "answers": [
+        "Richard I",
+        "Richard I",
+        "Richard I"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Richard I",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Richard I",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.958296,
+          "contains_answer": true,
+          "chunk": "The Duchy of Normandy, which they formed by treaty with the French crown, was a great fief of medieval France, and under Richard I of Normandy was forged into a cohesive and formidable principality in feudal tenure."
+        }
+      ]
+    },
+    {
+      "question_id": "56e16839cd28a01900c6788a",
+      "question": "What unit is measured to determine circuit complexity?",
+      "answers": [
+        "number of gates in a circuit",
+        "number of gates in a circuit",
+        "number of gates"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "number of gates in a circuit",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "number of gates in a circuit",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 3,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.92208,
+          "contains_answer": true,
+          "chunk": "Other complexity measures are also used, such as the amount of communication (used in communication complexity), the number of gates in a circuit (used in circuit complexity) and the number of processors (used in parallel computing)."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b8f3e3433e14004230e6",
+      "question": "What are the three primary expressions used to represent case complexity?",
+      "answers": [
+        "best, worst and average",
+        "best, worst and average case",
+        "best, worst and average case complexity"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "best, worst and average",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "best, worst and average",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.914476,
+          "contains_answer": true,
+          "chunk": "The best, worst and average case complexity refer to three different ways of measuring the time complexity (or any other complexity measure) of different inputs of the same size."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a38de3433e140042305f",
+      "question": "In what unit is the size of the input measured?",
+      "answers": [
+        "bits",
+        "bits",
+        "bits"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "bits",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "bits",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.889277,
+          "contains_answer": true,
+          "chunk": "This is usually taken to be the size of the input in bits."
+        },
+        {
+          "step": 2,
+          "chunk_index": 5,
+          "trust": 0.43894,
+          "contains_answer": false,
+          "chunk": "Complexity theory is interested in how algorithms scale with an increase in the input size."
+        },
+        {
+          "step": 3,
+          "chunk_index": 3,
+          "trust": 0.352313,
+          "contains_answer": false,
+          "chunk": "Thus the time required to solve a problem (or the space required, or any measure of complexity) is calculated as a function of the size of the instance."
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.220912,
+          "contains_answer": false,
+          "chunk": "To measure the difficulty of solving a computational problem, one may wish to see how much time the best algorithm requires to solve the problem."
+        },
+        {
+          "step": 5,
+          "chunk_index": 2,
+          "trust": 0.126778,
+          "contains_answer": false,
+          "chunk": "In particular, larger instances will require more time to solve."
+        }
+      ]
+    },
+    {
+      "question_id": "57094d489928a8140047150a",
+      "question": "What is the name of the TV scrambling system BSkyB uses?",
+      "answers": [
+        "VideoGuard",
+        "VideoGuard pay-TV",
+        "VideoGuard"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "VideoGuard",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "VideoGuard",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.890806,
+          "contains_answer": true,
+          "chunk": "BSkyB utilises the VideoGuard pay-TV scrambling system owned by NDS, a Cisco Systems company."
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.321512,
+          "contains_answer": false,
+          "chunk": "BSkyB has design authority over all digital satellite receivers capable of receiving their service."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.219098,
+          "contains_answer": true,
+          "chunk": "There are tight controls over use of VideoGuard decoders; they are not available as stand-alone DVB CAMs (conditional-access modules)."
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.203807,
+          "contains_answer": false,
+          "chunk": "The receivers, though designed and built by different manufacturers, must conform to the same user interface look-and-feel as all the others."
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.137023,
+          "contains_answer": false,
+          "chunk": "This extends to the Personal video recorder (PVR) offering (branded Sky+)."
+        }
+      ]
+    },
+    {
+      "question_id": "56de16ca4396321400ee25c5",
+      "question": "Where did Harold II die?",
+      "answers": [
+        "Battle of Hastings",
+        "the Battle of Hastings",
+        "at the Battle of Hastings"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Battle of Hastings",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Battle of Hastings",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.901178,
+          "contains_answer": true,
+          "chunk": "In 1066, Duke William II of Normandy conquered England killing King Harold II at the Battle of Hastings."
+        }
+      ]
+    },
+    {
+      "question_id": "5705fb7f52bb891400689750",
+      "question": "What is the main gap to continued urbanization?",
+      "answers": [
+        "Camp Pendleton",
+        "Camp Pendleton",
+        "Camp Pendleton"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Camp Pendleton",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Camp Pendleton",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.954487,
+          "contains_answer": true,
+          "chunk": "Traveling south on Interstate 5, the main gap to continued urbanization is Camp Pendleton."
+        }
+      ]
+    },
+    {
+      "question_id": "56de10b44396321400ee2594",
+      "question": "Who was the leader when the Franks entered the Euphrates valley?",
+      "answers": [
+        "Oursel",
+        "Oursel",
+        "Oursel"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Oursel",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "Oursel",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.890689,
+          "contains_answer": true,
+          "chunk": "A Norman named Oursel led a force of \"Franks\" into the upper Euphrates valley in northern Syria."
+        },
+        {
+          "step": 2,
+          "chunk_index": 4,
+          "trust": 0.563143,
+          "contains_answer": false,
+          "chunk": "They even lent their ethnicity to the name of their castle: Afranji, meaning \"Franks.\" The known trade between Amalfi and Antioch and between Bari and Tarsus may be related to the presence of Italo-Normans in those cities while Amalfi and Bari were under Norman rule in Italy."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.207053,
+          "contains_answer": false,
+          "chunk": "Later, many took up service with the Armenian state further south in Cilicia and the Taurus Mountains."
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.213203,
+          "contains_answer": false,
+          "chunk": "Some Normans joined Turkish forces to aid in the destruction of the Armenians vassal-states of Sassoun and Taron in far eastern Anatolia."
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.207857,
+          "contains_answer": true,
+          "chunk": "From 1073 to 1074, 8,000 of the 20,000 troops of the Armenian general Philaretus Brachamius were Normans\u2014formerly of Oursel\u2014led by Raimbaud."
+        }
+      ]
+    },
+    {
+      "question_id": "56e200e4cd28a01900c67c15",
+      "question": "Who was the most influential researcher among those grappling with the deficit of work surrounding the complexity posed by algorithmic problems?",
+      "answers": [
+        "Alan Turing",
+        "Alan Turing",
+        "Alan Turing"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Alan Turing",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 2,
+      "learned_trust_answer": "Alan Turing",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.86728,
+          "contains_answer": false,
+          "chunk": "Before the actual research explicitly devoted to the complexity of algorithmic problems started off, numerous foundations were laid out by various researchers."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.466885,
+          "contains_answer": true,
+          "chunk": "Most influential among these was the definition of Turing machines by Alan Turing in 1936, which turned out to be a very robust and flexible simplification of a computer."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b355e3433e14004230b1",
+      "question": "What often affects or facilitates ease of analysis in computational problems?",
+      "answers": [
+        "unusual resources",
+        "more unusual resources",
+        "more unusual resources"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "unusual resources",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 3,
+      "learned_trust_answer": "unusual resources",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.840912,
+          "contains_answer": true,
+          "chunk": "However, some computational problems are easier to analyze in terms of more unusual resources."
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.671563,
+          "contains_answer": false,
+          "chunk": "The non-deterministic Turing machine has very little to do with how we physically want to compute algorithms, but its branching exactly captures many of the mathematical models we want to analyze, so that non-deterministic time is a very important resource in analyzing computational problems."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.286666,
+          "contains_answer": false,
+          "chunk": "For example, a non-deterministic Turing machine is a computational model that is allowed to branch out to check many different possibilities at once."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e99452bb89140068968b",
+      "question": "What is the lowest ranking one of the counties could have in terms of most populous counties in the United States?",
+      "answers": [
+        "15",
+        "15",
+        "Riverside"
+      ],
+      "baseline_steps": 1,
+      "baseline_answer": "15",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "15",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.941002,
+          "contains_answer": true,
+          "chunk": "Its counties of Los Angeles, Orange, San Diego, San Bernardino, and Riverside are the five most populous in the state and all are in the top 15 most populous counties in the United States."
+        }
+      ]
+    },
+    {
+      "question_id": "5705e3f252bb89140068966a",
+      "question": "Which coastline does Southern California touch?",
+      "answers": [
+        "Pacific",
+        "Pacific",
+        "Pacific"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Pacific",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "Pacific",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.858043,
+          "contains_answer": false,
+          "chunk": "With over 22 million people, southern California contains roughly 60 percent of California's population."
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.586026,
+          "contains_answer": true,
+          "chunk": "Southern California includes the heavily built-up urban area stretching along the Pacific coast from Ventura, through the Greater Los Angeles Area and the Inland Empire, and down to Greater San Diego."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.633909,
+          "contains_answer": false,
+          "chunk": "Southern California's population encompasses seven metropolitan areas, or MSAs: the Los Angeles metropolitan area, consisting of Los Angeles and Orange counties; the Inland Empire, consisting of Riverside and San Bernardino counties; the San Diego metropolitan area; the Oxnard\u2013Thousand Oaks\u2013Ventura metropolitan area; the Santa Barbara metro area; the San Luis Obispo metropolitan area; and the El Centro area."
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.272103,
+          "contains_answer": false,
+          "chunk": "Out of these, three are heavy populated areas: the Los Angeles area with over 12 million inhabitants, the Riverside-San Bernardino area with over four million inhabitants, and the San Diego area with over 3 million inhabitants."
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.231614,
+          "contains_answer": false,
+          "chunk": "For CSA metropolitan purposes, the five counties of Los Angeles, Orange, Riverside, San Bernardino, and Ventura are all combined to make up the Greater Los Angeles Area with over 17.5 million people."
+        }
+      ]
+    },
+    {
+      "question_id": "56e17e6ee3433e1400422f7f",
+      "question": "By how many kilometers does the traveling salesman problem seek to classify a route between the 15 largest cities in Germany?",
+      "answers": [
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "2000",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "2000",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 2,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.942945,
+          "contains_answer": true,
+          "chunk": "To further highlight the difference between a problem and an instance, consider the following instance of the decision version of the traveling salesman problem: Is there a route of at most 2000 kilometres passing through all of Germany's 15 largest cities?"
+        }
+      ]
+    },
+    {
+      "question_id": "56e1dc62cd28a01900c67bce",
+      "question": "In what theoretical machine is it confirmed that a problem in P belies membership in the NP class?",
+      "answers": [
+        "Turing machines",
+        "deterministic Turing machines",
+        "deterministic Turing machines"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "Turing machines",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "",
+      "learned_trust_token_f1": 0.0,
+      "answer_preserved": false,
+      "effort_delta": 3,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.926075,
+          "contains_answer": false,
+          "chunk": "The complexity class NP, on the other hand, contains many problems that people would like to solve efficiently, but for which no efficient algorithm is known, such as the Boolean satisfiability problem, the Hamiltonian path problem and the vertex cover problem."
+        }
+      ]
+    },
+    {
+      "question_id": "570603c475f01819005e7884",
+      "question": "What is the state average growth rate?",
+      "answers": [
+        "10.0%",
+        "10.0%",
+        "10.0%"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "10.0%",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "10.0%",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.976324,
+          "contains_answer": true,
+          "chunk": "Despite a reputation for high growth rates, southern California's rate grew less than the state average of 10.0% in the 2000s as California's growth became concentrated in the northern part of the state due to a stronger, tech-oriented economy in the Bay Area and an emerging Greater Sacramento region."
+        }
+      ]
+    },
+    {
+      "question_id": "57060f3e75f01819005e7925",
+      "question": "University City is an example of a business district located in which city?",
+      "answers": [
+        "San Diego",
+        "San Diego",
+        "San Diego"
+      ],
+      "baseline_steps": 3,
+      "baseline_answer": "San Diego",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 3,
+      "learned_trust_answer": "San Diego",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.886665,
+          "contains_answer": true,
+          "chunk": "Downtown San Diego is the central business district of San Diego, though the city is filled with business districts."
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.419108,
+          "contains_answer": false,
+          "chunk": "These include Carmel Valley, Del Mar Heights, Mission Valley, Rancho Bernardo, Sorrento Mesa, and University City."
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.25606,
+          "contains_answer": true,
+          "chunk": "Most of these districts are located in Northern San Diego and some within North County regions."
+        }
+      ]
+    },
+    {
+      "question_id": "57094ca7efce8f15003a7dda",
+      "question": "What replaced the Sky+Box?",
+      "answers": [
+        "Sky+HD Box",
+        "Sky+HD Box",
+        "Sky+HD Box"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Sky+HD Box",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Sky+HD Box",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.95943,
+          "contains_answer": true,
+          "chunk": "In January 2010 BSkyB discontinued the Sky+ Box, limited the standard Sky Box to Multiroom upgrade only and started to issue the Sky+HD Box as standard, thus giving all new subscribers the functions of Sky+."
+        }
+      ]
+    },
+    {
+      "question_id": "56dde27d9a695914005b9651",
+      "question": "What was the Norman religion?",
+      "answers": [
+        "Catholicism",
+        "Catholicism",
+        "Catholicism"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "Catholicism",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Catholicism",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.962115,
+          "contains_answer": true,
+          "chunk": "The descendants of Rollo's Vikings and their Frankish wives would replace the Norse religion and Old Norse language with Catholicism (Christianity) and the Gallo-Romance language of the local people, blending their maternal Frankish heritage with Old Norse traditions and customs to synthesize a unique \"Norman\" culture in the north of France."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a564cd28a01900c67a48",
+      "question": "Whose thesis states that the solution to a problem is solvable with reasonable resources assuming it allows for a polynomial time algorithm?",
+      "answers": [
+        "Cobham's thesis",
+        "Cobham's",
+        "Cobham"
+      ],
+      "baseline_steps": 4,
+      "baseline_answer": "Cobham's thesis",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 4,
+      "learned_trust_answer": "Cobham's thesis",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.876994,
+          "contains_answer": false,
+          "chunk": "If T(n) is a polynomial in n, then the algorithm is said to be a polynomial time algorithm."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.576517,
+          "contains_answer": true,
+          "chunk": "Cobham's thesis says that a problem can be solved with a feasible amount of resources if it admits a polynomial time algorithm."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.298617,
+          "contains_answer": false,
+          "chunk": "Since the time taken on different inputs of the same size can be different, the worst-case time complexity T(n) is defined to be the maximum time taken over all inputs of size n."
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.163692,
+          "contains_answer": false,
+          "chunk": "If the input size is n, the time taken can be expressed as a function of n."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c2eee3433e1400423134",
+      "question": "Concrete bounding of computation time frequently produces complexity classes contingent upon what?",
+      "answers": [
+        "chosen machine model",
+        "the chosen machine model",
+        "the chosen machine model"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "chosen machine model",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "chosen machine model",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 4,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.931319,
+          "contains_answer": true,
+          "chunk": "But bounding the computation time above by some concrete function f(n) often yields complexity classes that depend on the chosen machine model."
+        }
+      ]
+    },
+    {
+      "question_id": "56de15dbcffd8e1900b4b5ca",
+      "question": "To where did Ethelred flee?",
+      "answers": [
+        "Normandy",
+        "Normandy",
+        "Normandy"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "Normandy",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "Normandy",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.867815,
+          "contains_answer": true,
+          "chunk": "Because of this, Ethelred fled to Normandy in 1013, when he was forced from his kingdom by Sweyn Forkbeard."
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.513255,
+          "contains_answer": true,
+          "chunk": "This relationship eventually produced closer ties of blood through the marriage of Emma, sister of Duke Richard II of Normandy, and King Ethelred II of England."
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.245575,
+          "contains_answer": false,
+          "chunk": "Not only were their original Viking brethren still ravaging the English coasts, they occupied most of the important ports opposite England across the English Channel."
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.154729,
+          "contains_answer": false,
+          "chunk": "The Normans were in contact with England from an early date."
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.20774,
+          "contains_answer": true,
+          "chunk": "His stay in Normandy (until 1016) influenced him and his sons by Emma, who stayed in Normandy after Cnut the Great's conquest of the isle."
+        }
+      ]
+    },
+    {
+      "question_id": "56e16182e3433e1400422e29",
+      "question": "By what main attribute are computational problems classified utilizing computational complexity theory? ",
+      "answers": [
+        "inherent difficulty",
+        "their inherent difficulty",
+        "inherent difficulty"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "inherent difficulty",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "inherent difficulty",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.935832,
+          "contains_answer": true,
+          "chunk": "Computational complexity theory is a branch of the theory of computation in theoretical computer science that focuses on classifying computational problems according to their inherent difficulty, and relating those classes to each other."
+        }
+      ]
+    },
+    {
+      "question_id": "570611c475f01819005e793e",
+      "question": "The Port of Long Beach belongs to which region of California?",
+      "answers": [
+        "Southern",
+        "Southern California",
+        "Southern"
+      ],
+      "baseline_steps": 1,
+      "baseline_answer": "Southern",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "Southern",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.949863,
+          "contains_answer": true,
+          "chunk": "Southern California is also home to the Port of Los Angeles, the United States' busiest commercial port; the adjacent Port of Long Beach, the United States' second busiest container port; and the Port of San Diego."
+        }
+      ]
+    },
+    {
+      "question_id": "5706149552bb891400689881",
+      "question": "How many teams did Los Angeles used to have?",
+      "answers": [
+        "two",
+        "two",
+        "two"
+      ],
+      "baseline_steps": 2,
+      "baseline_answer": "two",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 1,
+      "learned_trust_answer": "two",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 1,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.922597,
+          "contains_answer": true,
+          "chunk": "From 2005 to 2014, there were two Major League Soccer teams in Los Angeles \u2014 the LA Galaxy and Chivas USA \u2014 that both played at the StubHub Center and were local rivals."
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a38de3433e140042305c",
+      "question": "What is a commonly used measurement used to determine the complexity of a computational problem?",
+      "answers": [
+        "how much time the best algorithm requires to solve the problem",
+        "time",
+        "time"
+      ],
+      "baseline_steps": 5,
+      "baseline_answer": "how much time the best algorithm requires to solve the problem",
+      "baseline_token_f1": 1.0,
+      "learned_trust_steps": 5,
+      "learned_trust_answer": "how much time the best algorithm requires to solve the problem",
+      "learned_trust_token_f1": 1.0,
+      "answer_preserved": true,
+      "effort_delta": 0,
+      "steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.892938,
+          "contains_answer": true,
+          "chunk": "To measure the difficulty of solving a computational problem, one may wish to see how much time the best algorithm requires to solve the problem."
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.527184,
+          "contains_answer": true,
+          "chunk": "Thus the time required to solve a problem (or the space required, or any measure of complexity) is calculated as a function of the size of the instance."
+        },
+        {
+          "step": 3,
+          "chunk_index": 5,
+          "trust": 0.267081,
+          "contains_answer": false,
+          "chunk": "Complexity theory is interested in how algorithms scale with an increase in the input size."
+        },
+        {
+          "step": 4,
+          "chunk_index": 6,
+          "trust": 0.443753,
+          "contains_answer": true,
+          "chunk": "For instance, in the problem of finding whether a graph is connected, how much more time does it take to solve a problem for a graph with 2n vertices compared to the time taken for a graph with n vertices?"
+        },
+        {
+          "step": 5,
+          "chunk_index": 2,
+          "trust": 0.138097,
+          "contains_answer": true,
+          "chunk": "In particular, larger instances will require more time to solve."
+        }
+      ]
+    }
+  ]
+}

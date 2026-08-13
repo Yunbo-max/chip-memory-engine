@@ -1,0 +1,144 @@
+{
+  "run_at_utc": "2026-06-09T11:27:40.394408+00:00",
+  "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+  "config": {
+    "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "learn_limit": 1024,
+    "eval_limit": 4,
+    "fixed_k": 5,
+    "flow_threshold": 0.3,
+    "max_new_tokens": 16,
+    "max_length": 768
+  },
+  "gpu": {
+    "visible_cuda_devices": "1",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "memory_cap_gib": 20.0,
+    "total_memory_gib": 23.65
+  },
+  "aggregate": {
+    "n": 4,
+    "baseline_mean_f1": 0.8222222222222222,
+    "flow_gated_mean_f1": 0.8863636363636364,
+    "f1_delta": 0.06414141414141417,
+    "baseline_mean_steps": 3.25,
+    "flow_gated_mean_steps": 1.0,
+    "mean_effort_reduction": 2.25,
+    "relative_effort_reduction": 0.6923076923076923
+  },
+  "verdict": "PASS",
+  "max_memory_allocated_mib": 8414.124,
+  "rows": [
+    {
+      "question_id": "5705e33f52bb89140068964e",
+      "question": "What is the name of the state that the megaregion expands to in the east?",
+      "answers": [
+        "Nevada",
+        "Nevada",
+        "Nevada"
+      ],
+      "baseline_answer": "Nevada",
+      "flow_gated_answer": "Nevada",
+      "baseline_f1": 1.0,
+      "flow_gated_f1": 1.0,
+      "baseline_steps": 2,
+      "flow_gated_steps": 1,
+      "flow_scores_by_step": [
+        0.8372551620847504,
+        0.1627448280324363
+      ],
+      "raw_flow_scores_by_step": [
+        0.08471830189228058,
+        0.016467459499835968
+      ],
+      "flow_stop_step": 1,
+      "token_count": 113
+    },
+    {
+      "question_id": "56e1a564cd28a01900c67a49",
+      "question": "If input size is is equal to n, what can respectively be assumed is the function of n?",
+      "answers": [
+        "the time taken",
+        "the time taken",
+        "the time taken"
+      ],
+      "baseline_answer": "Time taken is a function of n",
+      "flow_gated_answer": "The time taken is a function of n",
+      "baseline_f1": 0.4,
+      "flow_gated_f1": 0.5454545454545454,
+      "baseline_steps": 4,
+      "flow_gated_steps": 1,
+      "flow_scores_by_step": [
+        0.3801082896563437,
+        0.32307395791905547,
+        0.17742319039478774,
+        0.11939455521167364
+      ],
+      "raw_flow_scores_by_step": [
+        0.05574956163764,
+        0.04738447442650795,
+        0.026022229343652725,
+        0.017511310055851936
+      ],
+      "flow_stop_step": 1,
+      "token_count": 155
+    },
+    {
+      "question_id": "56de17f9cffd8e1900b4b5e1",
+      "question": "Who was Margaret's husband?",
+      "answers": [
+        "King Malcolm III of Scotland",
+        "King Malcolm III",
+        "King Malcolm III"
+      ],
+      "baseline_answer": "Malcolm III of Scotland",
+      "flow_gated_answer": "King Malcolm III of Scotland",
+      "baseline_f1": 0.888888888888889,
+      "flow_gated_f1": 1.0,
+      "baseline_steps": 4,
+      "flow_gated_steps": 1,
+      "flow_scores_by_step": [
+        0.6439358839638538,
+        0.09885553849818275,
+        0.05962644098449496,
+        0.1975821250457305
+      ],
+      "raw_flow_scores_by_step": [
+        0.055956773459911346,
+        0.008590353652834892,
+        0.005181421525776386,
+        0.01716950163245201
+      ],
+      "flow_stop_step": 1,
+      "token_count": 151
+    },
+    {
+      "question_id": "570960cf200fba1400367f03",
+      "question": "What did Microsoft announce that it would rename Sky Drive to?",
+      "answers": [
+        "OneDrive",
+        "OneDrive",
+        "OneDrive"
+      ],
+      "baseline_answer": "OneDrive",
+      "flow_gated_answer": "OneDrive",
+      "baseline_f1": 1.0,
+      "flow_gated_f1": 1.0,
+      "baseline_steps": 3,
+      "flow_gated_steps": 1,
+      "flow_scores_by_step": [
+        0.31161148415748435,
+        0.18738960997275825,
+        0.5009988993287788
+      ],
+      "raw_flow_scores_by_step": [
+        0.047639887779951096,
+        0.028648559004068375,
+        0.07659387588500977
+      ],
+      "flow_stop_step": 1,
+      "token_count": 186
+    }
+  ],
+  "note": "White-box attention-flow bridge, not exact 71120 contribution-matrix implementation."
+}

@@ -1,0 +1,20 @@
+{
+  "evaluated_at_utc": "2026-06-08T17:49:43.379059+00:00",
+  "dataset": "squad2",
+  "n_trace_examples": 8,
+  "real_info_flow_present": false,
+  "info_flow_files": {
+    "contri": [],
+    "rank": [],
+    "path": []
+  },
+  "baseline_predictions_present": false,
+  "trust_gated_predictions_present": false,
+  "mean_baseline_token_f1": null,
+  "verdict": "NOT_READY_FOR_METHOD_VERDICT",
+  "missing": [
+    "real 71120 contribution/rank/path JSONL",
+    "baseline_predictions.jsonl",
+    "trust_gated_predictions.jsonl"
+  ]
+}

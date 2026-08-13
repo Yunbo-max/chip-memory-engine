@@ -1,0 +1,3303 @@
+{
+  "run_at_utc": "2026-06-09T11:38:19.874806+00:00",
+  "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+  "config": {
+    "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "learn_limit": 1024,
+    "eval_limit": 100,
+    "fixed_k": 5,
+    "max_f1_drop": 0.05,
+    "max_new_tokens": 16,
+    "output_tag": "real_llm_trust_case_100"
+  },
+  "gpu": {
+    "visible_cuda_devices": "1",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "memory_cap_gib": 20.0,
+    "memory_cap_fraction": 0.845676,
+    "total_memory_gib": 23.65
+  },
+  "gate": {
+    "train_examples": 307,
+    "val_examples": 102,
+    "test_examples": 103,
+    "train_chunks": 1266,
+    "val_chunks": 422,
+    "val_auroc": 0.8270055113288427,
+    "val_auprc": 0.7631454889597091,
+    "selected_threshold": 0.9299999999999999,
+    "validation_policy": {
+      "n": 102,
+      "baseline_mean_token_f1": 1.0,
+      "learned_trust_mean_token_f1": 0.9607843137254902,
+      "token_f1_delta": -0.039215686274509776,
+      "baseline_mean_steps": 3.627450980392157,
+      "learned_trust_mean_steps": 2.6470588235294117,
+      "mean_effort_reduction": 0.9803921568627452,
+      "relative_effort_reduction": 0.2702702702702703,
+      "answer_preservation_rate": 0.9607843137254902
+    }
+  },
+  "aggregate": {
+    "n": 100,
+    "baseline_mean_f1": 0.807042914601738,
+    "gated_mean_f1": 0.7949873590461826,
+    "f1_delta": -0.012055555555555486,
+    "baseline_mean_steps": 3.41,
+    "gated_mean_steps": 2.58,
+    "mean_effort_reduction": 0.8300000000000001,
+    "relative_effort_reduction": 0.2434017595307918,
+    "answer_preservation_rate": 0.98
+  },
+  "verdict": "PASS",
+  "max_memory_allocated_mib": 8414.124,
+  "rows": [
+    {
+      "question_id": "5705e33f52bb89140068964e",
+      "question": "What is the name of the state that the megaregion expands to in the east?",
+      "answers": [
+        "Nevada",
+        "Nevada",
+        "Nevada"
+      ],
+      "baseline_answer": "Nevada",
+      "gated_answer": "Nevada",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.870361,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.412496,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a564cd28a01900c67a49",
+      "question": "If input size is is equal to n, what can respectively be assumed is the function of n?",
+      "answers": [
+        "the time taken",
+        "the time taken",
+        "the time taken"
+      ],
+      "baseline_answer": "Time complexity function of n",
+      "gated_answer": "Time taken as a function of n",
+      "baseline_f1": 0.25,
+      "gated_f1": 0.4,
+      "baseline_steps": 4,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.949806,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de17f9cffd8e1900b4b5e1",
+      "question": "Who was Margaret's husband?",
+      "answers": [
+        "King Malcolm III of Scotland",
+        "King Malcolm III",
+        "King Malcolm III"
+      ],
+      "baseline_answer": "King Malcolm III of Scotland",
+      "gated_answer": "King Malcolm III of Scotland",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.886909,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.207371,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.172109,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.208908,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "570960cf200fba1400367f03",
+      "question": "What did Microsoft announce that it would rename Sky Drive to?",
+      "answers": [
+        "OneDrive",
+        "OneDrive",
+        "OneDrive"
+      ],
+      "baseline_answer": "OneDrive",
+      "gated_answer": "OneDrive",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.888178,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.62837,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.237478,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de11154396321400ee25aa",
+      "question": "What were the origins of the Raouliii family?",
+      "answers": [
+        "Norman mercenary",
+        "an Italo-Norman named Raoul",
+        "descended from an Italo-Norman named Raoul"
+      ],
+      "baseline_answer": "Italo-Norman",
+      "gated_answer": "Italo-Norman",
+      "baseline_f1": 0.5714285714285715,
+      "gated_f1": 0.5714285714285715,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.539234,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.414114,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5706094b52bb8914006897df",
+      "question": "Southern California is most famous for tourism and what notably named district?",
+      "answers": [
+        "Hollywood",
+        "Hollywood",
+        "Hollywood"
+      ],
+      "baseline_answer": "Hollywood",
+      "gated_answer": "Hollywood",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.940663,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705eccb52bb8914006896b9",
+      "question": "Other than the desert city why do many locals and tourists frequent southern California?",
+      "answers": [
+        "beaches",
+        "for its popular beaches",
+        "beaches"
+      ],
+      "baseline_answer": "For its popular beaches",
+      "gated_answer": "For its popular beaches",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.960831,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de179dcffd8e1900b4b5dc",
+      "question": "What culture did the Normans combine with in Ireland?",
+      "answers": [
+        "Irish",
+        "Irish",
+        "Irish"
+      ],
+      "baseline_answer": "Irish culture",
+      "gated_answer": "Irish culture",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.848332,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.528639,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.676527,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.204631,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 5,
+          "trust": 0.328629,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "570953a7efce8f15003a7dff",
+      "question": "What channels were removed from the network in March of 2007?",
+      "answers": [
+        "basic channels",
+        "the basic channels",
+        "the basic channels"
+      ],
+      "baseline_answer": "Basic channels",
+      "gated_answer": "Basic channels",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.95238,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c7e2cd28a01900c67b75",
+      "question": "What is responsible for constraining P according to the time hierarchy theorem?",
+      "answers": [
+        "EXPTIME",
+        "EXPTIME",
+        "EXPTIME"
+      ],
+      "baseline_answer": "Time hierarchy theorem",
+      "gated_answer": "Time hierarchy theorem",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.937609,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1ddfce3433e14004231d5",
+      "question": "If P is ultimately proven to be equal tot NP, what effect would this have on the efficiency of problems?",
+      "answers": [
+        "more efficient solutions",
+        "shown to have more efficient solutions",
+        "many important problems can be shown to have more efficient solutions"
+      ],
+      "baseline_answer": "More efficient solutions for many important problems",
+      "gated_answer": "More efficient solutions for many important problems",
+      "baseline_f1": 0.6666666666666665,
+      "gated_f1": 0.6666666666666665,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.867225,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.497158,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.393535,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.352632,
+          "contains_answer": true
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.144538,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e200e4cd28a01900c67c14",
+      "question": "What tactic did researchers employ to offset the former deficit of work surrounding the complexity of algorithmic problems?",
+      "answers": [
+        "foundations were laid out",
+        "numerous foundations were laid out",
+        "numerous foundations were laid out by various researchers"
+      ],
+      "baseline_answer": "Defined Turing machines",
+      "gated_answer": "Defined Turing machines",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.906847,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.319846,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e190bce3433e1400422fcb",
+      "question": "What will the output be for a member of the language of a decision problem?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes"
+      ],
+      "baseline_answer": "Yes",
+      "gated_answer": "Yes",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.948803,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1ba41cd28a01900c67ae1",
+      "question": "When extensive time is required to sort integers, this represents what case complexity?",
+      "answers": [
+        "worst-case",
+        "worst",
+        "worst-case"
+      ],
+      "baseline_answer": "Worst-case complexity",
+      "gated_answer": "Worst-case complexity",
+      "baseline_f1": 0.8,
+      "gated_f1": 0.8,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.887994,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.462427,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 4,
+          "trust": 0.378398,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.245455,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 0,
+          "trust": 0.108135,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c3e1e3433e1400423148",
+      "question": "What are two examples of measurements are bound within algorithms to establish complexity classes?",
+      "answers": [
+        "time or space",
+        "time or space",
+        "time or space"
+      ],
+      "baseline_answer": "Time and space",
+      "gated_answer": "Time and space",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.855258,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.471961,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1dc62cd28a01900c67bcd",
+      "question": "What is an example of a problem that rests within the NP complexity class?",
+      "answers": [
+        "Boolean satisfiability problem",
+        "Boolean satisfiability problem"
+      ],
+      "baseline_answer": "Boolean satisfiability problem",
+      "gated_answer": "Boolean satisfiability problem",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.934584,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "570602fa52bb89140068979e",
+      "question": "Southern California's distinctive regions are divided culturally, politically and what other trait?",
+      "answers": [
+        "economically",
+        "economically",
+        "economically"
+      ],
+      "baseline_answer": "economically",
+      "gated_answer": "economically",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.957692,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705f36452bb89140068971c",
+      "question": "In the definition based off the mountain range, which region would the desert portions of north Los Angeles County be included in?",
+      "answers": [
+        "southern",
+        "southern California",
+        "southern California"
+      ],
+      "baseline_answer": "southern California region",
+      "gated_answer": "southern California region",
+      "baseline_f1": 0.8,
+      "gated_f1": 0.8,
+      "baseline_steps": 3,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.981991,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e181d9e3433e1400422fa0",
+      "question": "In a computational problem, what can be described as a string over an alphabet?",
+      "answers": [
+        "problem instance",
+        "a problem instance",
+        "problem instance"
+      ],
+      "baseline_answer": "A problem instance",
+      "gated_answer": "A problem instance",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.933901,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e200e4cd28a01900c67c18",
+      "question": "In the most basic sense what did a Turing machine emulate?",
+      "answers": [
+        "a computer",
+        "a computer",
+        "a computer"
+      ],
+      "baseline_answer": "A computer",
+      "gated_answer": "A computer",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.898067,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.244061,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56de0f6a4396321400ee257f",
+      "question": "Who was the Normans' main enemy in Italy, the Byzantine Empire and Armenia?",
+      "answers": [
+        "Seljuk Turks",
+        "the Pechenegs, the Bulgars, and especially the Seljuk Turks",
+        "the Seljuk Turks"
+      ],
+      "baseline_answer": "Seljuk Turks",
+      "gated_answer": "Seljuk Turks",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.933322,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b754cd28a01900c67abc",
+      "question": "Time and space are both examples of what type of resource?",
+      "answers": [
+        "complexity resources",
+        "complexity resources",
+        "complexity"
+      ],
+      "baseline_answer": "complexity resources",
+      "gated_answer": "complexity resources",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.906591,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.271807,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.156547,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.159455,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705ffde52bb891400689788",
+      "question": "The earthquake forecast models what features of earthquakes in California?",
+      "answers": [
+        "occurrence",
+        "occurrence",
+        "occurrence"
+      ],
+      "baseline_answer": "Earthquake occurrence",
+      "gated_answer": "Earthquake occurrence",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 3,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.93957,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a38de3433e140042305c",
+      "question": "What is a commonly used measurement used to determine the complexity of a computational problem?",
+      "answers": [
+        "how much time the best algorithm requires to solve the problem",
+        "time",
+        "time"
+      ],
+      "baseline_answer": "Time required to solve the problem",
+      "gated_answer": "Time required to solve the problem",
+      "baseline_f1": 0.5882352941176471,
+      "gated_f1": 0.5882352941176471,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.907324,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.565766,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 5,
+          "trust": 0.27007,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 6,
+          "trust": 0.429997,
+          "contains_answer": true
+        },
+        {
+          "step": 5,
+          "chunk_index": 2,
+          "trust": 0.131143,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "57094ca7efce8f15003a7dd6",
+      "question": "What service did BSkyB chare additional subscription fees for?",
+      "answers": [
+        "Sky+ PVR",
+        "Sky+ PVR",
+        "Sky+ PVR"
+      ],
+      "baseline_answer": "Sky+ PVR service",
+      "gated_answer": "Sky+ PVR service",
+      "baseline_f1": 0.8,
+      "gated_f1": 0.8,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.929457,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.374381,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.211055,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 4,
+          "trust": 0.209015,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.252118,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b8f3e3433e14004230e9",
+      "question": "Case complexities provide three likelihoods of what differing variable that remains the same size? ",
+      "answers": [
+        "inputs",
+        "inputs",
+        "inputs"
+      ],
+      "baseline_answer": "Time complexity of inputs of same size",
+      "gated_answer": "Time complexity of inputs of same size",
+      "baseline_f1": 0.25,
+      "gated_f1": 0.25,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.856302,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.56017,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "570610b275f01819005e792a",
+      "question": "What is the second busiest airport in the United States?",
+      "answers": [
+        "Los Angeles International Airport",
+        "Los Angeles International Airport",
+        "Los Angeles International Airport"
+      ],
+      "baseline_answer": "Los Angeles International Airport",
+      "gated_answer": "Los Angeles International Airport",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.986998,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705eee952bb8914006896de",
+      "question": "Which country used to rule California?",
+      "answers": [
+        "Mexico",
+        "Mexico",
+        "Mexico"
+      ],
+      "baseline_answer": "Mexico",
+      "gated_answer": "Mexico",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.902899,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.54972,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.482917,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e2042ecd28a01900c67c1f",
+      "question": "In what year did Raymond Sullivan publish a study of rudimentary sets?",
+      "answers": [
+        "1961",
+        "1961",
+        "1961"
+      ],
+      "baseline_answer": "Raymond Smullyan, not Raymond Sullivan, studied rudimentary sets in 1",
+      "gated_answer": "Raymond Smullyan, not Raymond Sullivan, studied rudimentary sets in 1",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.925153,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.253649,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.124193,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1dc62cd28a01900c67bcc",
+      "question": "What complexity class is commonly characterized by unknown algorithms to enhance solvability?",
+      "answers": [
+        "NP",
+        "NP",
+        "NP"
+      ],
+      "baseline_answer": "NP",
+      "gated_answer": "NP",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.851194,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.598119,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 3,
+          "trust": 0.259629,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.12798,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56dde1d966d3e219004dad8d",
+      "question": "Who upon arriving gave the original viking settlers a common identity?",
+      "answers": [
+        "Rollo",
+        "Rollo",
+        "Rollo"
+      ],
+      "baseline_answer": "Rollo",
+      "gated_answer": "The traditional pagii",
+      "baseline_f1": 1.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 3,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.936574,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e17644e3433e1400422f41",
+      "question": "What field of computer science analyzes the resource requirements of a specific algorithm isolated unto itself within a given problem?",
+      "answers": [
+        "analysis of algorithms",
+        "analysis of algorithms",
+        "analysis of algorithms"
+      ],
+      "baseline_answer": "Analysis of algorithms",
+      "gated_answer": "Analysis of algorithms",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.830337,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.647619,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.149306,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.218722,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56de179dcffd8e1900b4b5db",
+      "question": "What country did the Normans invade in 1169?",
+      "answers": [
+        "Ireland",
+        "Ireland",
+        "Ireland"
+      ],
+      "baseline_answer": "Ireland",
+      "gated_answer": "Ireland",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.938193,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "570614ff52bb89140068988e",
+      "question": "The two listed teams play for which NCAA group?",
+      "answers": [
+        "Division I",
+        "Division I",
+        "Division I"
+      ],
+      "baseline_answer": "NCAA Division I",
+      "gated_answer": "NCAA Division I",
+      "baseline_f1": 0.8,
+      "gated_f1": 0.8,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.880057,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.168137,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e19557e3433e1400422ff1",
+      "question": "What encoding decision needs to be made in order to determine an exact definition of the formal language?",
+      "answers": [
+        "how graphs are encoded as binary strings",
+        "how graphs are encoded as binary strings",
+        "how graphs are encoded as binary strings"
+      ],
+      "baseline_answer": "How graphs are encoded as binary strings",
+      "gated_answer": "How graphs are encoded as binary strings",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.925754,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.341123,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.152413,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.157826,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e20a3ae3433e140042324b",
+      "question": "What theorem was implicated by Manuel Blum's axioms?",
+      "answers": [
+        "speed-up theorem",
+        "speed-up theorem",
+        "speed-up theorem"
+      ],
+      "baseline_answer": "Speed-up theorem",
+      "gated_answer": "Speed-up theorem",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.902605,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.296713,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.276212,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56de4c324396321400ee27ab",
+      "question": "What kind of needlework was used in the creation of the Bayeux Tapestry?",
+      "answers": [
+        "embroidery",
+        "embroidery",
+        "embroidery"
+      ],
+      "baseline_answer": "Embroidery",
+      "gated_answer": "Embroidery",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.891294,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.459348,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b169cd28a01900c67a73",
+      "question": "In considering Turing machines and alternate variables, what measurement left unaffected by conversion between machine models? ",
+      "answers": [
+        "computational power",
+        "computational power",
+        "computational power"
+      ],
+      "baseline_answer": "Computational power",
+      "gated_answer": "Computational power",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.888983,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.338405,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 3,
+          "trust": 0.289281,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.169542,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de52614396321400ee27fd",
+      "question": "Who patronized the monks in Italy? ",
+      "answers": [
+        "Robert Guiscard",
+        "Robert Guiscard",
+        "Robert Guiscard"
+      ],
+      "baseline_answer": "Robert Guiscard",
+      "gated_answer": "Robert Guiscard",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.896434,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.265917,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.165354,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705fd8475f01819005e7844",
+      "question": "The mountain ranges tail off into what kind of geographical formation?",
+      "answers": [
+        "valleys",
+        "valleys",
+        "interior valleys"
+      ],
+      "baseline_answer": "Interior valleys and deserts",
+      "gated_answer": "Interior valleys and deserts",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.891697,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.294193,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56de4b5c4396321400ee279a",
+      "question": "Who used the church to unify themselves?",
+      "answers": [
+        "dukes",
+        "the dukes",
+        "dukes"
+      ],
+      "baseline_answer": "The dukes used the church to unify themselves",
+      "gated_answer": "The dukes used the church to unify themselves",
+      "baseline_f1": 0.4,
+      "gated_f1": 0.4,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.834912,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.532101,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.18342,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.204513,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.188341,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "57060cc352bb89140068980f",
+      "question": "Downtown Santa Monica and Downtown Glendale are a part of which area?",
+      "answers": [
+        "Los Angeles Area",
+        "the Los Angeles Area",
+        "major business"
+      ],
+      "baseline_answer": "Los Angeles Area",
+      "gated_answer": "Los Angeles Area",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.961992,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1dc62cd28a01900c67bca",
+      "question": "What complexity class is characterized by a computational tasks and efficient algorithms?",
+      "answers": [
+        "P",
+        "P",
+        "P"
+      ],
+      "baseline_answer": "P",
+      "gated_answer": "P",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.927322,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.536085,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 3,
+          "trust": 0.242972,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.134258,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e19724cd28a01900c679f8",
+      "question": "The traveling salesman problem is an example of what type of problem?",
+      "answers": [
+        "A function problem",
+        "function",
+        "function problem"
+      ],
+      "baseline_answer": "Function problem",
+      "gated_answer": "Function problem",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.904771,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.548635,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705eccb52bb8914006896bb",
+      "question": "Other than for its resort feel, what is Palm Springs popular for?",
+      "answers": [
+        "open spaces",
+        "nearby open spaces",
+        "nearby open spaces"
+      ],
+      "baseline_answer": "Nearby open spaces",
+      "gated_answer": "Nearby open spaces",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.953294,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1f10ee3433e1400423225",
+      "question": "What are two complexity classes between L and P?",
+      "answers": [
+        "NL and NC",
+        "NL and NC",
+        "NL and NC"
+      ],
+      "baseline_answer": "NL, NC",
+      "gated_answer": "NL and NC",
+      "baseline_f1": 0.8,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.948435,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1ded7cd28a01900c67bd6",
+      "question": "What is an example of an NP-intermediate problem not known to exist in P or NP-complete? ",
+      "answers": [
+        "graph isomorphism problem",
+        "the discrete logarithm problem",
+        "graph isomorphism problem, the discrete logarithm problem and the integer factorization problem"
+      ],
+      "baseline_answer": "Graph isomorphism problem",
+      "gated_answer": "Factoring",
+      "baseline_f1": 1.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 4,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.940922,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5706149552bb891400689884",
+      "question": "When is the suspended team scheduled to return?",
+      "answers": [
+        "2018",
+        "in 2018",
+        "2018"
+      ],
+      "baseline_answer": "2018",
+      "gated_answer": "2018",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.939255,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c4fce3433e1400423152",
+      "question": "IP and AM are most commonly defined by what type of proof system?",
+      "answers": [
+        "Interactive",
+        "Interactive",
+        "Interactive"
+      ],
+      "baseline_answer": "Interactive proof system",
+      "gated_answer": "Interactive proof system",
+      "baseline_f1": 0.5,
+      "gated_f1": 0.5,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.901258,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.477719,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.153969,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.13161,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56de17f9cffd8e1900b4b5e3",
+      "question": "Who was the hostage?",
+      "answers": [
+        "Duncan",
+        "Duncan",
+        "Duncan"
+      ],
+      "baseline_answer": "Duncan",
+      "gated_answer": "Duncan",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.900083,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.255338,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.231145,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.163719,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c3e1e3433e1400423149",
+      "question": "What function is used by algorithms to define measurements like time or space?",
+      "answers": [
+        "bounding",
+        "bounding",
+        "bounding"
+      ],
+      "baseline_answer": "Resource function",
+      "gated_answer": "Resource function",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.890733,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.20031,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705fb7f52bb891400689753",
+      "question": "Other than L.A. which other county do many people commute to?",
+      "answers": [
+        "Orange",
+        "Orange Counties",
+        "Orange"
+      ],
+      "baseline_answer": "San Bernardino County",
+      "gated_answer": "San Bernardino County",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.928789,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.418437,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 6,
+          "trust": 0.225373,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.244201,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 0,
+          "trust": 0.157407,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "570602fa52bb8914006897a0",
+      "question": "Cities that anchor the regions are often the hub for what kind of activity?",
+      "answers": [
+        "economic",
+        "economic",
+        "economic activity"
+      ],
+      "baseline_answer": "Economic activity",
+      "gated_answer": "Economic activity",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.942333,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705e3f252bb89140068966a",
+      "question": "Which coastline does Southern California touch?",
+      "answers": [
+        "Pacific",
+        "Pacific",
+        "Pacific"
+      ],
+      "baseline_answer": "Pacific coast",
+      "gated_answer": "Pacific coast",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.85054,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.502212,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.505697,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.209626,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.187664,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1e9dfe3433e14004231fc",
+      "question": "What is the problem attributed to defining if two finite graphs are isomorphic?",
+      "answers": [
+        "The graph isomorphism problem",
+        "graph isomorphism",
+        "The graph isomorphism problem"
+      ],
+      "baseline_answer": "Graph isomorphism problem",
+      "gated_answer": "Graph isomorphism problem",
+      "baseline_f1": 0.8571428571428571,
+      "gated_f1": 0.8571428571428571,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.945487,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705ffde52bb891400689787",
+      "question": "Which organization released a California Earthquake forecast?",
+      "answers": [
+        "USGS",
+        "The USGS",
+        "USGS"
+      ],
+      "baseline_answer": "USGS",
+      "gated_answer": "USGS",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.962244,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5706111a52bb89140068984f",
+      "question": "A single line connects San Bernardino, Riverside and what other county?",
+      "answers": [
+        "Orange",
+        "Orange",
+        "Orange"
+      ],
+      "baseline_answer": "Orange counties",
+      "gated_answer": "Orange counties",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.943239,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56dde0ba66d3e219004dad76",
+      "question": "Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?",
+      "answers": [
+        "King Charles III",
+        "King Charles III",
+        "King Charles III"
+      ],
+      "baseline_answer": "King Charles III of West Francia",
+      "gated_answer": "King Charles III of West Francia",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.955219,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "57094d489928a8140047150e",
+      "question": "What is the name brand of the personal video recorder that BSkyB offers?",
+      "answers": [
+        "Sky+",
+        "Sky+",
+        "PVR"
+      ],
+      "baseline_answer": "Sky+",
+      "gated_answer": "Sky+",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.88976,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.288725,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.236117,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.188556,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.191236,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56de148dcffd8e1900b4b5be",
+      "question": "How many men were in Robert's army?",
+      "answers": [
+        "30,000",
+        "30,000",
+        "30,000"
+      ],
+      "baseline_answer": "30,000 men",
+      "gated_answer": "30,000 men",
+      "baseline_f1": 0.8,
+      "gated_f1": 0.8,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.913211,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 11,
+          "trust": 0.41355,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.312389,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.286064,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.149974,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705e99452bb89140068968a",
+      "question": "What are Los Angeles, Orange, San Diego, San Bernardino and Riverside?",
+      "answers": [
+        "counties",
+        "counties",
+        "five most populous in the state"
+      ],
+      "baseline_answer": "Counties in California",
+      "gated_answer": "Counties in California",
+      "baseline_f1": 0.5,
+      "gated_f1": 0.5,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.974001,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705f7c875f01819005e77e0",
+      "question": "What kind of region can be found inside the urban area of southern California?",
+      "answers": [
+        "international metropolitan",
+        "an international metropolitan region",
+        "international metropolitan"
+      ],
+      "baseline_answer": "International metropolitan region",
+      "gated_answer": "International metropolitan region",
+      "baseline_f1": 0.8571428571428571,
+      "gated_f1": 0.8571428571428571,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.922887,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.519242,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.300096,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.249149,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 1,
+          "trust": 0.14804,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "57094d489928a8140047150c",
+      "question": "Who is the parent company of NDS?",
+      "answers": [
+        "Cisco Systems",
+        "Cisco Systems",
+        "Cisco Systems company"
+      ],
+      "baseline_answer": "Cisco Systems",
+      "gated_answer": "Cisco Systems",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.870335,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.254336,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.183964,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.201446,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.156849,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a38de3433e140042305d",
+      "question": "What is one variable on which the running time may be contingent?",
+      "answers": [
+        "the instance",
+        "the instance",
+        "the size of the instance"
+      ],
+      "baseline_answer": "Size of the instance",
+      "gated_answer": "Size of the instance",
+      "baseline_f1": 0.888888888888889,
+      "gated_f1": 0.888888888888889,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.902658,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 6,
+          "trust": 0.448458,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.196717,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.292977,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.27645,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56ddde6b9a695914005b962b",
+      "question": "Who was the Norse leader?",
+      "answers": [
+        "Rollo",
+        "Rollo",
+        "Rollo",
+        "Rollo"
+      ],
+      "baseline_answer": "Rollo",
+      "gated_answer": "Rollo",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.910958,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.32602,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.239845,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.227509,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705fb7f52bb891400689750",
+      "question": "What is the main gap to continued urbanization?",
+      "answers": [
+        "Camp Pendleton",
+        "Camp Pendleton",
+        "Camp Pendleton"
+      ],
+      "baseline_answer": "Camp Pendleton",
+      "gated_answer": "Camp Pendleton",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.965127,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705edcd52bb8914006896cc",
+      "question": "The term \"southern\" California usually refers to how many of the southern-most counties of the state?",
+      "answers": [
+        "ten",
+        "ten",
+        "ten"
+      ],
+      "baseline_answer": "Ten counties",
+      "gated_answer": "ten counties",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.981819,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "570610b275f01819005e792b",
+      "question": "What is the metric they use to determine how busy airports are?",
+      "answers": [
+        "passenger volume",
+        "passenger volume",
+        "passenger volume"
+      ],
+      "baseline_answer": "Passenger volume",
+      "gated_answer": "Passenger volume",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.96905,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de3e414396321400ee26d8",
+      "question": "What year did Roger de Tosny fail to accomplish what he set out to do?",
+      "answers": [
+        "1018",
+        "1064",
+        "1018"
+      ],
+      "baseline_answer": "1018",
+      "gated_answer": "1018",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.887616,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.258118,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.144989,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.162616,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705f13d52bb8914006896f4",
+      "question": "How many counties initially made up the definition of southern California?",
+      "answers": [
+        "seven",
+        "seven",
+        "seven"
+      ],
+      "baseline_answer": "7 counties",
+      "gated_answer": "7 counties",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.918125,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705ec1675f01819005e776f",
+      "question": "What is the name of the professional skateboarder that lives in southern California?",
+      "answers": [
+        "Tony Hawk",
+        "Tony Hawk",
+        "Tony Hawk"
+      ],
+      "baseline_answer": "Tony Hawk",
+      "gated_answer": "Tony Hawk",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.917266,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 5,
+          "trust": 0.444053,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 6,
+          "trust": 0.380101,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.230102,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.358612,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705f7c875f01819005e77de",
+      "question": "Southern Californian communities are well known to be large, spread - out, and what other characteristic?",
+      "answers": [
+        "suburban",
+        "suburban",
+        "suburban communities and use of automobiles and highways"
+      ],
+      "baseline_answer": "Use of automobiles and highways",
+      "gated_answer": "Use of automobiles and highways",
+      "baseline_f1": 0.7692307692307693,
+      "gated_f1": 0.7692307692307693,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.904568,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.344538,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 3,
+          "trust": 0.316856,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.180989,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.20536,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b169cd28a01900c67a75",
+      "question": "What commonality do alternate machine models, such as random access machines, share with Turing machines?",
+      "answers": [
+        "the machines operate deterministically",
+        "deterministically",
+        "the machines operate deterministically"
+      ],
+      "baseline_answer": "Deterministic operation",
+      "gated_answer": "Deterministic operation",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.926773,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.340023,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.221587,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.16974,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a564cd28a01900c67a48",
+      "question": "Whose thesis states that the solution to a problem is solvable with reasonable resources assuming it allows for a polynomial time algorithm?",
+      "answers": [
+        "Cobham's thesis",
+        "Cobham's",
+        "Cobham"
+      ],
+      "baseline_answer": "Cobham's thesis",
+      "gated_answer": "Cobham's thesis",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.905493,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.648429,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 1,
+          "trust": 0.249044,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.158629,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e20a27cd28a01900c67c24",
+      "question": "What is the concrete choice typically assumed by most complexity-theoretic theorems?",
+      "answers": [
+        "input encoding",
+        "input encoding",
+        "input encoding"
+      ],
+      "baseline_answer": "Input encoding",
+      "gated_answer": "Input encoding",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.936175,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e2042ecd28a01900c67c20",
+      "question": "In 1962, who was responsible for the authorship of a paper published on real time-computations?",
+      "answers": [
+        "Hisao Yamada",
+        "Hisao Yamada",
+        "Hisao Yamada"
+      ],
+      "baseline_answer": "Yamada",
+      "gated_answer": "Yamada",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 3,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.946427,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705edcd52bb8914006896cb",
+      "question": "How many miles south of San Jose is the north - south midway point located?",
+      "answers": [
+        "11",
+        "11",
+        "11"
+      ],
+      "baseline_answer": "18 km (11 miles) south of San Jose",
+      "gated_answer": "11 miles",
+      "baseline_f1": 0.2222222222222222,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.955823,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5706074552bb8914006897d7",
+      "question": "What does the El Centro metropolitan area and San Diego-Carslbad-San Marcos metropolitan area form?",
+      "answers": [
+        "Southern Border Region",
+        "the Southern Border Region",
+        "Southern Border Region"
+      ],
+      "baseline_answer": "Southern Border Region",
+      "gated_answer": "Southern Border Region",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.977669,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de1563cffd8e1900b4b5c2",
+      "question": "When did the Normans attack Dyrrachium?",
+      "answers": [
+        "1185",
+        "in 1185",
+        "1185"
+      ],
+      "baseline_answer": "1185",
+      "gated_answer": "1185",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.911215,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.42565,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1ddfce3433e14004231d8",
+      "question": "What is the prize offered for finding a solution to P=NP?",
+      "answers": [
+        "$1,000,000",
+        "US$1,000,000",
+        "US$1,000,000"
+      ],
+      "baseline_answer": "US$1,000,000",
+      "gated_answer": "US$1,000,000",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.907568,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 3,
+          "trust": 0.585396,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 4,
+          "trust": 0.38592,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.173387,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 2,
+          "trust": 0.200977,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1b355e3433e14004230b0",
+      "question": "What type of Turing machine can be characterized by checking multiple possibilities at the same time?",
+      "answers": [
+        "non-deterministic",
+        "non-deterministic",
+        "non-deterministic Turing machine"
+      ],
+      "baseline_answer": "Non-deterministic Turing machine",
+      "gated_answer": "Non-deterministic Turing machine",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.874601,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.62382,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.148998,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e19724cd28a01900c679fa",
+      "question": "Is the output of a functional problem typically characterized by a simple or complex answer?",
+      "answers": [
+        "complex",
+        "complex",
+        "complex"
+      ],
+      "baseline_answer": "complex answer",
+      "gated_answer": "complex answer",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.941469,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e190bce3433e1400422fc9",
+      "question": "What are the two simple word responses to a decision problem?",
+      "answers": [
+        "yes or no",
+        "yes or no",
+        "yes or no"
+      ],
+      "baseline_answer": "Yes or No",
+      "gated_answer": "Yes or No",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.877858,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.561498,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.253059,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 4,
+          "trust": 0.268875,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.210476,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56de49564396321400ee277a",
+      "question": "What continent are the Canarian Islands off the coast of?",
+      "answers": [
+        "Africa",
+        "Africa",
+        "Africa"
+      ],
+      "baseline_answer": "Africa",
+      "gated_answer": "Africa",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.934878,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5706143575f01819005e7950",
+      "question": "The Los Angeles Rams are an example of what kind of sports team?",
+      "answers": [
+        "NFL",
+        "Professional",
+        "NFL"
+      ],
+      "baseline_answer": "NFL team",
+      "gated_answer": "NFL team",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.950547,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e20a3ae3433e140042324a",
+      "question": "Who is responsible for axiomatic complexity theory?",
+      "answers": [
+        "Manuel Blum",
+        "Manuel Blum",
+        "Manuel Blum"
+      ],
+      "baseline_answer": "Manuel Blum",
+      "gated_answer": "Manuel Blum",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.901294,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.301822,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.305382,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705f09e75f01819005e77a8",
+      "question": "Which Senator was a strong advocate for the Pico Act?",
+      "answers": [
+        "Milton Latham",
+        "Milton Latham",
+        "Milton Latham"
+      ],
+      "baseline_answer": "Milton Latham",
+      "gated_answer": "Milton Latham",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 6,
+          "trust": 0.908824,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.471271,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.098517,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 0,
+          "trust": 0.247812,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.153994,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a564cd28a01900c67a4a",
+      "question": "What term corresponds to the maximum measurement of time across all functions of n? ",
+      "answers": [
+        "worst-case time complexity",
+        "worst-case time complexity",
+        "the worst-case time complexity"
+      ],
+      "baseline_answer": "Worst-case time complexity",
+      "gated_answer": "Worst-case time complexity",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.926672,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.398007,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.333467,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.247553,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1cbe2cd28a01900c67bad",
+      "question": "What equates to a squared integer according to polynomial time reduction?",
+      "answers": [
+        "multiplying two integers",
+        "multiplying two integers",
+        "multiplying two integers"
+      ],
+      "baseline_answer": "Multiplying an integer by itself",
+      "gated_answer": "Multiplying an integer by itself",
+      "baseline_f1": 0.25,
+      "gated_f1": 0.25,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.904225,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.413432,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 3,
+          "trust": 0.184798,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 2,
+          "trust": 0.174884,
+          "contains_answer": true
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.126041,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705e26d75f01819005e76d5",
+      "question": "Despite being traditionall described as \"eight counties\", how many counties does this region actually have?",
+      "answers": [
+        "10 counties",
+        "10",
+        "10"
+      ],
+      "baseline_answer": "10 counties",
+      "gated_answer": "10 counties",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.891606,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.400215,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.243975,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.134354,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e17a7ccd28a01900c679a5",
+      "question": "What is the general term used to describe the output to any given input in a problem instance?",
+      "answers": [
+        "solution",
+        "the solution",
+        "solution"
+      ],
+      "baseline_answer": "Solution",
+      "gated_answer": "Solution",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 7,
+          "trust": 0.945462,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c9bfe3433e1400423192",
+      "question": "What concept is frequently used to define complexity classes?",
+      "answers": [
+        "reduction",
+        "a reduction",
+        "reduction"
+      ],
+      "baseline_answer": "Reduction",
+      "gated_answer": "Reduction",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.87791,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 4,
+          "trust": 0.381964,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.172672,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.164912,
+          "contains_answer": true
+        },
+        {
+          "step": 5,
+          "chunk_index": 3,
+          "trust": 0.245151,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705e4fe75f01819005e7704",
+      "question": "What is the name of the water body that is found to the east?",
+      "answers": [
+        "Colorado River",
+        "the Colorado River",
+        "Colorado River"
+      ],
+      "baseline_answer": "Colorado River",
+      "gated_answer": "Colorado River",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.90571,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.253355,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1aff7cd28a01900c67a6b",
+      "question": "What type of Turing machine is capable of multiple actions and extends into a variety of computational paths?",
+      "answers": [
+        "A non-deterministic Turing machine",
+        "non-deterministic",
+        "non-deterministic Turing machine"
+      ],
+      "baseline_answer": "Non-deterministic Turing machine",
+      "gated_answer": "Non-deterministic Turing machine",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 4,
+          "trust": 0.924905,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 5,
+          "trust": 0.672018,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.454263,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.355553,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 6,
+          "trust": 0.201113,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "5705eb3375f01819005e7767",
+      "question": "Other than the motion picture and television industry, what other major industry is centered in Los Angeles?",
+      "answers": [
+        "music",
+        "major record companies"
+      ],
+      "baseline_answer": "Music industry",
+      "gated_answer": "Music industry",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 4,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.971378,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "57060df252bb891400689821",
+      "question": "Other than San Bernardino, what is the name of the other city that maintains the districts including University Town?",
+      "answers": [
+        "Riverside",
+        "Riverside",
+        "Downtown Riverside"
+      ],
+      "baseline_answer": "Riverside",
+      "gated_answer": "Riverside",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.940326,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705eb3375f01819005e7764",
+      "question": "What is the name given to the district that is associated with the motion picture industry?",
+      "answers": [
+        "Hollywood",
+        "Hollywood",
+        "Hollywood"
+      ],
+      "baseline_answer": "Hollywood",
+      "gated_answer": "Hollywood",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.960444,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de52614396321400ee27fe",
+      "question": "What tradition were the Saint-Evroul monks known for?",
+      "answers": [
+        "singing",
+        "singing",
+        "singing"
+      ],
+      "baseline_answer": "Singing tradition",
+      "gated_answer": "Singing tradition",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.885358,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.59198,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.255342,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705f13d52bb8914006896f3",
+      "question": "What was the newer county added to the list?",
+      "answers": [
+        "Imperial",
+        "Imperial",
+        "1999"
+      ],
+      "baseline_answer": "Imperial",
+      "gated_answer": "Imperial",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.938561,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5706111a52bb89140068984d",
+      "question": "How many lines does the commuter rail system have?",
+      "answers": [
+        "seven",
+        "seven",
+        "seven"
+      ],
+      "baseline_answer": "Seven lines",
+      "gated_answer": "Seven lines",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.929784,
+          "contains_answer": true
+        }
+      ]
+    }
+  ]
+}

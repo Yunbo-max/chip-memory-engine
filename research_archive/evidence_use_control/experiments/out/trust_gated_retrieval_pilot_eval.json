@@ -1,0 +1,56 @@
+{
+  "evaluated_at_utc": "2026-06-08T17:41:46.730832+00:00",
+  "source_result": "/tf/notebooks/llm_reasoning_agent_memory_pilot_bundle/experiments/out/trust_gated_retrieval_pilot_result.json",
+  "verdict": "PARTIAL_PASS_FULL_EVAL_INCOMPLETE",
+  "criteria": {
+    "one_71033_baseline_trace_converted": {
+      "status": "PASS",
+      "evidence": "Trace contains the shared schema fields from SKILL.md."
+    },
+    "71120_trust_fields_same_step_granularity": {
+      "status": "PASS_STRUCTURAL_PROXY",
+      "evidence": "3 steps and matching trust/simulatability/concentration arrays."
+    },
+    "diagnostics_answer_and_effort_outputs": {
+      "status": "PASS",
+      "evidence": "ANLS/citation diagnostics and MADQA effort metrics executed."
+    },
+    "fields_trace_back_to_chip_implementation_items": {
+      "status": "PASS",
+      "evidence": "Grounding map points to MADQA trace/metrics and 71120 flow/relevance/calibrator paths."
+    },
+    "retrieved_chunks_aligned_with_real_contribution_relevance_features": {
+      "status": "FAIL",
+      "evidence": "Current run uses toy contribution matrices; real 71120 JSONL/PT outputs were not generated."
+    },
+    "trust_supports_stop_continue_before_final_answer": {
+      "status": "PASS_STRUCTURAL_PROXY",
+      "evidence": "Stop step computed as 1."
+    },
+    "effort_metrics_computable_from_logs": {
+      "status": "PASS",
+      "evidence": "Retrieval/tool steps and repeated-loop rate computed from search_history shape."
+    },
+    "required_runtime_modules_grounded_to_code": {
+      "status": "PASS",
+      "evidence": "Runtime modules point to code-inspected chip implementation paths."
+    }
+  },
+  "hard_failures": [
+    "retrieved_chunks_aligned_with_real_contribution_relevance_features"
+  ],
+  "proxy_passes": [
+    "71120_trust_fields_same_step_granularity",
+    "trust_supports_stop_continue_before_final_answer"
+  ],
+  "next_eval_required": {
+    "name": "Run real 71120 attribution/relevance/calibration on one real retrieved trace",
+    "gpu_constraint": "CUDA_VISIBLE_DEVICES=2 and <=20 GiB memory cap",
+    "candidate_command_shape": "CUDA_VISIBLE_DEVICES=2 torchrun --nproc_per_node=1 proposed/Ours/llama/main.py --dataset squad2 --model_path <local_llama_model> --i_block 1",
+    "missing_inputs": [
+      "local LLaMA-family model path compatible with 71120 code",
+      "real prepared RAG example or generated MADQA-to-71120 context/question record",
+      "real relevance-layout output from proposed/SHAP_Qwen3_8B.py or lighter ranker path"
+    ]
+  }
+}

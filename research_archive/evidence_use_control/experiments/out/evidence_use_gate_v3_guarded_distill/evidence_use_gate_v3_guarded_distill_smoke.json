@@ -1,0 +1,948 @@
+{
+  "run_at_utc": "2026-06-09T14:57:01.365261+00:00",
+  "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+  "config": {
+    "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "learn_limit": 128,
+    "train_examples": 4,
+    "val_examples": 2,
+    "eval_examples": 2,
+    "fixed_k": 5,
+    "risk_budgets": "0.005,0.02",
+    "max_f1_drop": 0.005,
+    "max_wrong_stop": 0.05,
+    "f1_epsilon": 0.03,
+    "min_good_f1": 0.55,
+    "min_counterfactual_drop": 0.05,
+    "min_alignment": 0.1,
+    "min_attention_concentration": 0.7,
+    "teacher_alpha": 0.6,
+    "teacher_threshold": 0.51,
+    "max_new_tokens": 16,
+    "max_length": 768,
+    "output_tag": "evidence_use_gate_v3_guarded_distill_smoke"
+  },
+  "gpu": {
+    "visible_cuda_devices": "0",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "memory_cap_gib": 20.0,
+    "total_memory_gib": 23.65
+  },
+  "splits": {
+    "train_examples": 4,
+    "val_examples": 2,
+    "test_examples": 2,
+    "train_states": 18,
+    "val_states": 9
+  },
+  "teacher": {
+    "alpha": 0.6,
+    "threshold": 0.51,
+    "source": "calibrated Qwen attention-flow"
+  },
+  "train_metrics": {
+    "safety": {
+      "train_states": 18,
+      "stop_positive_rate": 0.6666666666666666,
+      "noise_positive_rate": 0.2222222222222222,
+      "train_stop_auroc": 1.0,
+      "train_stop_auprc": 1.0,
+      "train_noise_auroc": 1.0,
+      "train_noise_auprc": 1.0
+    },
+    "distill": {
+      "train_attention_teacher_positive_rate": 0.8888888888888888,
+      "train_attention_teacher_auroc": 1.0,
+      "train_attention_teacher_auprc": 1.0,
+      "train_mean_actual_f1_drop": 0.04894179850816727
+    }
+  },
+  "validation_metrics": {
+    "val_states": 9,
+    "val_stop_positive_rate": 0.8888888888888888,
+    "val_noise_positive_rate": 0.1111111111111111,
+    "val_stop_auroc": 0.6875,
+    "val_stop_auprc": 0.9526289682539683,
+    "val_noise_auroc": 0.5,
+    "val_noise_auprc": 0.1111111111111111,
+    "val_attention_teacher_positive_rate": 1.0,
+    "val_attention_teacher_auroc": null,
+    "val_attention_teacher_auprc": null,
+    "val_drop_mae": 0.19676373898983002,
+    "val_mean_actual_f1_drop": 0.1111111119389534
+  },
+  "policies": [
+    {
+      "risk_budget": 0.005,
+      "teacher_stop_threshold": 0.05,
+      "drop_threshold": 0.04,
+      "noise_threshold": 0.3,
+      "uncertainty_threshold": 0.2,
+      "safe_stop_threshold": 0.05,
+      "quality_margin": 0.005,
+      "min_stop_step": 1,
+      "val_baseline_f1": 1.0,
+      "val_gate_f1": 1.0,
+      "val_f1_delta": 0.0,
+      "val_baseline_steps": 4.5,
+      "val_gate_steps": 2.5,
+      "val_effort_reduction": 2.0,
+      "val_relative_effort_reduction": 0.4444444444444444,
+      "val_wrong_stop_rate": 0.0,
+      "val_attention_teacher_exact_match_rate": 0.5,
+      "selection_score": 0.5944444444444444
+    },
+    {
+      "risk_budget": 0.02,
+      "teacher_stop_threshold": 0.05,
+      "drop_threshold": 0.04,
+      "noise_threshold": 0.3,
+      "uncertainty_threshold": 0.2,
+      "safe_stop_threshold": 0.05,
+      "quality_margin": 0.02,
+      "min_stop_step": 1,
+      "val_baseline_f1": 1.0,
+      "val_gate_f1": 1.0,
+      "val_f1_delta": 0.0,
+      "val_baseline_steps": 4.5,
+      "val_gate_steps": 2.5,
+      "val_effort_reduction": 2.0,
+      "val_relative_effort_reduction": 0.4444444444444444,
+      "val_wrong_stop_rate": 0.0,
+      "val_attention_teacher_exact_match_rate": 0.5,
+      "selection_score": 0.5944444444444444
+    }
+  ],
+  "pareto_curve": [
+    {
+      "risk_budget": 0.005,
+      "policy": {
+        "risk_budget": 0.005,
+        "teacher_stop_threshold": 0.05,
+        "drop_threshold": 0.04,
+        "noise_threshold": 0.3,
+        "uncertainty_threshold": 0.2,
+        "safe_stop_threshold": 0.05,
+        "quality_margin": 0.005,
+        "min_stop_step": 1,
+        "val_baseline_f1": 1.0,
+        "val_gate_f1": 1.0,
+        "val_f1_delta": 0.0,
+        "val_baseline_steps": 4.5,
+        "val_gate_steps": 2.5,
+        "val_effort_reduction": 2.0,
+        "val_relative_effort_reduction": 0.4444444444444444,
+        "val_wrong_stop_rate": 0.0,
+        "val_attention_teacher_exact_match_rate": 0.5,
+        "selection_score": 0.5944444444444444
+      },
+      "test": {
+        "n": 2,
+        "baseline_mean_f1": 0.5151515151515151,
+        "gate_mean_f1": 0.5151515151515151,
+        "f1_delta": 0.0,
+        "baseline_mean_steps": 5.0,
+        "gate_mean_steps": 3.5,
+        "mean_effort_reduction": 1.5,
+        "relative_effort_reduction": 0.3,
+        "answer_preservation_rate": 1.0,
+        "wrong_stop_rate": 0.0
+      },
+      "verdict": "MISS_TARGET"
+    },
+    {
+      "risk_budget": 0.02,
+      "policy": {
+        "risk_budget": 0.02,
+        "teacher_stop_threshold": 0.05,
+        "drop_threshold": 0.04,
+        "noise_threshold": 0.3,
+        "uncertainty_threshold": 0.2,
+        "safe_stop_threshold": 0.05,
+        "quality_margin": 0.02,
+        "min_stop_step": 1,
+        "val_baseline_f1": 1.0,
+        "val_gate_f1": 1.0,
+        "val_f1_delta": 0.0,
+        "val_baseline_steps": 4.5,
+        "val_gate_steps": 2.5,
+        "val_effort_reduction": 2.0,
+        "val_relative_effort_reduction": 0.4444444444444444,
+        "val_wrong_stop_rate": 0.0,
+        "val_attention_teacher_exact_match_rate": 0.5,
+        "selection_score": 0.5944444444444444
+      },
+      "test": {
+        "n": 2,
+        "baseline_mean_f1": 0.5151515151515151,
+        "gate_mean_f1": 0.5151515151515151,
+        "f1_delta": 0.0,
+        "baseline_mean_steps": 5.0,
+        "gate_mean_steps": 3.5,
+        "mean_effort_reduction": 1.5,
+        "relative_effort_reduction": 0.3,
+        "answer_preservation_rate": 1.0,
+        "wrong_stop_rate": 0.0
+      },
+      "verdict": "MISS_TARGET"
+    }
+  ],
+  "best_target_budget": null,
+  "attention_teacher_aggregate": {
+    "n": 2,
+    "baseline_mean_f1": 0.5151515151515151,
+    "attention_teacher_mean_f1": 0.3333333333333333,
+    "f1_delta": -0.18181818181818182,
+    "baseline_mean_steps": 5.0,
+    "attention_teacher_mean_steps": 1.0,
+    "mean_effort_reduction": 4.0,
+    "relative_effort_reduction": 0.8,
+    "answer_preservation_rate": 0.5,
+    "wrong_stop_rate": 0.5
+  },
+  "verdict": "NO_TARGET_PASS",
+  "max_memory_allocated_mib": 8414.124,
+  "train_attention_teacher_records": [
+    {
+      "question_id": "56de179dcffd8e1900b4b5dc",
+      "teacher_step": 3,
+      "combined_scores_by_step": [
+        0.4,
+        0.3795960968401282,
+        0.8237160206397509,
+        0.09106634266424933,
+        0.23483514945100775
+      ],
+      "flow_scores_by_step": [
+        0.04884294052737699,
+        0.14866300356158618,
+        0.49405500592136914,
+        0.08534370483003804,
+        0.2230953381979235
+      ],
+      "retrieval_scores_by_step": [
+        0.09885355471302457,
+        0.07487984216528082,
+        0.07157530461604288,
+        0.04343719717378871,
+        0.036957402751797826
+      ],
+      "labels_by_step": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56de16ca4396321400ee25c8",
+      "teacher_step": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.10520693476217463,
+        0.021877338792963965,
+        0.011451076474684638,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.7719603365334807,
+        0.07030653360051967,
+        0.06573162420908098,
+        0.05299500768626335,
+        0.03900648888492721
+      ],
+      "retrieval_scores_by_step": [
+        0.2771840965001963,
+        0.055148927562676295,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56de3d594396321400ee26cc",
+      "teacher_step": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.040104924618676555,
+        0.0
+      ],
+      "flow_scores_by_step": [
+        0.833349099052316,
+        0.10925851664023928,
+        0.05739237452948205
+      ],
+      "retrieval_scores_by_step": [
+        0.29203912186515574,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56de0ffd4396321400ee258e",
+      "teacher_step": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.06380840413821776,
+        0.0,
+        0.002727696331856522,
+        0.01577302676129534
+      ],
+      "flow_scores_by_step": [
+        0.7137287139675272,
+        0.11947988185490495,
+        0.048762488844423406,
+        0.051785533805530325,
+        0.06624337075368349
+      ],
+      "retrieval_scores_by_step": [
+        0.33452514333701405,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "val_attention_teacher_records": [
+    {
+      "question_id": "56dde2fa66d3e219004dad9b",
+      "teacher_step": 1,
+      "combined_scores_by_step": [
+        0.5674444515485741,
+        0.8459499868324997,
+        0.22471066464917275,
+        0.026269720488996146
+      ],
+      "flow_scores_by_step": [
+        0.2224513727899945,
+        0.6070459205332509,
+        0.07357285662646858,
+        0.09692984426758836
+      ],
+      "retrieval_scores_by_step": [
+        0.053004225010439575,
+        0.032590968805794915,
+        0.029776535350760785,
+        0.0
+      ],
+      "labels_by_step": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "question_id": "56de15104396321400ee25b8",
+      "teacher_step": 1,
+      "combined_scores_by_step": [
+        1.0,
+        0.022629830636125343,
+        0.039723968113989,
+        0.0,
+        0.17388205254171415
+      ],
+      "flow_scores_by_step": [
+        0.6385265349858313,
+        0.0534532002096013,
+        0.07077540768820352,
+        0.030521445861114296,
+        0.20672340209623652
+      ],
+      "retrieval_scores_by_step": [
+        0.2478398477817798,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "test_rows": [
+    {
+      "question_id": "56dde0ba66d3e219004dad76",
+      "question": "Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?",
+      "answers": [
+        "King Charles III",
+        "King Charles III",
+        "King Charles III"
+      ],
+      "baseline_answer": "King Charles III of West Francia",
+      "baseline_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "budget_results": {
+        "0.005": {
+          "steps": 2,
+          "answer": "King Charles III of West Francia",
+          "f1": 0.6666666666666666,
+          "policy": {
+            "risk_budget": 0.005,
+            "teacher_stop_threshold": 0.05,
+            "drop_threshold": 0.04,
+            "noise_threshold": 0.3,
+            "uncertainty_threshold": 0.2,
+            "safe_stop_threshold": 0.05,
+            "quality_margin": 0.005,
+            "min_stop_step": 1,
+            "val_baseline_f1": 1.0,
+            "val_gate_f1": 1.0,
+            "val_f1_delta": 0.0,
+            "val_baseline_steps": 4.5,
+            "val_gate_steps": 2.5,
+            "val_effort_reduction": 2.0,
+            "val_relative_effort_reduction": 0.4444444444444444,
+            "val_wrong_stop_rate": 0.0,
+            "val_attention_teacher_exact_match_rate": 0.5,
+            "selection_score": 0.5944444444444444
+          }
+        },
+        "0.020": {
+          "steps": 2,
+          "answer": "King Charles III of West Francia",
+          "f1": 0.6666666666666666,
+          "policy": {
+            "risk_budget": 0.02,
+            "teacher_stop_threshold": 0.05,
+            "drop_threshold": 0.04,
+            "noise_threshold": 0.3,
+            "uncertainty_threshold": 0.2,
+            "safe_stop_threshold": 0.05,
+            "quality_margin": 0.02,
+            "min_stop_step": 1,
+            "val_baseline_f1": 1.0,
+            "val_gate_f1": 1.0,
+            "val_f1_delta": 0.0,
+            "val_baseline_steps": 4.5,
+            "val_gate_steps": 2.5,
+            "val_effort_reduction": 2.0,
+            "val_relative_effort_reduction": 0.4444444444444444,
+            "val_wrong_stop_rate": 0.0,
+            "val_attention_teacher_exact_match_rate": 0.5,
+            "selection_score": 0.5944444444444444
+          }
+        }
+      },
+      "attention_teacher_answer": "King Charles III of West Francia",
+      "attention_teacher_f1": 0.6666666666666666,
+      "attention_teacher_steps": 1,
+      "attention_teacher_combined_scores_by_step": [
+        1.0,
+        0.15170200277465312,
+        0.0019309023136333402,
+        0.0,
+        0.00567117248471355
+      ],
+      "attention_teacher_labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "state_records": [
+        {
+          "step": 1,
+          "attention_scores_seen": [
+            0.9999999910139128
+          ],
+          "feature_debug": {
+            "step_frac": 0.2,
+            "inverse_step": 1.0,
+            "current_retrieval": 1.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 1.0,
+            "retrieval_margin": 1.0,
+            "retrieval_entropy": 0.0,
+            "retrieval_concentration": 0.9999999989999999,
+            "current_attention": 1.0,
+            "max_attention": 1.0,
+            "mean_attention": 1.0,
+            "attention_margin": 1.0,
+            "attention_entropy": 0.0,
+            "attention_concentration": 0.9999999989999999,
+            "attention_relevance_alignment": 0.0,
+            "current_lexical_overlap": 0.20512820512820512,
+            "current_question_recall": 0.6666666666666666,
+            "max_lexical_overlap_seen": 0.20512820512820512,
+            "max_question_recall_seen": 0.6666666666666666,
+            "current_chunk_len_128": 0.34375,
+            "cumulative_chunk_len_512": 0.0859375
+          },
+          "stop_prob": 0.01471601822219513,
+          "expected_f1_if_stop": 0.4739222355214425,
+          "continue_value": 0.7132084985524864,
+          "noise_risk": 0.9948662481197053,
+          "uncertainty": 0.3185748219576478,
+          "attention_teacher_stop_prob": 0.9997464080293618,
+          "predicted_f1_drop": 0.0002536084748068819,
+          "expected_f1_drop": 0.23928626303104383
+        },
+        {
+          "step": 2,
+          "attention_scores_seen": [
+            0.8452567416318012,
+            0.15474324947806067
+          ],
+          "feature_debug": {
+            "step_frac": 0.4,
+            "inverse_step": 0.5,
+            "current_retrieval": 0.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 0.5,
+            "retrieval_margin": 1.0,
+            "retrieval_entropy": -1.4428232973175177e-12,
+            "retrieval_concentration": 0.9999999989999999,
+            "current_attention": 0.0,
+            "max_attention": 1.0,
+            "mean_attention": 0.5,
+            "attention_margin": 1.0,
+            "attention_entropy": -1.4428232973175177e-12,
+            "attention_concentration": 0.9999999989999999,
+            "attention_relevance_alignment": 0.9999999999999999,
+            "current_lexical_overlap": 0.12903225806451613,
+            "current_question_recall": 0.3333333333333333,
+            "max_lexical_overlap_seen": 0.20512820512820512,
+            "max_question_recall_seen": 0.6666666666666666,
+            "current_chunk_len_128": 0.2109375,
+            "cumulative_chunk_len_512": 0.138671875
+          },
+          "stop_prob": 0.9968147980960371,
+          "expected_f1_if_stop": 0.8326890824329214,
+          "continue_value": 0.7190175736226808,
+          "noise_risk": 0.0029969467398024085,
+          "uncertainty": 0.34447017524179496,
+          "attention_teacher_stop_prob": 0.9997464080293618,
+          "predicted_f1_drop": 0.0002536084748068819,
+          "expected_f1_drop": 0.0
+        },
+        {
+          "step": 3,
+          "attention_scores_seen": [
+            0.7969136260683685,
+            0.11906916719581541,
+            0.08401719795564089
+          ],
+          "feature_debug": {
+            "step_frac": 0.6,
+            "inverse_step": 0.3333333333333333,
+            "current_retrieval": 0.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 0.4353509078566975,
+            "retrieval_margin": 0.6939472764299075,
+            "retrieval_entropy": 0.495589315129383,
+            "retrieval_concentration": 0.7656658733506838,
+            "current_attention": 0.0,
+            "max_attention": 1.0,
+            "mean_attention": 0.3497227976126544,
+            "attention_margin": 0.9508316071620369,
+            "attention_entropy": 0.1721957061808178,
+            "attention_concentration": 0.9531358415610479,
+            "attention_relevance_alignment": 0.9664782530777724,
+            "current_lexical_overlap": 0.05555555555555555,
+            "current_question_recall": 0.16666666666666666,
+            "max_lexical_overlap_seen": 0.20512820512820512,
+            "max_question_recall_seen": 0.6666666666666666,
+            "current_chunk_len_128": 0.25,
+            "cumulative_chunk_len_512": 0.201171875
+          },
+          "stop_prob": 0.01073474730266005,
+          "expected_f1_if_stop": 0.7478214819785005,
+          "continue_value": 0.6570716214781922,
+          "noise_risk": 0.0029969467398024085,
+          "uncertainty": 0.3841900387858499,
+          "attention_teacher_stop_prob": 0.9997464080293618,
+          "predicted_f1_drop": 0.0002536084748068819,
+          "expected_f1_drop": 0.0
+        },
+        {
+          "step": 4,
+          "attention_scores_seen": [
+            0.7696637929180109,
+            0.10075016466582862,
+            0.0631300258017264,
+            0.06645600785809642
+          ],
+          "feature_debug": {
+            "step_frac": 0.8,
+            "inverse_step": 0.25,
+            "current_retrieval": 0.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 0.3265131808925231,
+            "retrieval_margin": 0.6939472764299075,
+            "retrieval_entropy": 0.392745240119076,
+            "retrieval_concentration": 0.7656658733506838,
+            "current_attention": 0.004707455630908567,
+            "max_attention": 1.0,
+            "mean_attention": 0.26448837695929167,
+            "attention_margin": 0.9467539477937418,
+            "attention_entropy": 0.16431381812129855,
+            "attention_concentration": 0.9452211194980907,
+            "attention_relevance_alignment": 0.9658608879482395,
+            "current_lexical_overlap": 0.06451612903225806,
+            "current_question_recall": 0.16666666666666666,
+            "max_lexical_overlap_seen": 0.20512820512820512,
+            "max_question_recall_seen": 0.6666666666666666,
+            "current_chunk_len_128": 0.2109375,
+            "cumulative_chunk_len_512": 0.25390625
+          },
+          "stop_prob": 0.01073474730266005,
+          "expected_f1_if_stop": 0.7536473108533381,
+          "continue_value": 0.5566995111521704,
+          "noise_risk": 0.0029969467398024085,
+          "uncertainty": 0.38980982605673525,
+          "attention_teacher_stop_prob": 0.9997464080293618,
+          "predicted_f1_drop": 0.0002536084748068819,
+          "expected_f1_drop": 0.0
+        },
+        {
+          "step": 5,
+          "attention_scores_seen": [
+            0.753907215688241,
+            0.08503339220486959,
+            0.05297961071383313,
+            0.0507166249262988,
+            0.057363147509647126
+          ],
+          "feature_debug": {
+            "step_frac": 1.0,
+            "inverse_step": 0.2,
+            "current_retrieval": 0.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 0.2612105447140185,
+            "retrieval_margin": 0.6939472764299075,
+            "retrieval_entropy": 0.3382923364283839,
+            "retrieval_concentration": 0.7656658733506838,
+            "current_attention": 0.00945195414118925,
+            "max_attention": 1.0,
+            "mean_attention": 0.21229432938165438,
+            "attention_margin": 0.9511984777556398,
+            "attention_entropy": 0.15993772993544766,
+            "attention_concentration": 0.9420882808981215,
+            "attention_relevance_alignment": 0.9646175947171719,
+            "current_lexical_overlap": 0.06666666666666667,
+            "current_question_recall": 0.16666666666666666,
+            "max_lexical_overlap_seen": 0.20512820512820512,
+            "max_question_recall_seen": 0.6666666666666666,
+            "current_chunk_len_128": 0.2109375,
+            "cumulative_chunk_len_512": 0.306640625
+          },
+          "stop_prob": 0.01073474730266005,
+          "expected_f1_if_stop": 0.534168231228567,
+          "continue_value": 0.4680107830836496,
+          "noise_risk": 0.9948662481197053,
+          "uncertainty": 0.3890935531280323,
+          "attention_teacher_stop_prob": 0.9997464080293618,
+          "predicted_f1_drop": 0.0002536084748068819,
+          "expected_f1_drop": 0.0
+        }
+      ]
+    },
+    {
+      "question_id": "56de10b44396321400ee2595",
+      "question": "Who did the Normans team up with in Anatolia?",
+      "answers": [
+        "Turkish forces",
+        "Turkish forces",
+        "Turkish forces"
+      ],
+      "baseline_answer": "The Normans teamed up with Turkish forces in Anatolia",
+      "baseline_f1": 0.3636363636363636,
+      "baseline_steps": 5,
+      "budget_results": {
+        "0.005": {
+          "steps": 5,
+          "answer": "The Normans teamed up with Turkish forces in Anatolia",
+          "f1": 0.3636363636363636,
+          "policy": {
+            "risk_budget": 0.005,
+            "teacher_stop_threshold": 0.05,
+            "drop_threshold": 0.04,
+            "noise_threshold": 0.3,
+            "uncertainty_threshold": 0.2,
+            "safe_stop_threshold": 0.05,
+            "quality_margin": 0.005,
+            "min_stop_step": 1,
+            "val_baseline_f1": 1.0,
+            "val_gate_f1": 1.0,
+            "val_f1_delta": 0.0,
+            "val_baseline_steps": 4.5,
+            "val_gate_steps": 2.5,
+            "val_effort_reduction": 2.0,
+            "val_relative_effort_reduction": 0.4444444444444444,
+            "val_wrong_stop_rate": 0.0,
+            "val_attention_teacher_exact_match_rate": 0.5,
+            "selection_score": 0.5944444444444444
+          }
+        },
+        "0.020": {
+          "steps": 5,
+          "answer": "The Normans teamed up with Turkish forces in Anatolia",
+          "f1": 0.3636363636363636,
+          "policy": {
+            "risk_budget": 0.02,
+            "teacher_stop_threshold": 0.05,
+            "drop_threshold": 0.04,
+            "noise_threshold": 0.3,
+            "uncertainty_threshold": 0.2,
+            "safe_stop_threshold": 0.05,
+            "quality_margin": 0.02,
+            "min_stop_step": 1,
+            "val_baseline_f1": 1.0,
+            "val_gate_f1": 1.0,
+            "val_f1_delta": 0.0,
+            "val_baseline_steps": 4.5,
+            "val_gate_steps": 2.5,
+            "val_effort_reduction": 2.0,
+            "val_relative_effort_reduction": 0.4444444444444444,
+            "val_wrong_stop_rate": 0.0,
+            "val_attention_teacher_exact_match_rate": 0.5,
+            "selection_score": 0.5944444444444444
+          }
+        }
+      },
+      "attention_teacher_answer": "The Normans teamed up with the Turks in Anatolia",
+      "attention_teacher_f1": 0.0,
+      "attention_teacher_steps": 1,
+      "attention_teacher_combined_scores_by_step": [
+        1.0,
+        0.2369747975173504,
+        0.2130694186600458,
+        0.0,
+        0.03158903026921786
+      ],
+      "attention_teacher_labels_by_step": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "state_records": [
+        {
+          "step": 1,
+          "attention_scores_seen": [
+            0.9999999879439315
+          ],
+          "feature_debug": {
+            "step_frac": 0.2,
+            "inverse_step": 1.0,
+            "current_retrieval": 1.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 1.0,
+            "retrieval_margin": 1.0,
+            "retrieval_entropy": 0.0,
+            "retrieval_concentration": 0.9999999989999999,
+            "current_attention": 1.0,
+            "max_attention": 1.0,
+            "mean_attention": 1.0,
+            "attention_margin": 1.0,
+            "attention_entropy": 0.0,
+            "attention_concentration": 0.9999999989999999,
+            "attention_relevance_alignment": 0.0,
+            "current_lexical_overlap": 0.16,
+            "current_question_recall": 0.4444444444444444,
+            "max_lexical_overlap_seen": 0.16,
+            "max_question_recall_seen": 0.4444444444444444,
+            "current_chunk_len_128": 0.1796875,
+            "cumulative_chunk_len_512": 0.044921875
+          },
+          "stop_prob": 0.012056678848781416,
+          "expected_f1_if_stop": 0.2866728451885399,
+          "continue_value": 0.6723024637162467,
+          "noise_risk": 0.9948662481197053,
+          "uncertainty": 0.2732612601696871,
+          "attention_teacher_stop_prob": 0.0015264854850886645,
+          "predicted_f1_drop": 0.450029244434304,
+          "expected_f1_drop": 0.3856296185277068
+        },
+        {
+          "step": 2,
+          "attention_scores_seen": [
+            0.7078154930010366,
+            0.29218449992920165
+          ],
+          "feature_debug": {
+            "step_frac": 0.4,
+            "inverse_step": 0.5,
+            "current_retrieval": 0.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 0.5,
+            "retrieval_margin": 1.0,
+            "retrieval_entropy": -1.4428232973175177e-12,
+            "retrieval_concentration": 0.9999999989999999,
+            "current_attention": 0.0,
+            "max_attention": 1.0,
+            "mean_attention": 0.5,
+            "attention_margin": 1.0,
+            "attention_entropy": -1.4428232973175177e-12,
+            "attention_concentration": 0.9999999989999999,
+            "attention_relevance_alignment": 0.9999999999999999,
+            "current_lexical_overlap": 0.07142857142857142,
+            "current_question_recall": 0.2222222222222222,
+            "max_lexical_overlap_seen": 0.16,
+            "max_question_recall_seen": 0.4444444444444444,
+            "current_chunk_len_128": 0.1953125,
+            "cumulative_chunk_len_512": 0.09375
+          },
+          "stop_prob": 0.9962408701848161,
+          "expected_f1_if_stop": 0.5980360221581181,
+          "continue_value": 0.6702588072534724,
+          "noise_risk": 0.0029969467398024085,
+          "uncertainty": 0.3303654987455839,
+          "attention_teacher_stop_prob": 0.0015264854850886645,
+          "predicted_f1_drop": 0.39892501858879026,
+          "expected_f1_drop": 0.07222278509535429
+        },
+        {
+          "step": 3,
+          "attention_scores_seen": [
+            0.5702358540956163,
+            0.1896271427745318,
+            0.2401369949246658
+          ],
+          "feature_debug": {
+            "step_frac": 0.6,
+            "inverse_step": 0.3333333333333333,
+            "current_retrieval": 0.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 0.36833183295092226,
+            "retrieval_margin": 0.8950045011472332,
+            "retrieval_entropy": 0.2858137842171115,
+            "retrieval_concentration": 0.9049810611294282,
+            "current_attention": 0.13270809136465753,
+            "max_attention": 1.0,
+            "mean_attention": 0.37756936378821915,
+            "attention_margin": 0.8672919086353424,
+            "attention_entropy": 0.32880394734909846,
+            "attention_concentration": 0.8828399891735441,
+            "attention_relevance_alignment": 0.9762985960112195,
+            "current_lexical_overlap": 0.07142857142857142,
+            "current_question_recall": 0.3333333333333333,
+            "max_lexical_overlap_seen": 0.16,
+            "max_question_recall_seen": 0.4444444444444444,
+            "current_chunk_len_128": 0.375,
+            "cumulative_chunk_len_512": 0.1875
+          },
+          "stop_prob": 0.01083555374269951,
+          "expected_f1_if_stop": 0.4574194618936029,
+          "continue_value": 0.6534194797724845,
+          "noise_risk": 0.0029969467398024085,
+          "uncertainty": 0.39482122299995825,
+          "attention_teacher_stop_prob": 0.0015264854850886645,
+          "predicted_f1_drop": 0.4112523976086697,
+          "expected_f1_drop": 0.1960000178788816
+        },
+        {
+          "step": 4,
+          "attention_scores_seen": [
+            0.5787674790340075,
+            0.16237346559057714,
+            0.1745380676559086,
+            0.0843209803511962
+          ],
+          "feature_debug": {
+            "step_frac": 0.8,
+            "inverse_step": 0.25,
+            "current_retrieval": 0.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 0.3990847872813796,
+            "retrieval_margin": 0.6629444831694407,
+            "retrieval_entropy": 0.6611708888706191,
+            "retrieval_concentration": 0.6264332989148146,
+            "current_attention": 0.0,
+            "max_attention": 1.0,
+            "mean_attention": 0.3350797681122417,
+            "attention_margin": 0.8175392413834318,
+            "attention_entropy": 0.5351830547660764,
+            "attention_concentration": 0.7460910016200522,
+            "attention_relevance_alignment": 0.982820354227594,
+            "current_lexical_overlap": 0.19047619047619047,
+            "current_question_recall": 0.4444444444444444,
+            "max_lexical_overlap_seen": 0.19047619047619047,
+            "max_question_recall_seen": 0.4444444444444444,
+            "current_chunk_len_128": 0.1328125,
+            "cumulative_chunk_len_512": 0.220703125
+          },
+          "stop_prob": 0.005076781387331162,
+          "expected_f1_if_stop": 0.3469741666666952,
+          "continue_value": 0.6470062381580823,
+          "noise_risk": 0.9948662481197053,
+          "uncertainty": 0.3679162163373659,
+          "attention_teacher_stop_prob": 0.0015264854850886645,
+          "predicted_f1_drop": 0.40625182838432794,
+          "expected_f1_drop": 0.3000320714913871
+        },
+        {
+          "step": 5,
+          "attention_scores_seen": [
+            0.5584718357272663,
+            0.14476680377650686,
+            0.1507527248632749,
+            0.05987926560536706,
+            0.08612936215135565
+          ],
+          "feature_debug": {
+            "step_frac": 1.0,
+            "inverse_step": 0.2,
+            "current_retrieval": 0.0,
+            "max_retrieval": 1.0,
+            "mean_retrieval": 0.31926782982510366,
+            "retrieval_margin": 0.6629444831694407,
+            "retrieval_entropy": 0.5695016054342482,
+            "retrieval_concentration": 0.6264332989148146,
+            "current_attention": 0.052648383782029774,
+            "max_attention": 1.0,
+            "mean_attention": 0.2810325289321356,
+            "attention_margin": 0.8177400570965631,
+            "attention_entropy": 0.5503670914251906,
+            "attention_concentration": 0.7116613888706249,
+            "attention_relevance_alignment": 0.9782166659090745,
+            "current_lexical_overlap": 0.08695652173913043,
+            "current_question_recall": 0.2222222222222222,
+            "max_lexical_overlap_seen": 0.19047619047619047,
+            "max_question_recall_seen": 0.4444444444444444,
+            "current_chunk_len_128": 0.1328125,
+            "cumulative_chunk_len_512": 0.25390625
+          },
+          "stop_prob": 0.004636318547770342,
+          "expected_f1_if_stop": 0.5243359910998164,
+          "continue_value": 0.6210062593635843,
+          "noise_risk": 0.0029969467398024085,
+          "uncertainty": 0.3548841354705563,
+          "attention_teacher_stop_prob": 0.0015264854850886645,
+          "predicted_f1_drop": 0.4112523976086697,
+          "expected_f1_drop": 0.0966702682637679
+        }
+      ]
+    }
+  ],
+  "note": "v3 uses calibrated attention-flow as a high-efficiency teacher and learned safety heads as vetoes."
+}

@@ -15,5 +15,5 @@ venv/
 runtime/
 outputs/
 *.jsonl
+!research_archive/**/*.jsonl
 .DS_Store
-

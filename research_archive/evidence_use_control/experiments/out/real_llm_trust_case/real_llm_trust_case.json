@@ -1,0 +1,548 @@
+{
+  "run_at_utc": "2026-06-08T18:13:19.205433+00:00",
+  "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+  "config": {
+    "model_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "learn_limit": 1024,
+    "eval_limit": 16,
+    "fixed_k": 5,
+    "max_f1_drop": 0.05,
+    "max_new_tokens": 16
+  },
+  "gpu": {
+    "visible_cuda_devices": "2",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "memory_cap_gib": 20.0,
+    "memory_cap_fraction": 0.845772,
+    "total_memory_gib": 23.647
+  },
+  "gate": {
+    "train_examples": 307,
+    "val_examples": 102,
+    "test_examples": 103,
+    "train_chunks": 1266,
+    "val_chunks": 422,
+    "val_auroc": 0.8270055113288427,
+    "val_auprc": 0.7631454889597091,
+    "selected_threshold": 0.9299999999999999,
+    "validation_policy": {
+      "n": 102,
+      "baseline_mean_token_f1": 1.0,
+      "learned_trust_mean_token_f1": 0.9607843137254902,
+      "token_f1_delta": -0.039215686274509776,
+      "baseline_mean_steps": 3.627450980392157,
+      "learned_trust_mean_steps": 2.6470588235294117,
+      "mean_effort_reduction": 0.9803921568627452,
+      "relative_effort_reduction": 0.2702702702702703,
+      "answer_preservation_rate": 0.9607843137254902
+    }
+  },
+  "aggregate": {
+    "n": 16,
+    "baseline_mean_f1": 0.7263392857142856,
+    "gated_mean_f1": 0.7357142857142858,
+    "f1_delta": 0.009375000000000133,
+    "baseline_mean_steps": 3.375,
+    "gated_mean_steps": 2.3125,
+    "mean_effort_reduction": 1.0625,
+    "relative_effort_reduction": 0.3148148148148148,
+    "answer_preservation_rate": 1.0
+  },
+  "verdict": "PASS",
+  "max_memory_allocated_mib": 8414.124,
+  "rows": [
+    {
+      "question_id": "5705e33f52bb89140068964e",
+      "question": "What is the name of the state that the megaregion expands to in the east?",
+      "answers": [
+        "Nevada",
+        "Nevada",
+        "Nevada"
+      ],
+      "baseline_answer": "Nevada",
+      "gated_answer": "Nevada",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.870361,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.412496,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1a564cd28a01900c67a49",
+      "question": "If input size is is equal to n, what can respectively be assumed is the function of n?",
+      "answers": [
+        "the time taken",
+        "the time taken",
+        "the time taken"
+      ],
+      "baseline_answer": "Time complexity function of n",
+      "gated_answer": "Time taken as a function of n",
+      "baseline_f1": 0.25,
+      "gated_f1": 0.4,
+      "baseline_steps": 4,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.949806,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de17f9cffd8e1900b4b5e1",
+      "question": "Who was Margaret's husband?",
+      "answers": [
+        "King Malcolm III of Scotland",
+        "King Malcolm III",
+        "King Malcolm III"
+      ],
+      "baseline_answer": "King Malcolm III of Scotland",
+      "gated_answer": "King Malcolm III of Scotland",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 4,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.886909,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.207371,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.172109,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.208908,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "570960cf200fba1400367f03",
+      "question": "What did Microsoft announce that it would rename Sky Drive to?",
+      "answers": [
+        "OneDrive",
+        "OneDrive",
+        "OneDrive"
+      ],
+      "baseline_answer": "OneDrive",
+      "gated_answer": "OneDrive",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 3,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.888178,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.62837,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.237478,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de11154396321400ee25aa",
+      "question": "What were the origins of the Raouliii family?",
+      "answers": [
+        "Norman mercenary",
+        "an Italo-Norman named Raoul",
+        "descended from an Italo-Norman named Raoul"
+      ],
+      "baseline_answer": "Italo-Norman",
+      "gated_answer": "Italo-Norman",
+      "baseline_f1": 0.5714285714285715,
+      "gated_f1": 0.5714285714285715,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.539234,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.414114,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5706094b52bb8914006897df",
+      "question": "Southern California is most famous for tourism and what notably named district?",
+      "answers": [
+        "Hollywood",
+        "Hollywood",
+        "Hollywood"
+      ],
+      "baseline_answer": "Hollywood",
+      "gated_answer": "Hollywood",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.940663,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "5705eccb52bb8914006896b9",
+      "question": "Other than the desert city why do many locals and tourists frequent southern California?",
+      "answers": [
+        "beaches",
+        "for its popular beaches",
+        "beaches"
+      ],
+      "baseline_answer": "For its popular beaches",
+      "gated_answer": "For its popular beaches",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 1,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.960831,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56de179dcffd8e1900b4b5dc",
+      "question": "What culture did the Normans combine with in Ireland?",
+      "answers": [
+        "Irish",
+        "Irish",
+        "Irish"
+      ],
+      "baseline_answer": "Irish culture",
+      "gated_answer": "Irish culture",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.848332,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.528639,
+          "contains_answer": true
+        },
+        {
+          "step": 3,
+          "chunk_index": 2,
+          "trust": 0.676527,
+          "contains_answer": true
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.204631,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 5,
+          "trust": 0.328629,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "570953a7efce8f15003a7dff",
+      "question": "What channels were removed from the network in March of 2007?",
+      "answers": [
+        "basic channels",
+        "the basic channels",
+        "the basic channels"
+      ],
+      "baseline_answer": "Basic channels",
+      "gated_answer": "Basic channels",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 3,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.95238,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c7e2cd28a01900c67b75",
+      "question": "What is responsible for constraining P according to the time hierarchy theorem?",
+      "answers": [
+        "EXPTIME",
+        "EXPTIME",
+        "EXPTIME"
+      ],
+      "baseline_answer": "Time hierarchy theorem",
+      "gated_answer": "Time hierarchy theorem",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 2,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.937609,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1ddfce3433e14004231d5",
+      "question": "If P is ultimately proven to be equal tot NP, what effect would this have on the efficiency of problems?",
+      "answers": [
+        "more efficient solutions",
+        "shown to have more efficient solutions",
+        "many important problems can be shown to have more efficient solutions"
+      ],
+      "baseline_answer": "More efficient solutions for many important problems",
+      "gated_answer": "More efficient solutions for many important problems",
+      "baseline_f1": 0.6666666666666665,
+      "gated_f1": 0.6666666666666665,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 3,
+          "trust": 0.867225,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 2,
+          "trust": 0.497158,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 0,
+          "trust": 0.393535,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 1,
+          "trust": 0.352632,
+          "contains_answer": true
+        },
+        {
+          "step": 5,
+          "chunk_index": 4,
+          "trust": 0.144538,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e200e4cd28a01900c67c14",
+      "question": "What tactic did researchers employ to offset the former deficit of work surrounding the complexity of algorithmic problems?",
+      "answers": [
+        "foundations were laid out",
+        "numerous foundations were laid out",
+        "numerous foundations were laid out by various researchers"
+      ],
+      "baseline_answer": "Defined Turing machines",
+      "gated_answer": "Defined Turing machines",
+      "baseline_f1": 0.0,
+      "gated_f1": 0.0,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 0,
+          "trust": 0.906847,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.319846,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e190bce3433e1400422fcb",
+      "question": "What will the output be for a member of the language of a decision problem?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes"
+      ],
+      "baseline_answer": "Yes",
+      "gated_answer": "Yes",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 5,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.948803,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1ba41cd28a01900c67ae1",
+      "question": "When extensive time is required to sort integers, this represents what case complexity?",
+      "answers": [
+        "worst-case",
+        "worst",
+        "worst-case"
+      ],
+      "baseline_answer": "Worst-case complexity",
+      "gated_answer": "Worst-case complexity",
+      "baseline_f1": 0.8,
+      "gated_f1": 0.8,
+      "baseline_steps": 5,
+      "gated_steps": 5,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.887994,
+          "contains_answer": true
+        },
+        {
+          "step": 2,
+          "chunk_index": 1,
+          "trust": 0.462427,
+          "contains_answer": false
+        },
+        {
+          "step": 3,
+          "chunk_index": 4,
+          "trust": 0.378398,
+          "contains_answer": false
+        },
+        {
+          "step": 4,
+          "chunk_index": 3,
+          "trust": 0.245455,
+          "contains_answer": false
+        },
+        {
+          "step": 5,
+          "chunk_index": 0,
+          "trust": 0.108135,
+          "contains_answer": false
+        }
+      ]
+    },
+    {
+      "question_id": "56e1c3e1e3433e1400423148",
+      "question": "What are two examples of measurements are bound within algorithms to establish complexity classes?",
+      "answers": [
+        "time or space",
+        "time or space",
+        "time or space"
+      ],
+      "baseline_answer": "Time and space",
+      "gated_answer": "Time and space",
+      "baseline_f1": 0.6666666666666666,
+      "gated_f1": 0.6666666666666666,
+      "baseline_steps": 2,
+      "gated_steps": 2,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 1,
+          "trust": 0.855258,
+          "contains_answer": false
+        },
+        {
+          "step": 2,
+          "chunk_index": 0,
+          "trust": 0.471961,
+          "contains_answer": true
+        }
+      ]
+    },
+    {
+      "question_id": "56e1dc62cd28a01900c67bcd",
+      "question": "What is an example of a problem that rests within the NP complexity class?",
+      "answers": [
+        "Boolean satisfiability problem",
+        "Boolean satisfiability problem"
+      ],
+      "baseline_answer": "Boolean satisfiability problem",
+      "gated_answer": "Boolean satisfiability problem",
+      "baseline_f1": 1.0,
+      "gated_f1": 1.0,
+      "baseline_steps": 4,
+      "gated_steps": 1,
+      "gate_steps": [
+        {
+          "step": 1,
+          "chunk_index": 2,
+          "trust": 0.934584,
+          "contains_answer": true
+        }
+      ]
+    }
+  ]
+}

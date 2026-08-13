@@ -38,7 +38,14 @@ python -m chip_memory query \
 
 New retrieval behavior should include tests for ranking, provenance, layer coverage, and context-budget behavior. New runtime behavior should demonstrate that the source Chip remains byte-for-byte unchanged.
 
+If a change updates archived results or claims, also run:
+
+```bash
+python tools/verify_experience_archive.py
+```
+
+Do not delete a failed historical run merely because a later variant performs better. Add the later artifact and update the interpretation with a direct link to both.
+
 ## Research claims
 
 Do not describe a design hypothesis as an empirical advantage without adding the corresponding controlled evaluation. Report failures and negative-transfer cases alongside successful examples.
-

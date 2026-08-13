@@ -1,0 +1,194 @@
+python --version:
+Python 3.10.13
+
+
+nvidia-smi -i 2:
+Tue Jun  9 12:06:11 2026
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.183.01             Driver Version: 535.183.01   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   2  NVIDIA GeForce RTX 4090        Off | 00000000:8A:00.0  On |                  Off |
+|  0%   57C    P2             234W / 450W |  15804MiB / 24564MiB |     83%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+
+
+versions:
+torch=2.6.0+cu124
+transformers=4.51.2
+sklearn=1.7.2
+datasets=4.3.0
+numpy=1.26.0
+
+
+cuda_available=True
+torch_cuda=12.4
+
+
+pip freeze:
+accelerate==1.11.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.2
+aiosignal==1.4.0
+anls_star==1.0.1
+annotated-types==0.7.0
+anyio==4.11.0
+asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
+astunparse==1.6.3
+async-timeout==5.0.1
+attrs==23.1.0
+backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+beautifulsoup4 @ file:///croot/beautifulsoup4-split_1681493039619/work
+boltons @ file:///croot/boltons_1677628692245/work
+brotlipy==0.7.0
+certifi @ file:///croot/certifi_1690232220950/work/certifi
+cffi @ file:///croot/cffi_1670423208954/work
+chardet @ file:///home/builder/ci_310/chardet_1640804867535/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+click @ file:///tmp/build/80754af9/click_1646056706450/work
+conda @ file:///croot/conda_1696257509808/work
+conda-build @ file:///croot/conda-build_1696257509796/work
+conda-content-trust @ file:///croot/conda-content-trust_1693490622020/work
+conda-libmamba-solver @ file:///croot/conda-libmamba-solver_1691418897561/work/src
+conda-package-handling @ file:///croot/conda-package-handling_1690999929514/work
+conda_index @ file:///croot/conda-index_1695310357675/work
+conda_package_streaming @ file:///croot/conda-package-streaming_1690987966409/work
+contourpy==1.3.2
+cryptography @ file:///croot/cryptography_1694444244250/work
+cycler==0.12.1
+datasets==4.3.0
+decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+dill==0.4.0
+dnspython==2.4.2
+exceptiongroup @ file:///croot/exceptiongroup_1668714342571/work
+executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+expecttest==0.1.6
+filelock @ file:///croot/filelock_1672387128942/work
+fonttools==4.60.1
+frozenlist==1.8.0
+fsspec==2023.9.2
+gitdb==4.0.12
+GitPython==3.1.45
+gmpy2 @ file:///tmp/build/80754af9/gmpy2_1645455533097/work
+h11==0.16.0
+hf-xet==1.2.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface-hub==0.36.0
+hypothesis==6.87.2
+idna @ file:///croot/idna_1666125576474/work
+ipython @ file:///croot/ipython_1694181358621/work
+jedi @ file:///tmp/build/80754af9/jedi_1644315229345/work
+Jinja2 @ file:///croot/jinja2_1666908132255/work
+joblib==1.5.2
+jsonpatch @ file:///tmp/build/80754af9/jsonpatch_1615747632069/work
+jsonpointer==2.1
+kiwisolver==1.4.9
+libarchive-c @ file:///tmp/build/80754af9/python-libarchive-c_1617780486945/work
+libmambapy @ file:///croot/mamba-split_1685993156657/work/libmambapy
+MarkupSafe @ file:///opt/conda/conda-bld/markupsafe_1654597864307/work
+matplotlib==3.10.7
+matplotlib-inline @ file:///opt/conda/conda-bld/matplotlib-inline_1662014470464/work
+mkl-fft @ file:///croot/mkl_fft_1695058164594/work
+mkl-random @ file:///croot/mkl_random_1695059800811/work
+mkl-service==2.4.0
+more-itertools @ file:///tmp/build/80754af9/more-itertools_1637733554872/work
+mpmath @ file:///croot/mpmath_1690848262763/work
+multidict==6.7.0
+multiprocess==0.70.16
+munkres==1.1.4
+networkx @ file:///croot/networkx_1690561992265/work
+numpy @ file:///croot/numpy_and_numpy_base_1695830428084/work/dist/numpy-1.26.0-cp310-cp310-linux_x86_64.whl#sha256=fc2732718bc9e06a7b702492cb4f5afffe9671083930452d894377bf563464a3
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cudnn-cu12==9.1.0.70
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusolver-cu12==11.6.1.9
+nvidia-cusparse-cu12==12.3.1.170
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+packaging @ file:///croot/packaging_1693575174725/work
+panda==0.3.1
+pandas==2.3.3
+parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
+peft==0.17.1
+pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+Pillow @ file:///croot/pillow_1696580024257/work
+pkginfo @ file:///croot/pkginfo_1679431160147/work
+platformdirs==4.5.0
+pluggy @ file:///tmp/build/80754af9/pluggy_1648024709248/work
+prompt-toolkit @ file:///croot/prompt-toolkit_1672387306916/work
+propcache==0.4.1
+protobuf==6.33.0
+psutil @ file:///opt/conda/conda-bld/psutil_1656431268089/work
+ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+pyarrow==22.0.0
+pycosat @ file:///croot/pycosat_1696536503704/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pydantic==2.12.3
+pydantic_core==2.41.4
+Pygments @ file:///croot/pygments_1684279966437/work
+pyOpenSSL @ file:///croot/pyopenssl_1690223430423/work
+pyparsing==3.2.5
+PySocks @ file:///home/builder/ci_310/pysocks_1640793678128/work
+python-dateutil==2.9.0.post0
+python-etcd==0.4.5
+pytz @ file:///croot/pytz_1695131579487/work
+PyYAML @ file:///croot/pyyaml_1670514731622/work
+regex==2025.10.23
+requests==2.32.5
+ruamel.yaml @ file:///croot/ruamel.yaml_1666304550667/work
+ruamel.yaml.clib @ file:///croot/ruamel.yaml.clib_1666302247304/work
+safetensors==0.6.2
+scikit-learn==1.7.2
+scipy==1.15.3
+seaborn==0.13.2
+sentry-sdk==2.42.1
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+smmap==5.0.2
+sniffio==1.3.1
+sortedcontainers==2.4.0
+soupsieve @ file:///croot/soupsieve_1696347547217/work
+stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
+sympy==1.13.1
+threadpoolctl==3.6.0
+tokenizers==0.21.4
+tomli @ file:///opt/conda/conda-bld/tomli_1657175507142/work
+toolz @ file:///croot/toolz_1667464077321/work
+torch==2.6.0+cu124
+torchaudio==2.6.0+cu124
+torchelastic==0.2.2
+torchvision==0.21.0+cu124
+tqdm==4.67.1
+traitlets @ file:///croot/traitlets_1671143879854/work
+transformers==4.51.2
+triton==3.2.0
+truststore @ file:///croot/truststore_1695244293384/work
+types-dataclasses==0.6.6
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata==2025.2
+urllib3 @ file:///croot/urllib3_1686163155763/work
+wandb==0.22.2
+wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
+xxhash==3.6.0
+yarl==1.22.0
+zstandard @ file:///croot/zstandard_1677013143055/work

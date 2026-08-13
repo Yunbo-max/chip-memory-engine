@@ -1,0 +1,4 @@
+# Baseline and trust-gated were produced by one paired evaluation command.
+# For each example, the script generated a baseline answer from top-k context and a trust-gated answer from early-stopped context.
+
+CUDA_VISIBLE_DEVICES=2 python /tf/notebooks/llm_reasoning_agent_memory_pilot_bundle/experiments/run_real_llm_trust_case.py --model-path /root/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554 --eval-limit 16 --learn-limit 1024 --fixed-k 5 --max-new-tokens 16

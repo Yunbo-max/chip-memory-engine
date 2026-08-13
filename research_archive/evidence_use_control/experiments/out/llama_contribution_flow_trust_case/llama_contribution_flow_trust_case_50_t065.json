@@ -1,0 +1,2079 @@
+{
+  "run_at_utc": "2026-06-09T12:33:54.112749+00:00",
+  "model_path": "/root/.cache/huggingface/hub/models--NousResearch--Llama-2-7b-chat-hf/snapshots/351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+  "config": {
+    "model_path": "/root/.cache/huggingface/hub/models--NousResearch--Llama-2-7b-chat-hf/snapshots/351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "data_limit": 256,
+    "eval_limit": 50,
+    "fixed_k": 5,
+    "threshold": 0.65,
+    "alpha": 0.65,
+    "i_block": 4,
+    "max_new_tokens": 16,
+    "max_length": 512,
+    "output_tag": "llama_contribution_flow_trust_case_50_t065"
+  },
+  "gpu": {
+    "visible_cuda_devices": "3",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "memory_cap_gib": 20.0,
+    "total_memory_gib": 23.65
+  },
+  "aggregate": {
+    "n": 50,
+    "baseline_mean_f1": 0.8183333333333335,
+    "contribution_flow_mean_f1": 0.8296666666666666,
+    "f1_delta": 0.011333333333333084,
+    "baseline_mean_steps": 3.94,
+    "contribution_flow_mean_steps": 2.6,
+    "mean_effort_reduction": 1.3399999999999999,
+    "relative_effort_reduction": 0.34010152284263956,
+    "answer_preservation_rate": 0.94
+  },
+  "verdict": "PASS",
+  "max_memory_allocated_mib": 13103.6,
+  "rows": [
+    {
+      "question_id": "56de4b5c4396321400ee279a",
+      "question": "Who used the church to unify themselves?",
+      "answers": [
+        "dukes",
+        "the dukes",
+        "dukes"
+      ],
+      "baseline_answer": "The Normans",
+      "contribution_flow_answer": "The Normans",
+      "baseline_f1": 0.5,
+      "contribution_flow_f1": 0.5,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.4388511208853279,
+        0.22264265495376895,
+        0.1511989613889099,
+        0.108851378522502,
+        0.07845588424714216
+      ],
+      "raw_contribution_scores_by_step": [
+        0.1868133544921875,
+        0.09477615356445312,
+        0.06436347961425781,
+        0.04633665084838867,
+        0.033397674560546875
+      ],
+      "relevance_scores_by_step": [
+        0.6567579780020486,
+        0.34324202198828463,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.5151185208761802,
+        0.2648524334158494,
+        0.09827932490279144,
+        0.0707533960396263,
+        0.050996324760642406
+      ],
+      "stop_step": 5,
+      "token_count": 244
+    },
+    {
+      "question_id": "56dde0ba66d3e219004dad77",
+      "question": "What river originally bounded the Duchy",
+      "answers": [
+        "Seine",
+        "Epte",
+        "Seine"
+      ],
+      "baseline_answer": "Epte",
+      "contribution_flow_answer": "Epte",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.4139221080179661,
+        0.3162215498515597,
+        0.1578967098947408,
+        0.0475867628999956,
+        0.06437286933395103
+      ],
+      "raw_contribution_scores_by_step": [
+        0.231658935546875,
+        0.17697906494140625,
+        0.08836972713470459,
+        0.02663278579711914,
+        0.03602743148803711
+      ],
+      "relevance_scores_by_step": [
+        0.5219801145049783,
+        0.27361789109552753,
+        0.20440199439254864,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.4517424102884203,
+        0.30131026928694843,
+        0.17417355946897356,
+        0.03093139588499714,
+        0.04184236506706817
+      ],
+      "stop_step": 5,
+      "token_count": 267
+    },
+    {
+      "question_id": "56de0f6a4396321400ee257f",
+      "question": "Who was the Normans' main enemy in Italy, the Byzantine Empire and Armenia?",
+      "answers": [
+        "Seljuk Turks",
+        "the Pechenegs, the Bulgars, and especially the Seljuk Turks",
+        "the Seljuk Turks"
+      ],
+      "baseline_answer": "Seljuk Turks",
+      "contribution_flow_answer": "The Pechenegs",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 0.4,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7096375163383565,
+        0.09499886887512805,
+        0.0592954486440163,
+        0.05672785140909272,
+        0.0793403147310694
+      ],
+      "raw_contribution_scores_by_step": [
+        0.30364227294921875,
+        0.040648460388183594,
+        0.025371551513671875,
+        0.024272918701171875,
+        0.033948421478271484
+      ],
+      "relevance_scores_by_step": [
+        0.6505336812893686,
+        0.17582149457275714,
+        0.09159652678586346,
+        0.08204829734940526,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6889511740712106,
+        0.12328678786929823,
+        0.0706008259936628,
+        0.06559000748820211,
+        0.05157120457519511
+      ],
+      "stop_step": 1,
+      "token_count": 232
+    },
+    {
+      "question_id": "56de1563cffd8e1900b4b5c2",
+      "question": "When did the Normans attack Dyrrachium?",
+      "answers": [
+        "1185",
+        "in 1185",
+        "1185"
+      ],
+      "baseline_answer": "1185",
+      "contribution_flow_answer": "1185",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7981811373218934,
+        0.20181886267530194
+      ],
+      "raw_contribution_scores_by_step": [
+        0.28458404541015625,
+        0.07195663452148438
+      ],
+      "relevance_scores_by_step": [
+        0.6579274952996007,
+        0.3420725046902907
+      ],
+      "trust_scores_by_step": [
+        0.7490923626140911,
+        0.250907637380548
+      ],
+      "stop_step": 1,
+      "token_count": 122
+    },
+    {
+      "question_id": "56ddde6b9a695914005b9628",
+      "question": "In what country is Normandy located?",
+      "answers": [
+        "France",
+        "France",
+        "France",
+        "France"
+      ],
+      "baseline_answer": "France",
+      "contribution_flow_answer": "France",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.6016700926452134,
+        0.11591945355092226,
+        0.1130253250795783,
+        0.1693851287212331
+      ],
+      "raw_contribution_scores_by_step": [
+        0.19707298278808594,
+        0.03796863555908203,
+        0.03702068328857422,
+        0.05548095703125
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999827033,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.7410855602133348,
+        0.07534764480809947,
+        0.07346646130172589,
+        0.11010033366880152
+      ],
+      "stop_step": 1,
+      "token_count": 227
+    },
+    {
+      "question_id": "56de3ebc4396321400ee26e8",
+      "question": "What major conquest did Tancred play a roll in?",
+      "answers": [
+        "Jerusalem",
+        "Jerusalem",
+        "Jerusalem"
+      ],
+      "baseline_answer": "Jerusalem",
+      "contribution_flow_answer": "Jerusalem",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 4,
+      "contribution_scores_by_step": [
+        0.5678105690541833,
+        0.27489827217792706,
+        0.04830453630721244,
+        0.10898662245881813
+      ],
+      "raw_contribution_scores_by_step": [
+        0.30541229248046875,
+        0.14786148071289062,
+        0.025981903076171875,
+        0.05862140655517578
+      ],
+      "relevance_scores_by_step": [
+        0.7078640688580943,
+        0.292135931131861,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6168292939855522,
+        0.28093145281180393,
+        0.031397948599688086,
+        0.07084130459823179
+      ],
+      "stop_step": 4,
+      "token_count": 183
+    },
+    {
+      "question_id": "56de15dbcffd8e1900b4b5c9",
+      "question": "Who was Emma's brother?",
+      "answers": [
+        "Duke Richard II",
+        "Duke Richard II",
+        "Duke Richard II"
+      ],
+      "baseline_answer": "Duke Richard II of Normandy",
+      "contribution_flow_answer": "Duke Richard II of Normandy",
+      "baseline_f1": 0.7499999999999999,
+      "contribution_flow_f1": 0.7499999999999999,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.44952988838443125,
+        0.43532983932933983,
+        0.040243809609634654,
+        0.017650823364857907,
+        0.057245639309371446
+      ],
+      "raw_contribution_scores_by_step": [
+        0.1900787353515625,
+        0.18407440185546875,
+        0.01701664924621582,
+        0.0074634552001953125,
+        0.024205684661865234
+      ],
+      "relevance_scores_by_step": [
+        0.5487126061282742,
+        0.4512873938631949,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.4842438395947763,
+        0.44091498341618907,
+        0.026158476246262524,
+        0.01147303518715764,
+        0.03720966555109144
+      ],
+      "stop_step": 5,
+      "token_count": 197
+    },
+    {
+      "question_id": "56de40da4396321400ee2709",
+      "question": "What were Isaac's chains made out of?",
+      "answers": [
+        "silver",
+        "silver",
+        "silver"
+      ],
+      "baseline_answer": "Silver",
+      "contribution_flow_answer": "Silver",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.734506117249416,
+        0.031340518403283,
+        0.08300878153958852,
+        0.04881756078520162,
+        0.1023270220195038
+      ],
+      "raw_contribution_scores_by_step": [
+        0.2442474365234375,
+        0.0104217529296875,
+        0.0276031494140625,
+        0.016233444213867188,
+        0.034027099609375
+      ],
+      "relevance_scores_by_step": [
+        0.5575184173438267,
+        0.2876947056627834,
+        0.15478687699065258,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6725604222824597,
+        0.12106448394410813,
+        0.10813111494746094,
+        0.031731414510381056,
+        0.06651256431267748
+      ],
+      "stop_step": 1,
+      "token_count": 167
+    },
+    {
+      "question_id": "56de0ffd4396321400ee258e",
+      "question": "When did Robert Crispin go up against the Turks?",
+      "answers": [
+        "1060s",
+        "In the 1060s",
+        "In the 1060s"
+      ],
+      "baseline_answer": "In the 1060s",
+      "contribution_flow_answer": "In the 1060s",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.5554396887545286,
+        0.20806587413719616,
+        0.07599317158307603,
+        0.06388637844139332,
+        0.09661488708110597
+      ],
+      "raw_contribution_scores_by_step": [
+        0.20572662353515625,
+        0.07706451416015625,
+        0.028146743774414062,
+        0.023662567138671875,
+        0.03578472137451172
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999970107,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.7110357976893974,
+        0.1352428181891775,
+        0.04939556152899942,
+        0.04152614598690566,
+        0.06279967660271887
+      ],
+      "stop_step": 1,
+      "token_count": 195
+    },
+    {
+      "question_id": "56e181d9e3433e1400422fa1",
+      "question": "What is the name of the alphabet is most commonly used in a problem instance?",
+      "answers": [
+        "binary alphabet",
+        "binary",
+        "binary"
+      ],
+      "baseline_answer": "Binary",
+      "contribution_flow_answer": "Binary",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 4,
+      "contribution_scores_by_step": [
+        0.46392159222231927,
+        0.3587717362955174,
+        0.05009905711873588,
+        0.12720761436109077
+      ],
+      "raw_contribution_scores_by_step": [
+        0.1985321044921875,
+        0.153533935546875,
+        0.021439552307128906,
+        0.05443763732910156
+      ],
+      "relevance_scores_by_step": [
+        0.7485215661607423,
+        0.2514784338363943,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.5635315831007672,
+        0.32121908043482433,
+        0.032564387127178324,
+        0.082684949334709
+      ],
+      "stop_step": 4,
+      "token_count": 151
+    },
+    {
+      "question_id": "56e16839cd28a01900c6788a",
+      "question": "What unit is measured to determine circuit complexity?",
+      "answers": [
+        "number of gates in a circuit",
+        "number of gates in a circuit",
+        "number of gates"
+      ],
+      "baseline_answer": "Gates",
+      "contribution_flow_answer": "Gates",
+      "baseline_f1": 0.5,
+      "contribution_flow_f1": 0.5,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.6856295707790095,
+        0.09995956787247619,
+        0.10877944629233403,
+        0.1056314150532051
+      ],
+      "raw_contribution_scores_by_step": [
+        0.23045063018798828,
+        0.03359794616699219,
+        0.036562442779541016,
+        0.03550434112548828
+      ],
+      "relevance_scores_by_step": [
+        0.6097171729110378,
+        0.39028282708538115,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6590602315252194,
+        0.20157270859699292,
+        0.07070664009001712,
+        0.06866041978458332
+      ],
+      "stop_step": 1,
+      "token_count": 166
+    },
+    {
+      "question_id": "56de10b44396321400ee2595",
+      "question": "Who did the Normans team up with in Anatolia?",
+      "answers": [
+        "Turkish forces",
+        "Turkish forces",
+        "Turkish forces"
+      ],
+      "baseline_answer": "Turks",
+      "contribution_flow_answer": "Turks",
+      "baseline_f1": 0.0,
+      "contribution_flow_f1": 0.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.6301384194214115,
+        0.14898832016022423,
+        0.11506472608766319,
+        0.047730663750526085,
+        0.05807787057756321
+      ],
+      "raw_contribution_scores_by_step": [
+        0.2412567138671875,
+        0.05704212188720703,
+        0.04405403137207031,
+        0.018274307250976562,
+        0.022235870361328125
+      ],
+      "relevance_scores_by_step": [
+        0.6264332902451264,
+        0.21114279964093535,
+        0.16242391010628124,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6288416242097117,
+        0.17074238797847313,
+        0.1316404404941795,
+        0.031024931437841956,
+        0.03775061587541609
+      ],
+      "stop_step": 5,
+      "token_count": 267
+    },
+    {
+      "question_id": "56dde2fa66d3e219004dad9b",
+      "question": "What was one of the Norman's major exports?",
+      "answers": [
+        "fighting horsemen",
+        "fighting horsemen",
+        "fighting horsemen"
+      ],
+      "baseline_answer": "Fighting horsemen",
+      "contribution_flow_answer": "Fighting horsemen",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 4,
+      "contribution_scores_by_step": [
+        0.4694181363180929,
+        0.3571780844428993,
+        0.07942973523402572,
+        0.09397404400258798
+      ],
+      "raw_contribution_scores_by_step": [
+        0.19606781005859375,
+        0.1491870880126953,
+        0.033176422119140625,
+        0.03925132751464844
+      ],
+      "relevance_scores_by_step": [
+        0.4594212585065703,
+        0.2824866112419837,
+        0.25809213024277833,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.46591922908406,
+        0.33103606882257886,
+        0.14196157348708913,
+        0.06108312860168219
+      ],
+      "stop_step": 4,
+      "token_count": 205
+    },
+    {
+      "question_id": "56de17f9cffd8e1900b4b5e3",
+      "question": "Who was the hostage?",
+      "answers": [
+        "Duncan",
+        "Duncan",
+        "Duncan"
+      ],
+      "baseline_answer": "Duncan",
+      "contribution_flow_answer": "Duncan",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7443758021137641,
+        0.10945059921237474,
+        0.09677968845366118,
+        0.04939391021798115
+      ],
+      "raw_contribution_scores_by_step": [
+        0.335479736328125,
+        0.049327850341796875,
+        0.04361724853515625,
+        0.02226114273071289
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999928506,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.8338442713714443,
+        0.07114288948804358,
+        0.06290679749487978,
+        0.03210604164168775
+      ],
+      "stop_step": 1,
+      "token_count": 172
+    },
+    {
+      "question_id": "56de4c324396321400ee27ab",
+      "question": "What kind of needlework was used in the creation of the Bayeux Tapestry?",
+      "answers": [
+        "embroidery",
+        "embroidery",
+        "embroidery"
+      ],
+      "baseline_answer": "Embroidery",
+      "contribution_flow_answer": "Embroidery",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.8259023133005363,
+        0.17409768669672843
+      ],
+      "raw_contribution_scores_by_step": [
+        0.30194091796875,
+        0.06364822387695312
+      ],
+      "relevance_scores_by_step": [
+        0.888964736503832,
+        0.11103526349025124
+      ],
+      "trust_scores_by_step": [
+        0.8479741614216898,
+        0.15202583857446142
+      ],
+      "stop_step": 1,
+      "token_count": 127
+    },
+    {
+      "question_id": "56de4b074396321400ee2795",
+      "question": "What place had the Norman Arab architectural style?",
+      "answers": [
+        "Sicily",
+        "Sicily",
+        "Kingdom of Sicily"
+      ],
+      "baseline_answer": "Southern Italy",
+      "contribution_flow_answer": "Sicily",
+      "baseline_f1": 0.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.8089390567587021,
+        0.191060943238955
+      ],
+      "raw_contribution_scores_by_step": [
+        0.3452796936035156,
+        0.08155059814453125
+      ],
+      "relevance_scores_by_step": [
+        0.8191641701060858,
+        0.1808358298877548
+      ],
+      "trust_scores_by_step": [
+        0.8125178464302865,
+        0.18748215356603493
+      ],
+      "stop_step": 1,
+      "token_count": 110
+    },
+    {
+      "question_id": "56de1645cffd8e1900b4b5d2",
+      "question": "Who did Edward make archbishop of Canterbury?",
+      "answers": [
+        "Robert of Jumi\u00e8ges",
+        "Robert of Jumi\u00e8ges",
+        "Robert of Jumi\u00e8ges"
+      ],
+      "baseline_answer": "Robert of Jumi\u00e8ges",
+      "contribution_flow_answer": "Robert of Jumi\u00e8ges",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.6568821425300859,
+        0.0725031384028318,
+        0.111990461479259,
+        0.03257171042493458,
+        0.12605254715900005
+      ],
+      "raw_contribution_scores_by_step": [
+        0.16891860961914062,
+        0.018644332885742188,
+        0.028798580169677734,
+        0.008375883102416992,
+        0.03241467475891113
+      ],
+      "relevance_scores_by_step": [
+        0.7000208746353874,
+        0.17313490440178325,
+        0.1268442209590659,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6719806987669414,
+        0.10772425650246481,
+        0.1171892772971914,
+        0.021171611776207477,
+        0.08193415565335004
+      ],
+      "stop_step": 1,
+      "token_count": 225
+    },
+    {
+      "question_id": "56e17a7ccd28a01900c679a4",
+      "question": "What is another name for any given measure of input associated with a problem?",
+      "answers": [
+        "instances",
+        "the instance",
+        "instance"
+      ],
+      "baseline_answer": "Instance",
+      "contribution_flow_answer": "Instance",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.4950371153069332,
+        0.27714275452804754,
+        0.08834142680790842,
+        0.039442221285413866,
+        0.10003648206971498
+      ],
+      "raw_contribution_scores_by_step": [
+        0.249755859375,
+        0.13982391357421875,
+        0.044569969177246094,
+        0.019899368286132812,
+        0.05047035217285156
+      ],
+      "relevance_scores_by_step": [
+        0.3873474527937416,
+        0.2710175307072797,
+        0.2110505376064433,
+        0.071910797873842,
+        0.058673681016148865
+      ],
+      "trust_scores_by_step": [
+        0.4573457334273161,
+        0.2749989261907788,
+        0.13128961558739563,
+        0.05080622309136371,
+        0.08555950170096685
+      ],
+      "stop_step": 5,
+      "token_count": 162
+    },
+    {
+      "question_id": "56de3d594396321400ee26ca",
+      "question": "Where was Ralph earl of?",
+      "answers": [
+        "Hereford",
+        "Hereford",
+        "Hereford"
+      ],
+      "baseline_answer": "Hereford",
+      "contribution_flow_answer": "Hereford",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 3,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7617060152887467,
+        0.13962590758247245,
+        0.0986680771262599
+      ],
+      "raw_contribution_scores_by_step": [
+        0.30214691162109375,
+        0.055385589599609375,
+        0.0391387939453125
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999965759,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.8451089099364869,
+        0.0907568399286071,
+        0.06413425013206894
+      ],
+      "stop_step": 1,
+      "token_count": 110
+    },
+    {
+      "question_id": "56e16182e3433e1400422e2a",
+      "question": "What is the term for a task that generally lends itself to being solved by a computer?",
+      "answers": [
+        "computational problems",
+        "A computational problem",
+        "computational problem"
+      ],
+      "baseline_answer": "Algorithmic problem",
+      "contribution_flow_answer": "Computational problem",
+      "baseline_f1": 0.5,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.6936541099866228,
+        0.3063458900110266
+      ],
+      "raw_contribution_scores_by_step": [
+        0.2950935363769531,
+        0.1303253173828125
+      ],
+      "relevance_scores_by_step": [
+        0.8888501462195714,
+        0.1111498537746136
+      ],
+      "trust_scores_by_step": [
+        0.7619727226681547,
+        0.23802727732828205
+      ],
+      "stop_step": 1,
+      "token_count": 130
+    },
+    {
+      "question_id": "56de1563cffd8e1900b4b5c3",
+      "question": "What was the naval base called?",
+      "answers": [
+        "Dyrrachium",
+        "Dyrrachium",
+        "Dyrrachium"
+      ],
+      "baseline_answer": "Dyrrachium",
+      "contribution_flow_answer": "Dyrrachium",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7007874234738009,
+        0.2992125765232827
+      ],
+      "raw_contribution_scores_by_step": [
+        0.2402801513671875,
+        0.10259151458740234
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999844207,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.8055118252525177,
+        0.19448817474013377
+      ],
+      "stop_step": 1,
+      "token_count": 118
+    },
+    {
+      "question_id": "56de52614396321400ee27fc",
+      "question": "What monastery did the Saint-Evroul monks establish in Italy?",
+      "answers": [
+        "Latin monastery at Sant'Eufemia.",
+        "a Latin monastery at Sant'Eufemia",
+        "Sant'Eufemia"
+      ],
+      "baseline_answer": "Sant'Eufemia",
+      "contribution_flow_answer": "Sant'Eufemia",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 3,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.8682706693136176,
+        0.09972285581123014,
+        0.03200647487300918
+      ],
+      "raw_contribution_scores_by_step": [
+        0.40514373779296875,
+        0.04653167724609375,
+        0.014934539794921875
+      ],
+      "relevance_scores_by_step": [
+        0.6188554680077725,
+        0.3811445319885103,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.7809753488565718,
+        0.1982204424732782,
+        0.020804208667455967
+      ],
+      "stop_step": 1,
+      "token_count": 124
+    },
+    {
+      "question_id": "56de49564396321400ee277a",
+      "question": "What continent are the Canarian Islands off the coast of?",
+      "answers": [
+        "Africa",
+        "Africa",
+        "Africa"
+      ],
+      "baseline_answer": "Atlantic",
+      "contribution_flow_answer": "Africa",
+      "baseline_f1": 0.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.8466257668687558,
+        0.1533742331283978
+      ],
+      "raw_contribution_scores_by_step": [
+        0.29743194580078125,
+        0.053882598876953125
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999935959,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.9003067484624498,
+        0.09969325153345857
+      ],
+      "stop_step": 1,
+      "token_count": 126
+    },
+    {
+      "question_id": "56e181d9e3433e1400422fa3",
+      "question": "In the encoding of mathematical objects, what is the way in which integers are commonly expressed?",
+      "answers": [
+        "binary notation",
+        "binary notation",
+        "binary notation"
+      ],
+      "baseline_answer": "Binary notation",
+      "contribution_flow_answer": "Binary notation",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 4,
+      "contribution_scores_by_step": [
+        0.44933702702719536,
+        0.38812179490190774,
+        0.09228011275126079,
+        0.07026106531709254
+      ],
+      "raw_contribution_scores_by_step": [
+        0.1766510009765625,
+        0.15258502960205078,
+        0.036278724670410156,
+        0.027622222900390625
+      ],
+      "relevance_scores_by_step": [
+        0.687666891134599,
+        0.31233310886109994,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.5327524794647867,
+        0.36159575478762507,
+        0.05998207328831951,
+        0.045669692456110154
+      ],
+      "stop_step": 4,
+      "token_count": 153
+    },
+    {
+      "question_id": "56ddde6b9a695914005b962b",
+      "question": "Who was the Norse leader?",
+      "answers": [
+        "Rollo",
+        "Rollo",
+        "Rollo",
+        "Rollo"
+      ],
+      "baseline_answer": "Rollo",
+      "contribution_flow_answer": "Rollo",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7311696691704743,
+        0.12472968730897005,
+        0.06185364747723083,
+        0.08224699604103905
+      ],
+      "raw_contribution_scores_by_step": [
+        0.3198699951171875,
+        0.054566383361816406,
+        0.027059555053710938,
+        0.035981178283691406
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999929201,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.8252602849583304,
+        0.08107429675083054,
+        0.04020487086020004,
+        0.05346054742667539
+      ],
+      "stop_step": 1,
+      "token_count": 226
+    },
+    {
+      "question_id": "56de1645cffd8e1900b4b5d0",
+      "question": "Who was Edward the Confessor's half-brother?",
+      "answers": [
+        "Harthacnut",
+        "Harthacnut",
+        "Harthacnut"
+      ],
+      "baseline_answer": "Harthacnut",
+      "contribution_flow_answer": "Harthacnut",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.726222875642479,
+        0.049271352977010824,
+        0.11741962998051951,
+        0.03440100557207048,
+        0.07268513582497822
+      ],
+      "raw_contribution_scores_by_step": [
+        0.24684524536132812,
+        0.016747474670410156,
+        0.03991127014160156,
+        0.011693000793457031,
+        0.024705886840820312
+      ],
+      "relevance_scores_by_step": [
+        0.7845396235981315,
+        0.13670727201033311,
+        0.07875310438919544,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.7466337374269574,
+        0.07987392463867363,
+        0.10388634602355609,
+        0.022360653621845812,
+        0.047245338286235845
+      ],
+      "stop_step": 1,
+      "token_count": 227
+    },
+    {
+      "question_id": "56e16839cd28a01900c67887",
+      "question": "What measure of a computational problem broadly defines the inherent difficulty of the solution?",
+      "answers": [
+        "if its solution requires significant resources",
+        "its solution requires significant resources",
+        "if its solution requires significant resources"
+      ],
+      "baseline_answer": "Computational complexity",
+      "contribution_flow_answer": "Computational complexity",
+      "baseline_f1": 0.0,
+      "contribution_flow_f1": 0.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 4,
+      "contribution_scores_by_step": [
+        0.3030382501585776,
+        0.31392874478576926,
+        0.2210075662936851,
+        0.16202543875955588
+      ],
+      "raw_contribution_scores_by_step": [
+        0.1256256103515625,
+        0.1301403045654297,
+        0.09161949157714844,
+        0.0671682357788086
+      ],
+      "relevance_scores_by_step": [
+        0.6403611286757142,
+        0.3596388713165768,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.4211012576395754,
+        0.3299272890715519,
+        0.1436549180908953,
+        0.10531653519371133
+      ],
+      "stop_step": 4,
+      "token_count": 174
+    },
+    {
+      "question_id": "56de17f9cffd8e1900b4b5e0",
+      "question": "Who was Margaret's brother?",
+      "answers": [
+        "Edgar",
+        "Edgar",
+        "Edgar Atheling"
+      ],
+      "baseline_answer": "Edgar",
+      "contribution_flow_answer": "William",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 0.0,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.5917485892401612,
+        0.24819488652840707,
+        0.0536182079376726,
+        0.10643831629129788
+      ],
+      "raw_contribution_scores_by_step": [
+        0.24041366577148438,
+        0.10083580017089844,
+        0.021783828735351562,
+        0.043243408203125
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999870713,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.7346365830015797,
+        0.1613266762434646,
+        0.03485183515948719,
+        0.06918490558934362
+      ],
+      "stop_step": 1,
+      "token_count": 173
+    },
+    {
+      "question_id": "56de4c324396321400ee27ad",
+      "question": "Who commissioned the Tapestry?",
+      "answers": [
+        "Odo",
+        "Odo",
+        "Odo"
+      ],
+      "baseline_answer": "Odo",
+      "contribution_flow_answer": "Odo",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 2,
+      "contribution_scores_by_step": [
+        0.5570811552458037,
+        0.4429188447516633
+      ],
+      "raw_contribution_scores_by_step": [
+        0.21993255615234375,
+        0.17486190795898438
+      ],
+      "relevance_scores_by_step": [
+        0.7246002796239165,
+        0.2753997203718788
+      ],
+      "trust_scores_by_step": [
+        0.6157128487781431,
+        0.38428715121873874
+      ],
+      "stop_step": 2,
+      "token_count": 115
+    },
+    {
+      "question_id": "56de148dcffd8e1900b4b5be",
+      "question": "How many men were in Robert's army?",
+      "answers": [
+        "30,000",
+        "30,000",
+        "30,000"
+      ],
+      "baseline_answer": "30,000",
+      "contribution_flow_answer": "30,000",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.6693447139392235,
+        0.05881697152328328,
+        0.09584572349144742,
+        0.07113778633358056,
+        0.1048548047094092
+      ],
+      "raw_contribution_scores_by_step": [
+        0.21901226043701172,
+        0.019245147705078125,
+        0.03136110305786133,
+        0.023276567459106445,
+        0.03430891036987305
+      ],
+      "relevance_scores_by_step": [
+        0.4132034336996536,
+        0.2722203616415175,
+        0.16494736277614797,
+        0.14962884187880188,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.579695265855374,
+        0.13350815806466526,
+        0.12003129724109261,
+        0.09860965577440803,
+        0.06815562306111597
+      ],
+      "stop_step": 5,
+      "token_count": 278
+    },
+    {
+      "question_id": "56de4b074396321400ee2794",
+      "question": "What architecture type came before Norman in England?",
+      "answers": [
+        "Anglo-Saxon",
+        "Anglo-Saxon",
+        "Anglo-Saxon"
+      ],
+      "baseline_answer": "Anglo-Saxon",
+      "contribution_flow_answer": "Anglo-Saxon",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7380214020507374,
+        0.26197859794640016
+      ],
+      "raw_contribution_scores_by_step": [
+        0.2578277587890625,
+        0.091522216796875
+      ],
+      "relevance_scores_by_step": [
+        0.7133917206336099,
+        0.2866082793597692
+      ],
+      "trust_scores_by_step": [
+        0.7294010135547427,
+        0.2705989864410793
+      ],
+      "stop_step": 1,
+      "token_count": 109
+    },
+    {
+      "question_id": "56e16839cd28a01900c6788b",
+      "question": "What practical role does defining the complexity of problems play in everyday computing?",
+      "answers": [
+        "determine the practical limits on what computers can and cannot do",
+        "what computers can and cannot do",
+        "determine the practical limits on what computers can and cannot do"
+      ],
+      "baseline_answer": "Helps determine feasibility",
+      "contribution_flow_answer": "Helps determine feasibility",
+      "baseline_f1": 0.14285714285714288,
+      "contribution_flow_f1": 0.14285714285714288,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 4,
+      "contribution_scores_by_step": [
+        0.5540646335891454,
+        0.15087118798303797,
+        0.162563495675301,
+        0.13250068274869756
+      ],
+      "raw_contribution_scores_by_step": [
+        0.145111083984375,
+        0.039513587951660156,
+        0.042575836181640625,
+        0.034702301025390625
+      ],
+      "relevance_scores_by_step": [
+        0.42587386142265504,
+        0.3972851052925402,
+        0.17684103327916775,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.5091978633308738,
+        0.23711605904136374,
+        0.16756063383665437,
+        0.08612544378665342
+      ],
+      "stop_step": 4,
+      "token_count": 172
+    },
+    {
+      "question_id": "56de15dbcffd8e1900b4b5ca",
+      "question": "To where did Ethelred flee?",
+      "answers": [
+        "Normandy",
+        "Normandy",
+        "Normandy"
+      ],
+      "baseline_answer": "Normandy",
+      "contribution_flow_answer": "Normandy",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.6518883528427182,
+        0.13037583532311398,
+        0.07297853451046774,
+        0.04421106240053232,
+        0.1005462149207623
+      ],
+      "raw_contribution_scores_by_step": [
+        0.2709999084472656,
+        0.05419921875,
+        0.030338287353515625,
+        0.01837921142578125,
+        0.04179859161376953
+      ],
+      "relevance_scores_by_step": [
+        0.6063212524310035,
+        0.39367874755899357,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6359398676986181,
+        0.22253185460567182,
+        0.04743604743180403,
+        0.02873719056034601,
+        0.06535503969849549
+      ],
+      "stop_step": 5,
+      "token_count": 199
+    },
+    {
+      "question_id": "56de51c64396321400ee27f8",
+      "question": "Who were the two abbots at F\u00e9camp Abbey?",
+      "answers": [
+        "William of Volpiano and John of Ravenna",
+        "William of Volpiano and John of Ravenna",
+        "William of Volpiano and John of Ravenna"
+      ],
+      "baseline_answer": "William of Volpiano and John of Ravenna",
+      "contribution_flow_answer": "William of Volpiano and John of Ravenna",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.3445380245747287,
+        0.5102813521750355,
+        0.05910049780990325,
+        0.04342299352179526,
+        0.042657131916161425
+      ],
+      "raw_contribution_scores_by_step": [
+        0.14501190185546875,
+        0.21477127075195312,
+        0.02487468719482422,
+        0.018276214599609375,
+        0.017953872680664062
+      ],
+      "relevance_scores_by_step": [
+        0.6392964689274063,
+        0.24679508027489858,
+        0.11390845079572387,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.44770348009816585,
+        0.4180611570099876,
+        0.07828328135494048,
+        0.02822494578916692,
+        0.02772713574550493
+      ],
+      "stop_step": 5,
+      "token_count": 184
+    },
+    {
+      "question_id": "56de52614396321400ee27fb",
+      "question": "Where did the monks flee to?",
+      "answers": [
+        "southern Italy",
+        "southern Italy",
+        "southern Italy"
+      ],
+      "baseline_answer": "Italy",
+      "contribution_flow_answer": "Italy",
+      "baseline_f1": 0.6666666666666666,
+      "contribution_flow_f1": 0.6666666666666666,
+      "baseline_steps": 3,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.869347661134818,
+        0.10225338511108978,
+        0.028398953752137374
+      ],
+      "raw_contribution_scores_by_step": [
+        0.44470977783203125,
+        0.05230712890625,
+        0.014527320861816406
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999793975,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.9150759797304208,
+        0.06646470032220836,
+        0.018459319938889295
+      ],
+      "stop_step": 1,
+      "token_count": 117
+    },
+    {
+      "question_id": "56ddde6b9a695914005b9629",
+      "question": "When were the Normans in Normandy?",
+      "answers": [
+        "10th and 11th centuries",
+        "in the 10th and 11th centuries",
+        "10th and 11th centuries",
+        "10th and 11th centuries"
+      ],
+      "baseline_answer": "10th-11th centuries",
+      "contribution_flow_answer": "10th-11th centuries",
+      "baseline_f1": 0.8571428571428571,
+      "contribution_flow_f1": 0.8571428571428571,
+      "baseline_steps": 4,
+      "contribution_flow_steps": 4,
+      "contribution_scores_by_step": [
+        0.6042902763032262,
+        0.1494983675156889,
+        0.14467535555107627,
+        0.1015360006275883
+      ],
+      "raw_contribution_scores_by_step": [
+        0.24967193603515625,
+        0.061767578125,
+        0.05977487564086914,
+        0.04195117950439453
+      ],
+      "relevance_scores_by_step": [
+        0.705150871216412,
+        0.29484912877875447,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6395914845228412,
+        0.20037113395776185,
+        0.09403898110819958,
+        0.0659984004079324
+      ],
+      "stop_step": 4,
+      "token_count": 228
+    },
+    {
+      "question_id": "56de4a89cffd8e1900b4b7be",
+      "question": "What kind of arches does Norman architecture have?",
+      "answers": [
+        "rounded",
+        "rounded",
+        "rounded"
+      ],
+      "baseline_answer": "Round arches",
+      "contribution_flow_answer": "Round arches",
+      "baseline_f1": 0.0,
+      "contribution_flow_f1": 0.0,
+      "baseline_steps": 3,
+      "contribution_flow_steps": 3,
+      "contribution_scores_by_step": [
+        0.3608212116287732,
+        0.45774977919465026,
+        0.18142900917421403
+      ],
+      "raw_contribution_scores_by_step": [
+        0.1527252197265625,
+        0.19375228881835938,
+        0.07679367065429688
+      ],
+      "relevance_scores_by_step": [
+        0.7430225655039184,
+        0.25697743449152266,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.49459168548507404,
+        0.3874794585485556,
+        0.11792885596323913
+      ],
+      "stop_step": 3,
+      "token_count": 123
+    },
+    {
+      "question_id": "56de3f784396321400ee26fc",
+      "question": "What year did the storm hit Richard's fleet?",
+      "answers": [
+        "1191",
+        "1191",
+        "1191"
+      ],
+      "baseline_answer": "1191",
+      "contribution_flow_answer": "1191",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.23115511551088455,
+        0.4382508250812444,
+        0.18223322332180672,
+        0.05998899889971699,
+        0.08837183718346353
+      ],
+      "raw_contribution_scores_by_step": [
+        0.0801544189453125,
+        0.15196609497070312,
+        0.06319046020507812,
+        0.020801544189453125,
+        0.030643463134765625
+      ],
+      "relevance_scores_by_step": [
+        0.4171920562251168,
+        0.3589503264047883,
+        0.1336236570879504,
+        0.09023396027982222,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.2962680447608658,
+        0.4104956505444848,
+        0.165219875139957,
+        0.07057473538275383,
+        0.057441694169251295
+      ],
+      "stop_step": 5,
+      "token_count": 150
+    },
+    {
+      "question_id": "56de0ffd4396321400ee258d",
+      "question": "When did Herve serve as a Byzantine general?",
+      "answers": [
+        "1050s",
+        "in the 1050s",
+        "in the 1050s"
+      ],
+      "baseline_answer": "1050s",
+      "contribution_flow_answer": "1050s",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.5899558971644253,
+        0.14308459886463995,
+        0.07294543714363555,
+        0.09731276973446125,
+        0.09670129708974057
+      ],
+      "raw_contribution_scores_by_step": [
+        0.19046401977539062,
+        0.04619407653808594,
+        0.023550033569335938,
+        0.031416893005371094,
+        0.031219482421875
+      ],
+      "relevance_scores_by_step": [
+        0.7160744928129574,
+        0.20416622391795944,
+        0.07975928326691947,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6340974056414116,
+        0.16446316763330177,
+        0.07533028328678493,
+        0.06325330032739981,
+        0.06285584310833137
+      ],
+      "stop_step": 5,
+      "token_count": 195
+    },
+    {
+      "question_id": "56de16ca4396321400ee25c8",
+      "question": "Who was the ruling class ahead of the Normans?",
+      "answers": [
+        "Anglo-Saxons",
+        "the Anglo-Saxons",
+        "Anglo-Saxons"
+      ],
+      "baseline_answer": "Anglo-Saxons",
+      "contribution_flow_answer": "Anglo-Saxons",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7599784747500758,
+        0.0747980936003584,
+        0.06051510519272289,
+        0.055172384221268723,
+        0.0495359422333261
+      ],
+      "raw_contribution_scores_by_step": [
+        0.3380546569824219,
+        0.03327178955078125,
+        0.026918411254882812,
+        0.024541854858398438,
+        0.022034645080566406
+      ],
+      "relevance_scores_by_step": [
+        0.834055229031115,
+        0.16594477096587598,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.7859053387484396,
+        0.10669943067828955,
+        0.03933481837526988,
+        0.03586204974382467,
+        0.032198362451661966
+      ],
+      "stop_step": 1,
+      "token_count": 182
+    },
+    {
+      "question_id": "56de179dcffd8e1900b4b5db",
+      "question": "What country did the Normans invade in 1169?",
+      "answers": [
+        "Ireland",
+        "Ireland",
+        "Ireland"
+      ],
+      "baseline_answer": "Ireland",
+      "contribution_flow_answer": "Ireland",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.5671022322265217,
+        0.06982649020597208,
+        0.24931544442316664,
+        0.03075673293035383,
+        0.08299910021143926
+      ],
+      "raw_contribution_scores_by_step": [
+        0.22269439697265625,
+        0.0274200439453125,
+        0.09790325164794922,
+        0.012077808380126953,
+        0.0325927734375
+      ],
+      "relevance_scores_by_step": [
+        0.5805162281226804,
+        0.29303962697822505,
+        0.12644414489339192,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.5717971307901772,
+        0.14795108807626062,
+        0.20631048958774548,
+        0.01999187640472999,
+        0.05394941513743552
+      ],
+      "stop_step": 5,
+      "token_count": 204
+    },
+    {
+      "question_id": "56de4a89cffd8e1900b4b7bd",
+      "question": "What is the Norman architecture idiom?",
+      "answers": [
+        "Romanesque",
+        "Romanesque",
+        "Romanesque"
+      ],
+      "baseline_answer": "Romanesque",
+      "contribution_flow_answer": "Romanesque",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 3,
+      "contribution_flow_steps": 3,
+      "contribution_scores_by_step": [
+        0.3585520544803697,
+        0.4131131679245906,
+        0.2283347775922525
+      ],
+      "raw_contribution_scores_by_step": [
+        0.12863922119140625,
+        0.14821434020996094,
+        0.08192062377929688
+      ],
+      "relevance_scores_by_step": [
+        0.7967722010916886,
+        0.20322779890497544,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.5119291057943314,
+        0.33965328876772527,
+        0.14841760543496413
+      ],
+      "stop_step": 3,
+      "token_count": 121
+    },
+    {
+      "question_id": "56de4a474396321400ee2787",
+      "question": "How many customaries does Norman customary law have?",
+      "answers": [
+        "two",
+        "two",
+        "two"
+      ],
+      "baseline_answer": "Two",
+      "contribution_flow_answer": "Two",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 2,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.8126224883829538,
+        0.18737751161367733
+      ],
+      "raw_contribution_scores_by_step": [
+        0.24121475219726562,
+        0.05562019348144531
+      ],
+      "relevance_scores_by_step": [
+        0.6783855706764518,
+        0.32161442931973533
+      ],
+      "trust_scores_by_step": [
+        0.7656395671856782,
+        0.2343604328107976
+      ],
+      "stop_step": 1,
+      "token_count": 185
+    },
+    {
+      "question_id": "56e17e6ee3433e1400422f81",
+      "question": "What does computational complexity theory most specifically seek to answer? ",
+      "answers": [
+        "computational problems",
+        "computational problems",
+        "computational problems"
+      ],
+      "baseline_answer": "Problem instances",
+      "contribution_flow_answer": "Problem instances",
+      "baseline_f1": 0.0,
+      "contribution_flow_f1": 0.0,
+      "baseline_steps": 3,
+      "contribution_flow_steps": 3,
+      "contribution_scores_by_step": [
+        0.49563968057628116,
+        0.2715802399005046,
+        0.23278007952102459
+      ],
+      "raw_contribution_scores_by_step": [
+        0.226348876953125,
+        0.12402534484863281,
+        0.10630607604980469
+      ],
+      "relevance_scores_by_step": [
+        0.8634091450007069,
+        0.13659085499500012,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6243589931248301,
+        0.22433395518357804,
+        0.15130705168866598
+      ],
+      "stop_step": 3,
+      "token_count": 155
+    },
+    {
+      "question_id": "56de15104396321400ee25b7",
+      "question": "Where did the Normans and Byzantines sign the peace treaty?",
+      "answers": [
+        "Deabolis",
+        "Deabolis",
+        "Deabolis"
+      ],
+      "baseline_answer": "Deabolis",
+      "contribution_flow_answer": "Deabolis",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7113467770885625,
+        0.06703262252897725,
+        0.03229034528426869,
+        0.1150456441353553,
+        0.07428461096065928
+      ],
+      "raw_contribution_scores_by_step": [
+        0.3267555236816406,
+        0.030791282653808594,
+        0.014832496643066406,
+        0.05284595489501953,
+        0.034122467041015625
+      ],
+      "relevance_scores_by_step": [
+        0.6730572658468555,
+        0.1892838228120783,
+        0.08329731477295176,
+        0.054361596565548106,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.6979454481539651,
+        0.10982054262806262,
+        0.05014278460530776,
+        0.09380622748592278,
+        0.04828499712442853
+      ],
+      "stop_step": 1,
+      "token_count": 253
+    },
+    {
+      "question_id": "56de3cd0cffd8e1900b4b6be",
+      "question": "Who did Alexander I marry?",
+      "answers": [
+        "Sybilla of Normandy",
+        "Sybilla of Normandy",
+        "Sybilla"
+      ],
+      "baseline_answer": "Sybilla of Normandy",
+      "contribution_flow_answer": "Sybilla of Normandy",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7205404965817733,
+        0.057100281545136536,
+        0.143223242759385,
+        0.03313486699670817,
+        0.04600111211469237
+      ],
+      "raw_contribution_scores_by_step": [
+        0.3126506805419922,
+        0.024776458740234375,
+        0.06214618682861328,
+        0.014377593994140625,
+        0.019960403442382812
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999816834,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.8183513227717418,
+        0.03711518300433875,
+        0.09309510779360025,
+        0.021537663547860315,
+        0.02990072287455004
+      ],
+      "stop_step": 1,
+      "token_count": 234
+    },
+    {
+      "question_id": "56de179dcffd8e1900b4b5dc",
+      "question": "What culture did the Normans combine with in Ireland?",
+      "answers": [
+        "Irish",
+        "Irish",
+        "Irish"
+      ],
+      "baseline_answer": "Irish",
+      "contribution_flow_answer": "Irish",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.23823786758581822,
+        0.18176238603028042,
+        0.2815290581917214,
+        0.10711776715374956,
+        0.1913529210357711
+      ],
+      "raw_contribution_scores_by_step": [
+        0.0895843505859375,
+        0.06834793090820312,
+        0.10586309432983398,
+        0.040279388427734375,
+        0.07195425033569336
+      ],
+      "relevance_scores_by_step": [
+        0.30350799111264615,
+        0.22990200540984718,
+        0.21975615323450431,
+        0.13336431342355673,
+        0.11346953681637557
+      ],
+      "trust_scores_by_step": [
+        0.261082410820208,
+        0.1986112528131288,
+        0.2599085414566954,
+        0.11630405834818205,
+        0.16409373655898266
+      ],
+      "stop_step": 5,
+      "token_count": 239
+    },
+    {
+      "question_id": "56de3d594396321400ee26cc",
+      "question": "Who made Ralph earl?",
+      "answers": [
+        "Edward the Confessor",
+        "Edward the Confessor",
+        "Edward the Confessor"
+      ],
+      "baseline_answer": "Edward the Confessor",
+      "contribution_flow_answer": "Edward the Confessor",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 3,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.767728599355768,
+        0.1381203399226243,
+        0.09415106071867077
+      ],
+      "raw_contribution_scores_by_step": [
+        0.2613983154296875,
+        0.047027587890625,
+        0.03205680847167969
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999965759,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.8490235895800508,
+        0.08977822094970579,
+        0.061198189467136004
+      ],
+      "stop_step": 1,
+      "token_count": 109
+    },
+    {
+      "question_id": "56de1728cffd8e1900b4b5d7",
+      "question": "What was the Anglo-Norman language's final form?",
+      "answers": [
+        "Modern English",
+        "Modern English",
+        "Modern English"
+      ],
+      "baseline_answer": "Modern English",
+      "contribution_flow_answer": "Modern English",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 1.0,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 5,
+      "contribution_scores_by_step": [
+        0.32623998559649364,
+        0.3644567467810286,
+        0.07407057340877292,
+        0.08409397785559417,
+        0.15113871635575102
+      ],
+      "raw_contribution_scores_by_step": [
+        0.13825225830078125,
+        0.1544475555419922,
+        0.03138923645019531,
+        0.03563690185546875,
+        0.06404876708984375
+      ],
+      "relevance_scores_by_step": [
+        0.49697157597452735,
+        0.42814792790280853,
+        0.0748804961208319,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.38599604222880546,
+        0.3867486601736515,
+        0.07435404635799356,
+        0.05466108560613621,
+        0.09824016563123816
+      ],
+      "stop_step": 5,
+      "token_count": 200
+    },
+    {
+      "question_id": "56dddf4066d3e219004dad60",
+      "question": "Who ruled the duchy of Normandy",
+      "answers": [
+        "Richard I",
+        "Richard I",
+        "Richard I"
+      ],
+      "baseline_answer": "Richard I",
+      "contribution_flow_answer": "Richard I of Normandy",
+      "baseline_f1": 1.0,
+      "contribution_flow_f1": 0.6666666666666666,
+      "baseline_steps": 5,
+      "contribution_flow_steps": 1,
+      "contribution_scores_by_step": [
+        0.7025796194901875,
+        0.09299902057710821,
+        0.07890503385376146,
+        0.05847496321236127,
+        0.06704136286410085
+      ],
+      "raw_contribution_scores_by_step": [
+        0.2832212448120117,
+        0.03748941421508789,
+        0.031807899475097656,
+        0.023572206497192383,
+        0.027025461196899414
+      ],
+      "relevance_scores_by_step": [
+        0.9999999999957924,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trust_scores_by_step": [
+        0.8066767526671492,
+        0.06044936337512034,
+        0.05128827200494495,
+        0.03800872608803483,
+        0.043576885861665554
+      ],
+      "stop_step": 1,
+      "token_count": 229
+    }
+  ],
+  "note": "Uses the 71120 LLaMA contribution-matrix attributor. Default model is local LLaMA-2-7B chat, not the exact paper checkpoint."
+}

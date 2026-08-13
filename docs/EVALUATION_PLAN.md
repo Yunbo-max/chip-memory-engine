@@ -143,3 +143,32 @@ The first prototype is successful if it demonstrates:
 - fully traceable runtime events;
 - competitive task success at equal or lower context cost.
 
+## 11. Controller acceptance criteria learned from prior experiments
+
+The archived evidence-use sequence showed that mean F1 alone can conceal harmful early stops. Any learned evidence-use controller must therefore report a multi-objective frontier containing:
+
+- task quality or answer F1;
+- context/retrieval/tool effort;
+- wrong-use or wrong-stop rate;
+- answer preservation;
+- fallback and abstention rates;
+- calibration under clean, distractor, and incompatible-condition settings.
+
+Thresholds and fallback source must be selected on validation only. The selected policy is evaluated once on held-out test IDs. Post-hoc searches are allowed only as clearly labeled diagnostics for the next experiment.
+
+The earlier retrieval studies used provisional targets of F1 delta >= -0.005, effort reduction >= 35%, and wrong-stop <= 5%. Those values are useful historical reference points, not universal thresholds for every multi-agent benchmark. A new benchmark must predeclare task-appropriate targets.
+
+## 12. Minimum artifact bundle
+
+Every reported run should retain:
+
+- exact task/example IDs and split construction;
+- executable command and complete configuration;
+- environment and model identifiers;
+- per-example machine-readable outputs;
+- independent metric recomputation code;
+- acceptance rule fixed before test;
+- failure analysis and exclusions;
+- explicit statement distinguishing direct Chip evidence from adjacent controller evidence.
+
+See [the experience book](EXPERIMENTAL_EXPERIENCE.md) for the experiment history that motivated these requirements.

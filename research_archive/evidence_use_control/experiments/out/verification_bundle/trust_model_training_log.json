@@ -1,0 +1,27 @@
+{
+  "training_code_path": "/tf/notebooks/llm_reasoning_agent_memory_pilot_bundle/experiments/run_real_llm_trust_case.py::train_gate",
+  "feature_code_path": "/tf/notebooks/llm_reasoning_agent_memory_pilot_bundle/experiments/run_learned_trust_benchmark.py::features",
+  "model": "sklearn Pipeline(StandardScaler, LogisticRegression(max_iter=1000, class_weight=balanced, random_state=42))",
+  "metrics": {
+    "train_examples": 307,
+    "val_examples": 102,
+    "test_examples": 103,
+    "train_chunks": 1266,
+    "val_chunks": 422,
+    "val_auroc": 0.8270055113288427,
+    "val_auprc": 0.7631454889597091,
+    "selected_threshold": 0.9299999999999999,
+    "validation_policy": {
+      "n": 102,
+      "baseline_mean_token_f1": 1.0,
+      "learned_trust_mean_token_f1": 0.9607843137254902,
+      "token_f1_delta": -0.039215686274509776,
+      "baseline_mean_steps": 3.627450980392157,
+      "learned_trust_mean_steps": 2.6470588235294117,
+      "mean_effort_reduction": 0.9803921568627452,
+      "relative_effort_reduction": 0.2702702702702703,
+      "answer_preservation_rate": 0.9607843137254902
+    }
+  },
+  "checkpoint": "No serialized checkpoint was saved; model is trained in-run deterministically from SQuAD2 validation[:1024] answerable examples with rng seed 7."
+}
