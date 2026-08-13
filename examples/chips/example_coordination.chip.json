@@ -1,0 +1,70 @@
+{
+  "chip_id": "EXAMPLE_coordination",
+  "chip_type": "static-paper",
+  "schema_version": "example-1",
+  "title": "Grounded Multi-Agent Coordination",
+  "source_url": "https://example.org/coordination",
+  "problem_gap": {
+    "core_gap": "Agents receive the same undifferentiated memory and repeat coordination errors."
+  },
+  "method_mechanism": {
+    "core_idea": "Project a small evidence subgraph for each agent role."
+  },
+  "evaluation_validation": {
+    "metrics": ["task success", "unsupported claim rate", "context tokens"]
+  },
+  "result_outcome": {
+    "bottom_line": "Role-conditioned evidence improves coordination in the example."
+  },
+  "implementation": {
+    "status": "illustrative"
+  },
+  "reuse_transfer": {
+    "best_transfer": "Tasks with distinct planner, critic, executor, and verifier roles."
+  },
+  "nodes": [
+    {"id": "team", "kind": "Team", "text": "A planner, critic, executor, and verifier."},
+    {"id": "planner", "kind": "AgentRole", "text": "Planner decomposes the task."},
+    {"id": "critic", "kind": "AgentRole", "text": "Critic checks risks and negative evidence."},
+    {"id": "projector", "kind": "Module", "text": "Role-conditioned evidence projector."},
+    {"id": "failure", "kind": "FailureMode", "text": "Undifferentiated context causes irrelevant retrieval."},
+    {"id": "metric", "kind": "Metric", "text": "Unsupported claim rate."}
+  ],
+  "edges": [
+    {"id": "e1", "source": "projector", "target": "planner", "kind": "FEEDS"},
+    {"id": "e2", "source": "critic", "target": "failure", "kind": "MITIGATES"}
+  ],
+  "events": [
+    {
+      "id": "structure",
+      "kind": "Structure",
+      "label": "Team structure",
+      "parent": "team",
+      "children": ["planner", "critic"]
+    },
+    {
+      "id": "episode",
+      "kind": "CollaborationEpisode",
+      "label": "Grounded planning and criticism",
+      "participants": ["planner", "critic", "projector"],
+      "condition": "Each role receives only relevant evidence.",
+      "outcome": "The team produces an evidence-linked plan.",
+      "evidence": "Illustrative example event; not an empirical result."
+    },
+    {
+      "id": "eval",
+      "kind": "EvalPipeline",
+      "label": "Coordination evaluation",
+      "participants": ["metric", "team"],
+      "metric": "unsupported claim rate",
+      "evidence": "Illustrative protocol."
+    }
+  ],
+  "footprint": {
+    "primitives": ["role-conditioned projection"],
+    "scenarios": ["multi-agent coordination"],
+    "failure_modes": ["irrelevant memory retrieval"],
+    "datasets": []
+  }
+}
+

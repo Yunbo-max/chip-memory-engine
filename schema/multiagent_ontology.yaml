@@ -1,0 +1,47 @@
+schema_version: "0.1"
+purpose: "Controlled vocabulary extending paper Chips for multi-agent methods"
+
+l1_node_kinds:
+  - AgentRole
+  - Team
+  - Message
+  - Task
+  - Subtask
+  - Tool
+  - Artifact
+  - MemoryState
+  - Insight
+  - Outcome
+
+l2_relation_kinds:
+  - SENDS_TO
+  - DELEGATES_TO
+  - CRITIQUES
+  - REVISES
+  - VERIFIES
+  - REPAIRS
+  - CONSULTS
+  - SHARES_WITH
+  - BLOCKS
+  - SUPPORTS
+  - CONTRADICTS
+  - GENERALIZES_TO
+
+l3_event_kinds:
+  - CollaborationEpisode
+  - Delegation
+  - Handoff
+  - Debate
+  - Consensus
+  - ToolUse
+  - MemoryRead
+  - MemoryWrite
+  - FailureRepair
+  - TaskOutcome
+  - PrimitiveTransferClaim
+
+provenance_policy:
+  paper_chip: "Immutable source-grounded representation of one paper"
+  runtime_event: "Append-only observation produced while agents use paper Chips"
+  promotion_rule: "Runtime evidence never becomes a paper claim; derived insights retain a runtime-derived label"
+

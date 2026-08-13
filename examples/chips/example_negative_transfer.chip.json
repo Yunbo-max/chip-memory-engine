@@ -1,0 +1,83 @@
+{
+  "chip_id": "EXAMPLE_negative_transfer",
+  "chip_type": "static-paper",
+  "schema_version": "example-1",
+  "title": "Negative Transfer Under Incompatible Budgets",
+  "source_url": "https://example.org/negative-transfer",
+  "method": {
+    "id": "method",
+    "kind": "Method",
+    "label": "Long debate",
+    "nodes": [
+      {"id": "debate", "kind": "Module", "label": "Eight-round debate"},
+      {"id": "budget", "kind": "Hyperparameter", "label": "Eight communication rounds"}
+    ],
+    "edges": [
+      {"id": "m1", "src": "budget", "dst": "debate", "rel": "parameterizes", "layer": "L2"}
+    ],
+    "events": [
+      {
+        "id": "forward",
+        "kind": "Forward",
+        "consumes": ["debate", "budget"],
+        "produces": ["answer"],
+        "condition": "Requires eight communication rounds."
+      }
+    ]
+  },
+  "gap": {
+    "id": "gap",
+    "kind": "Gap",
+    "nodes": [
+      {"id": "failure", "kind": "FailureMode", "label": "Budget incompatibility"}
+    ],
+    "edges": [],
+    "events": [
+      {
+        "id": "gap_binding",
+        "kind": "GapBinding",
+        "affected_subject": "debate",
+        "condition": "One-round communication budget",
+        "failure_mode": "failure",
+        "evidence": "The method fails under a one-round communication budget."
+      }
+    ]
+  },
+  "evaluation": {
+    "id": "evaluation",
+    "kind": "Evaluation",
+    "nodes": [{"id": "success", "kind": "Metric", "label": "Task success"}],
+    "edges": [],
+    "events": [
+      {
+        "id": "pipeline",
+        "kind": "EvalPipeline",
+        "dataset": "coordination tasks",
+        "metric": "success",
+        "evidence": "Illustrative protocol."
+      }
+    ]
+  },
+  "result": {
+    "results": [
+      {
+        "id": "negative",
+        "kind": "Result",
+        "methods": ["Long debate"],
+        "evaluation": "pipeline",
+        "scope": "one-round budget",
+        "outcome": "Incompatible with the available budget and performs worse.",
+        "significance": "Significance:Negative",
+        "result_type": "ResultType:Negative",
+        "evidence": "Illustrative negative result."
+      }
+    ]
+  },
+  "footprint": {
+    "primitives": ["multi-agent debate"],
+    "scenarios": ["communication-limited coordination"],
+    "failure_modes": ["budget incompatibility"],
+    "datasets": ["coordination tasks"]
+  }
+}
+

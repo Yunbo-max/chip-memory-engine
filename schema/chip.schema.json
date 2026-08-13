@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/chip-memory/chip.schema.json",
+  "title": "Paper Chip compatibility schema",
+  "description": "A permissive compatibility contract for classic and extended paper Chips. Semantic quality is checked separately.",
+  "type": "object",
+  "anyOf": [
+    {"required": ["chip_id"]},
+    {"required": ["id"]}
+  ],
+  "properties": {
+    "chip_id": {"type": "string", "minLength": 1},
+    "id": {"type": "string", "minLength": 1},
+    "chip_type": {"type": "string"},
+    "schema_version": {"type": ["string", "number"]},
+    "title": {"type": "string"},
+    "problem_gap": {},
+    "method_mechanism": {},
+    "evaluation_validation": {},
+    "experimental_setting": {},
+    "result_outcome": {},
+    "implementation": {},
+    "reuse_transfer": {},
+    "gap": {},
+    "method": {},
+    "evaluation": {},
+    "result": {},
+    "nodes": {
+      "anyOf": [
+        {"type": "array", "items": {"$ref": "#/$defs/node"}},
+        {"$ref": "#/$defs/node"},
+        {"type": "object", "additionalProperties": {"$ref": "#/$defs/node"}}
+      ]
+    },
+    "edges": {
+      "anyOf": [
+        {"type": "array", "items": {"$ref": "#/$defs/edge"}},
+        {"$ref": "#/$defs/edge"},
+        {"type": "object", "additionalProperties": {"$ref": "#/$defs/edge"}}
+      ]
+    },
+    "events": {
+      "anyOf": [
+        {"type": "array", "items": {"$ref": "#/$defs/event"}},
+        {"$ref": "#/$defs/event"},
+        {"type": "object", "additionalProperties": {"$ref": "#/$defs/event"}}
+      ]
+    },
+    "footprint": {"type": "object"},
+    "sources": {"type": ["array", "object", "string"]}
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "node": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"type": "string"},
+        "label": {"type": "string"},
+        "text": {"type": "string"},
+        "props": {"type": "object"}
+      },
+      "additionalProperties": true
+    },
+    "edge": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "string"},
+        "source": {"type": "string"},
+        "target": {"type": "string"},
+        "src": {"type": "string"},
+        "dst": {"type": "string"},
+        "kind": {"type": "string"},
+        "rel": {"type": "string"},
+        "layer": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"type": "string"},
+        "label": {"type": "string"},
+        "participants": {
+          "anyOf": [
+            {"type": "array", "items": {"type": "string"}},
+            {"type": "object"}
+          ]
+        },
+        "evidence": {}
+      },
+      "additionalProperties": true
+    }
+  }
+}
